@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>OPlin的小站</title>
+<link>https://www.oplin.cn/</link>
+<atom:link href="https://www.oplin.cn/index.php/feed/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description> VPS推荐、评测，学习笔记，各种技术分享。OPlin.cn——希望你会喜欢！</description>
+<lastBuildDate>Sat, 09 Dec 2023 13:22:00 +0800</lastBuildDate>
+<pubDate>Sat, 09 Dec 2023 13:22:00 +0800</pubDate>
+<item>
+<title>BGP从入门到跑路</title>
+<link>https://www.oplin.cn/index.php/archives/164/</link>
+<guid>https://www.oplin.cn/index.php/archives/164/</guid>
+<pubDate>Sat, 09 Dec 2023 13:22:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[BGP从入门到跑路好几年前, 当时刚玩vps, 就在想, 加一个ip就要十多二十软妹币, 好贵啊, 能不能直接自己买ip自己用呢? 后来看到论坛有人买/24的ipv4, 一年只要4000, 好便...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h1>BGP从入门到跑路</h1><p>好几年前, 当时刚玩vps, 就在想, 加一个ip就要十多二十软妹币, 好贵啊, 能不能直接<strong>自己买ip自己用</strong>呢? 后来看到论坛有人买/24的ipv4, 一年只要4000, 好便宜啊(<del>虽然我还是买不起</del>)</p><p>后来了解到自己买ip自己用, 要有自己的asn, 要有服务器用来宣告, 要有人家愿意让你BGP Session, 感觉好麻烦啊 <del>特别是看到RIPE LIR会费的时候</del> , 再后来才知道可以找大佬注册小ASN, 又省钱, 又省力. 博主就趁着黑五, 找一个很不错的老外商家(cloudie.sh), 注册了一个ASN还拿到了/40的Ipv6 block, 非常爽.</p><p>总结一下, 注册ASN这件事, 主要是耗时耗钱, 但是准备好money以后还是比较简单的, 接下来介绍如何宣告自己拿到的ipv6 <del>然后在bgp.he.net上反复观摩自己</del>, 成为一个真正的BGP萌新 <del>天天漏路油那种</del></p><h3>事先准备</h3><ol><li>一个能进行BGP Session的服务器</li><li>一个ASN</li><li>一段ipv6 or ipv4</li><li>LOA文件</li><li>IP 所属的网络协调中心创建一个你要广播的inet6num对象</li></ol><h4>去RIPE 操作一手</h4><p>当然ripe才上ripe啊, <del>apnic一边玩去</del></p><p>比如我有一个/40的ipv6, 我现在要分/44出来广播, 那么我就去 <strong>resource -&gt; ipv6 -&gt; create assignment</strong></p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/1.jpg" alt="RIPE配置" title="RIPE配置"></p><h4>制作LOA文件</h4><p>感谢v.ps的客服提供的经验, 我推荐使用 <a href="https://loa.as1003.net/">https://loa.as1003.net</a> 这个网站制作自己的LOA证书(ip 广播授权书), 你想想, 你得想申明这段ip是你的, 然后给商家一份免责说明不是?</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/2.jpg" alt="LOA长什么样" title="LOA长什么样"></p><p>以上内容完成以后, 就去找你的服务器提供商, 开个ticket, 让它们帮你配置好BGP宣告吧! </p><p>礼貌很重要喔(*^▽^*)</p><h4>在服务器上安装bird并配置BGP</h4><p>博主服务器系统版本为ubuntu20的bird版本为1 (BIRD version 1.6.8), 比较老, 推荐安装bird2而不是bird.</p><p>但此教程使用bird1来做宣告, 也算是另外一个角度来看东西吧, 其实bird1和bird2语法差别很小, 而且v4和v6可以在一个config里面配, 所以大力推荐使用bird2 , 至于博主为什么不换bird2 <del>因为配好了才发现有bird2的懒狗罢了</del></p><pre><code class="lang-shell">apt install bird # 安装 bird1
+apt install bird2 # 安装 bird2</code></pre><p>修改 <code>/etc/bird/bird6.conf</code> 这个配置文件, 如果你的服务商是vultr, 建议<strong>参考文章附录里的几个博主</strong>, 它们使用vultr来进行BGP宣告, 与这份配置文件有所不同. 博主使用的服务商是 <code>V.PS</code></p><pre><code class="lang-markdown"># This is a minimal configuration file, which allows the bird daemon to start
+# but will not cause anything else to happen.
+#
+# Please refer to the documentation in the bird-doc package or BIRD User&#039;s
+# Guide on http://bird.network.cz/ for more information on configuring BIRD and
+# adding routing protocols.
+
+# Change this into your BIRD router ID. It&#039;s a world-wide unique identification
+# of your router, usually one of router&#039;s IPv6 addresses.
+router id 你的vps自带的ipv4;
+
+# The Kernel protocol is not a real routing protocol. Instead of communicating
+# with other routers in the network, it performs synchronization of BIRD&#039;s
+# routing tables with the OS kernel.
+protocol kernel {
+        scan time 20;
+        import none;
+#       export all;   # Actually insert routes into the kernel routing table
+}
+
+# The Device protocol is not a real routing protocol. It doesn&#039;t generate any
+# routes and it only serves as a module for getting information about network
+# interfaces from the kernel.
+
+
+protocol static
+{
+    route  你要宣告的地址段,比如1145:1140:0000::/44 via 你的vps自带的ipv6;
+}
+ 
+protocol device {
+        scan time 20;
+}
+
+
+protocol bgp xTomBGP
+{
+    local as 你的ASN号;
+    source address 你的vps自带的ipv6;
+    import none;
+    export all;
+    graceful restart on;
+    multihop; # 这个有坑, vultr是 multihop 2, 但是v.ps是直连的所以不能设置为2
+    neighbor 服务商给的那个peer用的ipv6 as 服务商给你peer的ASN;
+    password &quot;Your BGP Password&quot;;
+}
+
+</code></pre><p>修改好你的bird6配置文件, 然后重启 <strong>bird6</strong>, 注意, 因为bird 1 里面 <strong>IPV4</strong> 和 <strong>IPV6</strong>  宣告是分开来的, 在这篇教程当中我们只宣告ipv6, 所以命令应该是:</p><pre><code class="lang-shell">systemctl restart bird6
+# 然后你可以查看你的bird6运行情况
+systemctl status bird6
+# 如果你要每次开机时, bird6自动启动, 你可以输入以下命令:
+systemctl enable bird6</code></pre><p>如果你的配置是成功的, 那么输入:</p><pre><code class="lang-markdown"># 在bird1中, ipv4 和 ipv6是分开来的, 这个是查看ipv4连接的
+birdc s p
+# 这个是ipv6连接的
+birdc6 s p</code></pre><p>如果显示 <strong>Established</strong> 那就是宣告成功了!! (〃'▽'〃), 如果是 <strong>Active</strong>, 或者 <strong>Connect</strong>, 都是还没宣告成功正在连接哦!</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/3.jpg" alt="查看BGP宣告结果" title="查看BGP宣告结果"></p><p>既然已经宣告了, 等待全球路由刷新, 如果 <strong>bgp.he.net</strong> 上能看到你的asn已经宣告了ipv6, 那就是OK了, 如果想要快的话, 可以看看 <strong>bgp.tools</strong></p><p>接下来是最爽的使用自己ip上网环节, 我们将设置自己的网卡在走ipv6的时候, 走自己的ipv6!</p><p><strong><em>这里假设你的网卡是eth0</em></strong>, 并且你已经宣告的ipv6块是 <code>1145:1140:aabb::/44</code></p><pre><code class="lang-markdown"># 这一行将 1145:1140:aabb:6666:6666:6666:6666:6666 这个ip加到eth0网卡上, 这个操作是暂时的, 你重启服务器就会消失, 至于怎么永久配置, 麻烦自己百度一下咯
+sudo ip -6 addr add 1145:1140:aabb:6666:6666:6666:6666:6666 dev eth0
+
+# 这一行表达 1145:1140:aabb:6666:6666:6666:6666:6666 这个ipv6, 在eth0上, 要走 服务器商提供给你的网关, 像v.ps, 给你宣告ip用的网关和服务器本身ipv6的网关是不一样的, 所以我们就得这么操作
+sudo ip -6 route change default via 服务器商提供给你的网关 dev eth0 proto ra metric 1024 pref medium src 1145:1140:aabb:6666:6666:6666:6666:6666
+
+# 如果你宣告的ip, 走的网关就是你服务器的默认网关, 你可以通过命令
+ip -6 r # 来查看你的默认网关, 或者
+ip addr # 里面自己找
+
+# 测试上网环节
+curl -6 ip.sb
+如果出来的结果就是你刚刚配置的1145:1140:aabb:6666:6666:6666:6666:6666, 说明你实名上网成功了!!
+✿✿ヽ(°▽°)ノ✿</code></pre><hr><p>未完待续, 接下来是选修节目, 加入 <strong>LocIX</strong> 交换.</p><p>感谢 V.PS 买德意志服务器送LocIX接入的福利 <del>什么时候送DE-CIX DUS Port免月费</del></p><p>在加入LocIX之前, 我们先要完善一下你在 <a href="https://www.peeringdb.com/">Peering DB</a> 上的条目, 这样大家在看到你的时候, 可以通过peeringDB上的条目更了解你的ASN, 然后决定要不要找你peer.</p><p>这里帮大家猜一个坑, 在peeringDB注册好, 要关联组织的时候, <strong>只要把自己ASN填进去就好</strong>, peeringDB的工作人员审核以后会帮你把关联信息填入的! 非常方便!</p><p>然后你会拥有一个漂亮的peer主页, 脑补一下 -&gt;_-&gt; <del>以后可以写进简历里</del><br><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/5.jpg" alt="PeeringDB" title="PeeringDB"></p><h4>第二步</h4><p>到 LocIX 的面板里, 找一下LocIX分配给你的ip, 大家可以这么理解IX, 你要跟别人交朋友, 那就要去朋友多的地方交朋友效率比较高, IX 分配给你的IP, 相当于你的独家名片, 还记得在conf里面填写的 <code>neighbor 服务商给的那个peer用的ipv6</code> 这个时候, 你就可以用IX分配给你的名片来通过IX和大家交朋友啦!</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/4.jpg" alt="LocIX" title="LocIX"></p><p>接下来我们要交的第一个盆友是 LocIX的 <strong>Route Servers</strong>, 你得先跟IX的工作人员交盆友, 才能靠IX交更多朋友不是?</p><p>在Documentation中找到Route Server, 或者访问这个链接 </p><p><a href="https://manager.dus.locix.network/public-content/routeserver">https://manager.dus.locix.network/public-content/routeserver</a></p><p>可以看到这些服务器地址, 把他们全peer了</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/6.jpg" alt="Route Servers" title="Route Servers"></p><p>通过V.PS接入LocIX的话, 工作人员会先给你配置第二个网卡, 这个网卡可以直接连接LocIX, 所以得先给第二个网卡加上 <strong>LocIX分配给你的IP</strong> like this:</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/7.jpg" alt="eth1" title="eth1"></p><p>然后配置bird的conf来实现peer, 在bird6.conf里:</p><p>请注意这个<strong>LocIX_in</strong>过滤器是非常粗糙的, 只接受LocIX的表, 更多的目标得你自己去实现!</p><pre><code class="lang-markdown">filter LocIX_in {
+    if bgp_path.first ~ [202409] then accept; # 只收LocIX的表
+    reject;
+}
+
+protocol bgp LocIXBGP1 {
+    local as 你的ASN;
+    source address LocIX分给你的ipv6;
+    export none;
+    import filter LocIX_in;
+    graceful restart on;
+    neighbor 2a0c:b641:701::a5:20:2409:1 as 202409;
+}
+
+protocol bgp LocIXBGP2 {
+    local as 你的ASN;
+    source address LocIX分给你的ipv6;
+    import filter LocIX_in;
+    export none;
+    graceful restart on;
+    neighbor 2a0c:b641:701::a5:20:2409:2 as 202409;
+}
+
+</code></pre><p>依样画葫芦, bird.conf里:</p><pre><code class="lang-markdown">filter LocIX_in_v4 {
+    if bgp_path.first ~ [202409] then accept;
+    reject;
+}
+
+protocol bgp LocIXBGP1v4 {
+    local as 你的ASN;
+    source address LocIX分给你的ipv4;
+    import filter LocIX_in_v4;
+    export none;
+    neighbor 185.1.155.254 as 202409;
+}
+
+protocol bgp LocIXBGP2v4 {
+    local as 你的ASN;
+    source address LocIX分给你的ipv4;
+    import filter LocIX_in_v4;
+    export none; 
+    neighbor 185.1.155.253 as 202409;
+}
+</code></pre><p>然后重启bird服务</p><pre><code class="lang-shell">systemctl restart bird6
+systemctl restart bird</code></pre><p>最后查看广播情况</p><pre><code class="lang-shell">birdc6 s p
+birdc s p</code></pre><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/8.jpg" alt="bird" title="bird"></p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/9.jpg" alt="bird6" title="bird6"></p><p>恭喜你已经成功接入LocIX了!</p><p>请开始你辉煌的<del>漏油</del>BGP生涯吧!</p><p>欢迎大佬们peer我哦 <del>虽然我还没正经peer过谁</del> o(╥﹏╥)o<br>开始反复访问bgp.he.net吧!</p><p><img src="https://image.oplin.cn/photo/oplin.cn/bgp_rumen/result.jpg" alt="bird6" title="bird6"></p><p>文章参考了以下博主  <br><a href="https://blog.ni-co.moe/public/559.html">nico, vultr上宣告ipv6</a><br><a href="https://soha.moe/post/bird-bgp-kickstart.html#comment-464">Bird新手教程</a><br><a href="https://blog.enicat.com/archives/bird-bgp-guide">Misaka上bird6宣告</a> <del>有钱我也要买misaka</del><br><a href="https://www.9bingyin.com/archives/broadcast-your-own-ipv6-through-bird-on-linux.html">在 Linux 下通过 BIRD 广播自己的 IPv6</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/164/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>C语言指针</title>
+<link>https://www.oplin.cn/index.php/archives/158/</link>
+<guid>https://www.oplin.cn/index.php/archives/158/</guid>
+<pubDate>Sat, 05 Nov 2022 22:25:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[Pointer1. You need to know.We use type *variables to declare a pointer.Type of pointer  is import...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h2>Pointer</h2><h3>1. You need to know.</h3><p>We use <code>type *variables</code> to declare a pointer.</p><p><strong>Type of pointer </strong> is important,  it not only hint the data- type it point,  it also means  how long of one step if you use pointer to operate .</p><p>For example, memory address between <code>char *p1 = sth</code> and <code>p1 + 1</code> is <strong>1 byte</strong>.</p><p>But, memory address between <code>int *p1 = sth</code> and <code>p1 + 1</code> is <strong>4 bytes</strong>.</p><p>Just because int takes 4bytes,  char takes 1byte. </p><p><code>*</code> 解引用操作符，是指针操作中非常重要的工具。相对于上面声明指针时的 <code>int *</code>里的*用作声明，</p><p>运算符中的 <code>*</code> 将指定内存地址中所存储的值，取出来。</p><h3>2. 指针操作实例</h3><p>这里有一个一维数组</p><table><thead><tr><th>x[0]</th><th>x[1]</th><th>x[2]</th><th>x[3]</th><th>x[4]</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr></tbody></table><p>我们让<br><code>int *ptr1 = x;</code><br>那么编译器便在stack区中画出了一些地址，用于存储ptr所指向的内存地址，并且指出这是一个int型的指针。</p><p>显然，打印 ptr1 的结果，将会是数组的首地址，即 <code>&amp;x[0]</code></p><p>而如果你打印 <code>ptr+1</code> 则会是 &x[1], 很简单，因为你是<code>int*</code>型指针，一步走4bytes。举个例子</p><pre><code class="lang-c">#include &lt;cstdio&gt;
+int main() {
+    char a[] = &quot;abcdefgh&quot;;
+    char *p1 = a;
+    int *p2 = (int*)a;
+    printf(&quot;%c\n&quot;, *(p1+1));
+    printf(&quot;%c&quot;, *(p2+1));
+    return 0;
+}</code></pre><p>Results:</p><pre><code class="lang-c">b
+e</code></pre><p>是不是char类型的走了一步读到b，int类型走了一步读到e？</p><p>如果打印 <code>*(ptr+1)</code> 结果是 2 ，这也是显然的因为 取出 <code>&amp;x[1</code>] 里存放的值，便是2</p><p>We assume there is an <strong>int</strong> array of two dimension.</p><table><thead><tr><th align="center">x[0][0]</th><th align="center">x[0][1]</th><th align="center">x[0][2]</th><th align="center">x[0][3]</th><th align="center">x[0][4]</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td></tr><tr><td align="center">x[1][0]</td><td align="center">x[1][1]</td><td align="center">x[1][2]</td><td align="center">x[1][3]</td><td align="center">x[1][4]</td></tr><tr><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td></tr></tbody></table><p>要定义一个多维数组的指针，我们首先要指出这个指针是什么类型的，或者说一步走多远:</p><p><code>int (*p)[5] = x</code> 这个的意思是，声明一个指针p，但类型却是 <code>int[5]</code>,或者说，这是一个 <strong>一步走5*4bytes的int指针</strong>，</p><p>你想想，既然 <code>&amp;a &amp;a[0] &amp;a[0][0]</code> 他们都是 <strong>一个地址</strong>，为什么打印他们的时候前两个出来的是地址，而最后一个才是值？因为类型不同。</p><pre><code class="lang-c">    std::cout &lt;&lt; &quot;a: type is &quot; &lt;&lt; typeid(a).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;a[0]: type is &quot; &lt;&lt; typeid(a[0]).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;a[0][0]: type is &quot; &lt;&lt; typeid(a[0][0]).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;p: type is &quot; &lt;&lt; typeid(p).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;*p: type is &quot; &lt;&lt; typeid(*p).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;**p: type is &quot; &lt;&lt; typeid(*(*p)).name() &lt;&lt; std::endl;</code></pre><p>results：</p><pre><code class="lang-latex">a: type is A2_A5_i
+a[0]: type is A5_i
+a[0][0]: type is i
+p: type is PA5_i
+*p: type is A5_i
+**p: type is i</code></pre><p>我们先别纠结这些类型是啥 <del>因为我也不知道</del>，你看 <code>int (*p)[5] = x</code>是不是declare了p是一个<code>int[5]*</code>类型，而不是<code>int*</code>，结果也是如此吧!</p><p><code>*p</code>取出了 <strong>p中的</strong> 内存地址 <strong>中的</strong> 值。显然 p中的内存地址是 &a[0], 而<code>*(&amp;a[0])</code>便是 <code>&amp;a[0][0]</code>。</p><p>正同上面的结果，a[0] 和 *p 的type是一样的，他们打印出来也是一样的东西。</p><p>而只有取到最后的 <code>*(*p) and a[0][0]</code> 才是不属于<code>&amp;p</code> 占位符的数据类型，got it ?</p><pre><code>以下等号寓意他们等效
+p = a[0]
+*p = &amp;a[0][0]
+*(*p) = a[0][0]
+p+1 = a[1]
+*p + 1 = &amp;a[0][1]
+*(p+1) = &amp;a[1][0]
+*(*(p+1)+3) = a[1][3] </code></pre><p>所以要怎么才能声明一个指向多维数组的指针呢？</p><p>在声明时，<strong>指出其低维的长度</strong>，或者说是，<strong>进行指针运算时的步长</strong>。 </p><p>你想，对于一个指向高维数组的指针 <code>*ptr2</code> ，如果我们进行运算 <code>ptr2 += 1</code> 那么这个内存地址的跨度是多少字节呢？</p><p><del>只有神知道</del> 绝大多数情况下，内存中数组都是顺序排序的，不存在所谓 <strong>高维数组</strong>，只有所谓 <strong>数组的数组</strong></p><table><thead><tr><th>x[0][0]</th><th>x[0][1]</th><th>x[1][0]</th><th>x[1][1]</th><th>x[2][0]</th><th>x[2][1]</th><th>...etc</th></tr></thead></tbody></table><p>です，你需要告诉指针，它加一的时候，需要跨越， 什么数据类型的，多少个内存地址。比如下面的</p><pre><code class="lang-c">int a[10][10];
+int (*ptr1)[10] = a
+// 那么 ptr1+1 的结果就是 a[1]
+int (*ptr2) = a[0]
+// 那么ptr2+1 的结果就是 &amp;a[0][1]</code></pre><p>为什么要用 <code>()</code> 把指针包起来呢？因为这样的话，声明指针这一操作的优先度会比较高，如果不包起来的话，就先运行后面的[10],显然不能这样操作，会编译错误。</p><p>来康康更高维的。</p><pre><code class="lang-c">int a[2][5][8][9];
+int (*ptr1)[5][8][9] = a;
+// ptr1 + 1 结果是 a[1]
+int (*ptr2)[8][9] = a[1];
+// ptr2 + 2 结果是 a[1][2]</code></pre><h3>3. 向函数中传入高维数组的指针。</h3><p>实际上，对于一维数组而言</p><pre><code class="lang-c">现在有 int a[10];
+
+那么:
+void func(int *b)
+func(a)
+和
+void func(int b[]) // 这其实是语法糖，可以更清晰的告诉我们，传进去的是一个数组的指针。
+func(a)
+是等价的</code></pre><p>数组在被传入函数以后，<strong>会退化为指针</strong>。</p><p>实际上对于数组 <code>int a[10]</code> 而言， a其实是 <code>int* const a</code>，但传这个const a进函数后，接受值的b会退化成普通指针，既可改值，又可以改地址。</p><p>那么高维数组的呢？</p><pre><code class="lang-c">int a[10][10][10];
+那么
+void func(int (*b)[10][10])
+和
+void func(int b[][10][10])  //语法糖，指出这是一个三维数组
+也是等价的。
+两者都可以直接
+func(a)</code></pre><h3>4. String</h3><p><del>我刚刚知道</del> 众所周知，C语言中其实没有String字符串这种结构，但是可以用字符数组来模拟。</p><p>这里面有三种类型： <strong>字符串(fake)</strong> and <strong>字符数组</strong> and <strong>字符常量</strong>。</p><p>前两者的区别就是结尾有没有'\0' 作为字符串的结尾。在一些比较老的或者<del>我没用过的IDE上</del>（现在只用Clion）</p><p>你用 <code>char a[5] = {&#039;a&#039;, &#039;b&#039;, &#039;c&#039;, &#039;d&#039;, &#039;e&#039;}</code>这种全填满数组，不留地方给 '\0' 的方法可以整出字符数组。</p><p>不过不知道为什么我在Clion里,不管怎么写都会补个 '\0' 在最后，放弃了。。。</p><h4>字符常量</h4><p>那就比较有意思了，字符常量在编译时，不会被放在stack或者heap中，而是会被放在静态层，是不能被修改的。</p><p>比如 <code>printf(&quot;hello world&quot;)</code> 里面的<strong>hello world</strong>就是字符常量，不可以被修改。</p><pre><code class="lang-c">char *ptr = &quot;hello world&quot;;
+char b[] = &quot;hello world&quot;;</code></pre><p>这两个整出来的字符常量，我也不知道指针为什么可以这么赋值为字符串，历史遗留问题？</p><h3>5. 动态分配内存 malloc calloc realloc</h3><p><strong>一定要记得free喔，动态分配的内存均在heap区域，不会自己释放的，只能通过free(接受内存地址的那个指针)</strong></p><h4>malloc()</h4><p>就是在heap里开一块内存，然后返回 <em>所开辟区域的内存首地址</em>，这个首地址是 <code>void*</code>的指针。因为编译器不知道你(<del>赛博精神病</del>)要怎么对待这个数据</p><pre><code class="lang-c">malloc(size_t*size) // 括号里面是，要返回多少byte的heap内存
+int *a = (int*)malloc(4*sizeof(int)); //放回 4*4 bytes</code></pre><p>当然你也可以在括号里面直接放多少bytes就是了。</p><h4>calloc()</h4><p>跟<code>malloc()</code>的区别就是，会初始化heap里面分到的区域。但是据说性能不如malloc，所以还是用malloc()吧</p><h4>realloc()</h4><p>重新划分已经被分配的heap内存区域</p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/158/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>Pytorch第一章:创建并训练第一个神经网络</title>
+<link>https://www.oplin.cn/index.php/archives/155/</link>
+<guid>https://www.oplin.cn/index.php/archives/155/</guid>
+<pubDate>Tue, 01 Nov 2022 21:25:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[序言创建并训练第一个神经网络，要从：下载数据集-&gt;加载数据集-&gt;加载Tensorboard构建神经网络-&gt;训练-&gt;测试...-&gt;保存已经训练的模型 入手， 每一节，...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h2>序言</h2><p>创建并训练第一个神经网络，要从：</p><p><strong>下载数据集-&gt;加载数据集-&gt;加载Tensorboard</strong></p><p><strong>构建神经网络-&gt;训练-&gt;测试...-&gt;保存已经训练的模型 </strong></p><p>入手， 每一节，都是一个标题，可以通过点击直接跳转查看。</p><h2>1. Dataset</h2><p>IF you want to use dataset(), coding  <code>import torchvision</code></p><pre><code class="lang-python">import torchvision
+test_data = torchvision.CIFAR10(&#039;file path&#039;, train=True/False, transform=torchvision.transforms.ToTensor(), download=True/False)
+# Normally a dataset includes Train-set and Test-set, so the parameters &#039;train&#039; set about
+# &#039;transform&#039; parameter means whethter you want to transform the images from dataset to different forms
+# &#039;download&#039; will check if you do not have download CIFAR10 dataset
+# After all test_data means the whole package
+print(len(test_data)) # will print 50000, which means it has 50000 train_image</code></pre><h2>2. Dataloader</h2><pre><code class="lang-python">from torch.utils.data import DataLoader
+test_loader = DataLoader(dataset=test_data, batch_size=4, num_workers=0, drop_last=True)
+# &#039;dataset&#039; parameters is the target that will be load
+# &#039;batch_size&#039; means 1 package(batch) will has how many images, so as you set it &#039;4&#039;
+print(len(test_loader)) # will print 12500, and if batch_size is 64 it will print 781
+# &#039;num_workers&#039; will appoint the processes of computer to figure the task, &#039;0&#039; will work automatically    
+
+# if &#039;batch_size&#039; is &#039;64&#039;, All 50000 images will no be loaded totally, thus 50000/64 is&#039;t an int
+# so &#039;drop_last&#039; parameters will help you kick off the remaining images
+</code></pre><h2>3. import image & transform</h2><h3>3.1 use PIL to open image</h3><pre><code class="lang-python">from PIL import Image
+myPhoto = Image.open(&#039;your image path&#039;)
+myPhoto,show() # will open the photo you select, showing in your default application
+myPhoto = myPhoto.convert(&#039;RGB&#039;)
+# actually , not all photos&#039; forms are 3 channels. Like .png, also has a transparency channel
+# .convert will change photo&#039;s color channel, because some transform function like &#039;torchvision.transforms.ToTensor&#039; requires 3 color channels.</code></pre><h2>4. Use Tensorboard</h2><h3>4.1 SummaryWriter()</h3><p><code>SummaryWriter</code>() is the entrance of tensor board to write in data.</p><pre><code class="lang-python">from torch.utils.tensorboard import SummaryWriter
+MyDataBoard = SummaryWriter(&#039;Your board name&#039;)
+# Remember this name, it means interpreter will mkidr a folder named it, and it is also your tensorboard&#039;s title.
+# &#039;MydataBoard&#039; is now a instantiation of tensorboard class, so just use &#039;MydataBoard&#039;, you could operate the tensorboard.
+After you finsh the operation, close the
+MyDataBoard.close()</code></pre><h3>4.2 add_scalar()</h3><pre><code class="lang-python">for i in range(500):
+  MyDataBoard.add_scalar(&#039;y=x**2+2x-6&#039;, i**2+2*i-6, i)
+  # use .add_scalar() one time means a scalar in graph.
+     # .add_scalar(&#039;tag&#039;, how_y_calculate, how_x_calculate)
+  # if in different add_scalar step, your &#039;tag&#039; is same, the scalar will be added in the same graph
+  # &#039;how_y_calculate&#039; is scalar&#039;s coordinates in y axis, &#039;how_x_calculate&#039; is same
+</code></pre><h3>4.3 add_image()</h3><p>Images that in <strong>torch.Tensor</strong> or <strong>np.array</strong> or <strong>string</strong> forms could be add to Tensorboard.</p><pre><code class="lang-python">.add_image(&#039;tag&#039;, img, step, dataformats)
+MyDataBoard.add_image(&quot;I think it\&#039;s a 只因!&quot;, np_image, 1, dataformats=&#039;HWC&#039;)
+# this step we add a image in form np.array.
+# Specially, default &#039;dataformats&#039; in .add_image() is &#039;CHW&#039;, (channel,heigh,weigh)
+# but if your image is opened through PIL.Image, and use np.array() to transform it into np.array, its dataformat is &#039;HWC&#039;, (Heigh,weigh,channel), so you should set &#039;dataformats&#039; parameter</code></pre><h2>5. Create a Neural network class</h2><pre><code class="lang-python">from torch import nn
+
+class MyfirstNet(nn.Module):
+    def __init__(self):
+        super(MyfirstNet, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 64, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Flatten(),  # 降维， 多维转一维
+            nn.Linear(64 * 4 * 4, 64),  # 线性映射 in 64*4*4 out 64
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, inputData):
+        resolveData = self.model(inputData)
+        return resolveData</code></pre><p>As you see, these codes is a complete neural network.</p><h3>5.1 Create Class and Inherit & override superclass</h3><pre><code class="lang-python">from torch import nn # import the superclass
+
+class MyfirstNet(nn.Module): # inherit
+    def __init__(self):
+        super(MyfirstNet, self).__init__() # inherit the superclass&#039;s __init__
+        self.model = nn.Sequential(
+        # here is your training
+        ) 
+        # override self.model, with a function nn.Sequential(), which makes codes clear</code></pre><h3>5.2 forward()</h3><p>Forward properties of nn class is the way to process your input data through what training ways and return what.</p><pre><code class="lang-python">def forward(self, inputData):
+    resolveData = self.model(inputData)
+    return resolveData
+  # forward() send inputData to self.model properties we had set and return the over-training data to us.
+  # it actually means how we process our data.</code></pre><h3>5.3 nn.Sequential()</h3><p>Sequential() function makea us feel convenient, but even we don't have sequential(), we also can continue the process</p><pre><code class="lang-python">from torch import nn
+
+class MyfirstNet(nn.Module):
+    def __init__(self):
+        super(MyfirstNet, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 64, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Flatten(),  # 降维， 多维转一维
+            nn.Linear(64 * 4 * 4, 64),  # 线性映射 in 64*4*4 out 64
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, inputData):
+        resolveData = self.model(inputData)
+        return resolveData</code></pre><h2>6. Train the Neural Network</h2><h3>6.1 Instantiation training class</h3><p>It's a basic operation just like other instantiation.</p><pre><code class="lang-python">Training = MyfirstNet()</code></pre><h3>6.2 Load the <u>optimizer</u> and <u>loss function</u> etc.</h3><pre><code class="lang-python">    # 加载损失函数
+    loss_fn = nn.CrossEntropyLoss()  # 交叉熵
+    # with this fucntion we could calculate the loss between input and target just like
+    # loss = loss_fn(outputData, tags)  # 计算loss 
+    # loss.backward() # 反向传播， 梯度下降。
+    
+    #  加载优化器
+    learning_rate = 1e-2 # although smaller learning_rate will results a deep learning, but it will also take a long time for learning and &#039;过拟合&#039;
+    optimizer = torch.optim.SGD(Training.parameters(), lr=learning_rate)
+    # torch.optim.SGD(neural_network parameter, learning_rate)</code></pre><p>​    通过 <strong>损失函数</strong> 和 <strong>优化器</strong> 我们就可以实现 <strong>计算损失、反向传播、计算题度、梯度下降</strong> 等修正模型参数的重要方法。</p><h2>7. Test the Neural Network</h2><p>Through the step we learned above, we could train a module completely.</p><pre><code class="lang-python">    # training config 训练前设置
+    # train epoch 设置
+    epoch = 300
+    # open the tensorboard
+    writer = SummaryWriter(&#039;First_unbroken_train&#039;)
+    # 开始训练
+    Training.train()  # a signal of training start
+    total_train_step = 1  # global training step
+    total_test_step = 1  # global test step
+    for n in range(epoch):
+        print(f&#039;------ {n} epoch training starting ------&#039;)
+        # start training and load training data
+        for data in train_data_load:  # 从batch size中拿出数据
+            imgs, tags = data  # 提取图片 和 答案tag
+            outputData = Training(imgs)  # 送入训练网络
+            loss = loss_fn(outputData, tags)  # 计算loss
+            optimizer.zero_grad()  # 加载优化器 清理梯度
+            loss.backward()  # 反向传播 计算梯度
+            optimizer.step()  # 梯度下降
+            # print(type(loss)) loss is Tensor
+            # print(type(loss.item())) loss.item() is float, thus we need item()to take data out.
+            if total_train_step % 100 == 0:  # every 100 steps print and show the loss
+                print(f&#039;Training in {n} epoch, ongoing {total_train_step} step\&#039;s Loss is {loss.item()}&#039;)  # 打印loss
+                writer.add_scalar(&#039;lossOfTrain&#039;, loss.item(), total_train_step)
+            total_train_step += 1  # already study 1 batch_size
+        # training over , start test</code></pre><h2>8. Analyze Loss and Accuracy</h2><pre><code class="lang-python">        test_total_loss = 0  # loss of this test
+        total_test_accuracy = 0  # accuracy of this test
+        Training.eval()  # a signal of verify test
+        with torch.no_grad():  # test without grad to save the memory
+            print(&#039;------ Start verify accuracy of NN module this time ------&#039;)
+            for data in test_data_load:
+                imgs, tags = data
+                testOut = Training(imgs)
+                loss = loss_fn(testOut, tags)
+                test_total_loss += loss.item()
+                # Because of linear, one image was mapped into one line,
+                # so search ever line with argmax(1) we could get every image&#039;s prediction and use to compare
+                accuracy = (testOut.argmax(1) == tags).sum()
+                # it will return true of false, and sum() will calculate all of this by true=1 false=0
+                total_test_accuracy += accuracy
+        print(f&#039;After this training, the total loss of test_data is {test_total_loss}&#039;)
+        print(f&#039;After this training, Accuracy of test_data is {total_test_accuracy/test_data_len}&#039;)
+        # total right/all test data
+        writer.add_scalar(&#039;lossOfTest&#039;, test_total_loss, total_test_step)
+        writer.add_scalar(&#039;accuracyOftest&#039;, total_test_accuracy/test_data_len, total_test_step)
+        total_test_step += 1  # test over</code></pre><p><strong><code>torch.no_gard()</code></strong> save memory and time of learning in test, because we don't need test dataset to train module, right?</p><h3>8.1 how to calculate the accuracy of test</h3><p>Actually, in the <strong><code>Sequential()</code></strong> the latest step is <strong><code>nn.Linear(64, 10)</code></strong> makes data forecast as a line into 10 results.</p><p><strong><code>.argmax(1)</code></strong> <em>1</em>  present searching the <strong>Biggest data</strong>  <strong>row by row</strong>, </p><p>Specially, one dimensionality array doesn't have axis. But it also can use <code>.argmax(0)</code> , which will return the max digit in the array, instead of every biggest digit in every columns.</p><p><img src="https://image.oplin.cn/photo/oplin.cn/pytorch_study/axis.jpg" alt="axis" title="axis"></p><pre><code class="lang-python">example = np.array([[1, 5, 3, 4],
+                   [7, 8, 9, 10],
+                   [2, 5, 8, 6]])
+
+print(example.argmax(0))
+# result: [1 0 2 1]
+print(example.argmax(1))
+# result: [1 3 2]</code></pre><p> </p><pre><code class="lang-python">accuracy = (testOut.argmax(1) == tags).sum()
+# testOut.argmax(1) will find the biggest digit, and return the digit&#039;s index.
+# testOut is a Tensor in two dimension like:
+# [[0.5, 0.3,....., 0.64]]
+# so .argmax(1) could work in this linear of tensor</code></pre><p><code>(testOut.argmax(1) == tags)</code></p><p>compares the <strong>index</strong> with <strong>answer of tag</strong>(it's an index too), if the index is <em>same</em>, will <strong>return 1</strong>, <em>false</em> will <strong>return 0</strong>.</p><p><code>.sum()</code> will count all returns and add them up. The returns only have 1 or 0, so the result means the number of Accepted answer.</p><h2>Save & Load the already training Neural Network.</h2><h3>Save</h3><pre><code class="lang-python">torch.save(Training, f&#039;./mymodule/MyFirstTrainModule_NO{n+1}.pth&#039;)
+# &#039;torch.save(instantiation_of_NN, store_path)&#039;
+# &#039;instantiation&#039; parameter symbolize nn project that you decide to store.
+# &#039;store_path&#039; parameter, store  file in the path, usually, we store in &#039;.pth&#039; form</code></pre><p>Specially, torch.save() will <strong>not create a file path</strong> if it does't exist, just err.</p><p><strong>So check the path first</strong></p><h3>Load</h3><pre><code class="lang-python">model = torch.load(&#039;./mymodule/MyFirstTrainModule_NO30.pth&#039;)</code></pre><p>This step will help you instantiate <strong>module</strong> of your class.</p><p>But even you save the module completely, you need to paste the module's training step or <strong>import the training class</strong>(recommend)</p><pre><code class="lang-python">from fullStructure import *  # import the NNmodule class
+
+or
+
+class MyfirstNet(nn.Module):
+    def __init__(self):
+        super(MyfirstNet, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 64, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Flatten(),  # 降维， 多维转一维
+            nn.Linear(64 * 4 * 4, 64),  # 线性映射 in64*4*4 out 64
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, inputData):
+        resolveData = self.model(inputData)
+        return resolveData</code></pre><h2>10. Summary</h2><p>本章我们用一点都不地道的英语粗略地描述了，如何创建自己的第一个完整的训练网络，训练CIFAR10，这样一个基础的训练集。</p><p>并且学习使用<strong>Tensorboard</strong>，呈现出训练当中的Loss，Accuracy方便对神经网络进行调节。</p><p>下一章将更加粗略地讲解如何<strong>使用已经训练好的神经网络</strong></p><p>CIFAR10提供了 飞机、车、鸡、猫、鹿、狗、蛤蟆、马、船、货车。下一章我们将测试一下它是否可以认出只因。</p><h2>完整代码</h2><pre><code class="lang-python">import torch.optim
+import torchvision
+from torch import nn
+from torch.utils.data import DataLoader
+from torch.utils.tensorboard import SummaryWriter
+
+
+class MyfirstNet(nn.Module):
+    def __init__(self):
+        super(MyfirstNet, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 32, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Conv2d(32, 64, 5, 1, 2),  # 卷积
+            nn.MaxPool2d(2),  # 池化
+            nn.Flatten(),  # 降维， 多维转一维
+            nn.Linear(64 * 4 * 4, 64),  # 线性映射 in64*4*4 out 64
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, inputData):
+        resolveData = self.model(inputData)
+        return resolveData
+
+
+if __name__ == &#039;__main__&#039;:
+    # 加载训练模型
+    Training = MyfirstNet()
+    # 加载训练数据集
+    train_data = torchvision.datasets.CIFAR10(&quot;./CIFAR10_dataset&quot;, train=True,
+                                              transform=torchvision.transforms.ToTensor(), download=True)
+    # 加载测试数据集
+    test_data = torchvision.datasets.CIFAR10(&quot;./CIFAR10_dataset&quot;, train=False,
+                                             transform=torchvision.transforms.ToTensor(), download=True)
+    # 加载train batch size
+    train_data_load = DataLoader(dataset=train_data, batch_size=64, num_workers=0, drop_last=True)
+    # 加载test batch size
+    test_data_load = DataLoader(dataset=test_data, batch_size=64, num_workers=0, drop_last=True)
+    # calculate the whole num of images in Train/Test set
+    train_data_len = len(train_data)
+    print(f&#039;length of trainData {train_data_len}&#039;)
+    test_data_len = len(test_data)
+    print(f&#039;length of testData {test_data_len}&#039;)
+    # 加载损失函数
+    loss_fn = nn.CrossEntropyLoss()  # 交叉熵
+    #  加载优化器
+    learning_rate = 1e-2
+    optimizer = torch.optim.SGD(Training.parameters(), lr=learning_rate)
+    # training config 训练前设置
+    # train epoch 设置
+    epoch = 300
+    # open the tensorboard
+    writer = SummaryWriter(&#039;First_unbroken_train&#039;)
+    # 开始训练
+    Training.train()  # a signal of training start
+    total_train_step = 1  # global training step
+    total_test_step = 1  # global test step
+    for n in range(epoch):
+        print(f&#039;------ {n} epoch training starting ------&#039;)
+        # start training and load training data
+        for data in train_data_load:  # 从batch size中拿出数据
+            imgs, tags = data  # 提取图片 和 答案tag
+            outputData = Training(imgs)  # 送入训练网络
+            loss = loss_fn(outputData, tags)  # 计算loss
+            optimizer.zero_grad()  # 加载优化器 清理梯度
+            loss.backward()  # 反向传播 计算梯度
+            optimizer.step()  # 梯度下降
+            # print(type(loss)) loss is Tensor
+            # print(type(loss.item())) loss.item() is float
+            if total_train_step % 100 == 0:  # every 100 steps print and show the loss
+                print(f&#039;Training in {n} epoch, ongoing {total_train_step} step\&#039;s Loss is {loss.item()}&#039;)  # 打印loss
+                writer.add_scalar(&#039;lossOfTrain&#039;, loss.item(), total_train_step)
+            total_train_step += 1  # already study 1 batch_size
+        # training over , start test
+        test_total_loss = 0  # loss of this test
+        total_test_accuracy = 0  # accuracy of this test
+        Training.eval()  # a signal of verify test
+        with torch.no_grad():  # test without grad to save the memory
+            print(&#039;------ Start verify accuracy of NN module this time ------&#039;)
+            for data in test_data_load:
+                imgs, tags = data
+                testOut = Training(imgs)
+                loss = loss_fn(testOut, tags)
+                test_total_loss += loss.item()
+                # Because of linear, one image was mapped into one line,
+                # so search ever line with argmax(1) we could get every image&#039;s prediction and use to compare
+                accuracy = (testOut.argmax(1) == tags).sum()
+                # it will return true of false, and sum() will calculate all of this by true=1 false=0
+                total_test_accuracy += accuracy
+        print(f&#039;After this training, the total loss of test_data is {test_total_loss}&#039;)
+        print(f&#039;After this training, Accuracy of test_data is {total_test_accuracy/test_data_len}&#039;)
+        # total right/all test data
+        writer.add_scalar(&#039;lossOfTest&#039;, test_total_loss, total_test_step)
+        writer.add_scalar(&#039;accuracyOftest&#039;, total_test_accuracy/test_data_len, total_test_step)
+        total_test_step += 1  # test over
+        # save the all-ready module, epoch was counted from 0
+        if n in (49, 59, 69, 79, 99, 119, 149, 169, 189, 199, 209, 219, 239, 249, 269, 279, 299):
+            torch.save(Training, f&#039;./mymodule/MyFirstTrainModule_NO{n+1}.pth&#039;)
+
+    # close the tensorboard
+    writer.close()
+</code></pre>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/155/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>原码 反码 补码</title>
+<link>https://www.oplin.cn/index.php/archives/147/</link>
+<guid>https://www.oplin.cn/index.php/archives/147/</guid>
+<pubDate>Sun, 09 Oct 2022 01:24:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[如果页面打开时，数学公式显示为一些奇怪的数字和字符，请刷新页面，直到看到数学公式！为什么要用补码？我们有 原码、反码、补码这么多种码，那为什么signed型的许多类型数据，比如int、char，...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h1>如果页面打开时，数学公式显示为一些奇怪的数字和字符，请刷新页面，直到看到数学公式！</h1><h2>为什么要用补码？</h2><p>我们有 <strong>原码、反码、补码</strong>这么多种码，那为什么signed型的许多类型数据，比如int、char，还有大量的二进制数据，是以补码的形式存放在寄存器里，而不是以简单明了的原码形势呢？</p><h3>我们现在来用二进制做一个减法 64 + (-16) = ？</h3><h3>原码的减</h3><p>[scode type="yellow"]这里我们使用一个字节(8位)的标准__int8(char)类型，来表示带符号的二进制数[/scode]</p><p>显然，十进制数64的二进制为：</p><pre><code class="lang-latex">01000000</code></pre><p>而十进制-16的二进制为：</p><pre><code class="lang-latex">10010000 符号类型的首位数字为“符号位”，0代表正数，1代表负数。</code></pre><p>做个减法 <strong>原码符号位不参与计算，数值位进行加减。</strong></p><p>$$
+\begin{align}
+01000000 \\
++\quad10010000 \\
+——————— \\
+11010000
+\end{align}
+$$</p><p>なに！？二进制的1101000是十进制的 <strong>-80</strong>，显然这是错误的，原码不可以用于减法运算。于是有人发明了 <strong>反码</strong></p><hr><h3>反码的减</h3><blockquote><p>人为规定反码最高位为符号位，正数为0，负数为1，</p><p>反码正数与原码正数格式一致，</p><p>反码负数为负数绝对值的原码按位分别取反</p></blockquote><p><img src="https://image.oplin.cn/photo/oplin.cn/data_complement/two_complement1.jpg" alt="反码" title="反码"></p><p>所以，64的反码为</p><pre><code class="lang-latex">01000000</code></pre><p>-16的反码为</p><pre><code class="lang-latex">11101111</code></pre><p>我们再来做一下减法，请注意，在反码中 <strong>如果最高位(符号位)发生了溢位，则需要在最低位加上1</strong></p><p>$$
+\begin{align}
+01000000 \\
++\quad11101111 \\
+——————— \\
+(第九位溢位舍去，最低位加一)100101111 \\
++1 \\
+——————— \\
+00110000
+\end{align}
+$$</p><p>00110000代表十进制48，显然64+(-16)=48，减法运算正确。</p><p>不过这看起来很完美的方法却有一点小纰漏：</p><table><thead><tr><th align="center">二进制反码</th><th>十进制</th></tr></thead><tbody><tr><td align="center">00000000</td><td>+0</td></tr><tr><td align="center">10000000</td><td>-0</td></tr></tbody></table><p>你有听说过+0和-0的存在吗？反正我没有，虽然我可以容忍，但是反码减法的算法规则比较复杂，需要增加计算机内部逻辑组件额外判断溢位，会影响计算效率，在那个年代这是不能容忍的。于是就有了 <strong>补码</strong></p><hr><h3>补码的减</h3><blockquote><p>正数的补码与原码格式相同，</p><p>负数的补码,是将原码变为反码，再加上1</p></blockquote><p><img src="https://image.oplin.cn/photo/oplin.cn/data_complement/two_complement2.jpg" alt="补码" title="补码"></p><p>于是，64的补码还是：</p><pre><code class="lang-latex">01000000</code></pre><p>-16的补码是：</p><pre><code class="lang-latex">11110000</code></pre><p>再来做一下减法，并且 <strong>补码的加法更简单，直接丢弃溢位，不需要针对溢位单独处理</strong></p><p>或者说 <strong>符号位要作为数的一部分一起参加运算，符号位产生的进位要丢掉</strong></p><p>$$
+\begin{align}
+01000000 \\
++\quad11110000 \\
+——————— \\
+(第九位的1溢位直接舍去)100110000 \\
+——————— \\
+00110000
+\end{align}
+$$</p><p>やりますね</p><p>显然00110000变为48，那么问题来了</p><p>$$
+10000000\quad \&amp; \quad00000000 \\
+现在各自表达什么意思？
+$$</p><table><thead><tr><th align="center">二进制补码</th><th align="center">十进制</th></tr></thead><tbody><tr><td align="center">10000000</td><td align="center">-128</td></tr><tr><td align="center">00000000</td><td align="center">0</td></tr></tbody></table><p>ん？为什么10000000变成-128了呢？</p><p>这其实是完成了一个数字上的闭环：<strong>四位补码1000</strong>为十进制的<strong>-8</strong>，八位补码<strong>10000000</strong>为十进制 <strong>-128</strong>,</p><p>其实就是把最高位符号位的数字，在用作<strong>表示正负</strong>的同时表示<strong>数值位</strong>。</p><p>然后最高位为1的负数的表示，就由这个最大负数加上后面的数值位，举个栗子：二进制补码的<em>10000001</em></p><p>$$
+\begin{align}
+10000001 \\
+=\\
+\quad10000000 \\
++\quad00000001\\
+——————— \\
+(这里用十进制方便理解)-128 \\
++\quad1\\
+——————— \\
+-127\\
+\end{align}
+$$</p><p>所以以此类推：</p><table><thead><tr><th align="center">二进制补码</th><th>十进制</th></tr></thead><tbody><tr><td align="center">01111111</td><td>127</td></tr><tr><td align="center">10000000</td><td>-128</td></tr><tr><td align="center">10000001</td><td>-127</td></tr><tr><td align="center">········</td><td>···</td></tr><tr><td align="center">11000000</td><td>-64</td></tr><tr><td align="center">········</td><td>··</td></tr><tr><td align="center">11111111</td><td>-1</td></tr><tr><td align="center">00000000</td><td>0</td></tr><tr><td align="center">00000001</td><td> </td></tr></tbody></table><p>这样就实现了一个闭环，只要不断加下去，数值就会不断变大，除了在01111111时再加一，最大正值会变成最小负值以外，只要不断+++，就可以从起点环绕一圈再回到起点.</p><p><img src="https://image.oplin.cn/photo/oplin.cn/data_complement/one_complement.png" alt="一个数据“地球”" title="一个数据“地球”"></p><p>现在我们再来看看不同数据类型可以表现的数据范围：</p><p>[scode type="green"]</p><p>signed\unsigned意味着有符号\无符号</p><p>一个字节为8bit，也就是占八位</p><p>[/scode]</p><table><thead><tr><th align="left">类型名称</th><th align="left">字节</th><th align="left">其他名称</th><th align="left">值的范围</th></tr></thead><tbody><tr><td align="left"><strong><code>int</code></strong></td><td align="left">4</td><td align="left"><strong><code>signed</code></strong></td><td align="left">-2,147,483,648 到 2,147,483,647</td></tr><tr><td align="left"><strong><code>unsigned int</code></strong></td><td align="left">4</td><td align="left"><strong><code>unsigned</code></strong></td><td align="left">0 到 4,294,967,295</td></tr><tr><td align="left"><strong><code>__int8</code></strong></td><td align="left">1</td><td align="left"><strong><code>char</code></strong></td><td align="left">-128 到 127</td></tr><tr><td align="left"><strong><code>unsigned __int8</code></strong></td><td align="left">1</td><td align="left"><strong><code>unsigned char</code></strong></td><td align="left">0 到 255</td></tr><tr><td align="left"><strong><code>__int16</code></strong></td><td align="left">2</td><td align="left"><strong><code>short</code></strong>, <strong><code>short int</code></strong>, <strong><code>signed short int</code></strong></td><td align="left">-32,768 到 32,767</td></tr><tr><td align="left"><strong><code>unsigned __int16</code></strong></td><td align="left">2</td><td align="left"><strong><code>unsigned short</code></strong>, <strong><code>unsigned short int</code></strong></td><td align="left">0 到 65,535</td></tr></tbody></table><p>现在可以看懂这个表了吗？</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/147/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>进制转换</title>
+<link>https://www.oplin.cn/index.php/archives/136/</link>
+<guid>https://www.oplin.cn/index.php/archives/136/</guid>
+<pubDate>Tue, 27 Sep 2022 13:49:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[部分转载于 http://c.biancheng.net/view/1725.html2、8、10、16进制：2进制： 0 18进制：0 1 2 3 4 5 6 710进制：0 1 2 3 4 ...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<blockquote>部分转载于 <a href="http://c.biancheng.net/view/1725.html">http://c.biancheng.net/view/1725.html</a></blockquote><hr><h3>2、8、10、16进制：</h3><p><strong>2进制</strong>： 0 1</p><p><strong>8进制</strong>：0 1 2 3 4 5 6 7</p><p><strong>10进制</strong>：0 1 2 3 4 5 6 7 8 9</p><p><strong>16进制</strong>： 0 1 2 3 4 5 6 7 8 9 A B C D E F</p><h1>进制的转换</h1><h2>1. 2\8\16 转 10进制：</h2><p>假设当前数字是 N 进制，那么：</p><ul><li>对于整数部分，从右往左看，第 i 位的位权等于$$N^{i-1}$$</li><li>对于小数部分，恰好相反，要从左往右看，第 j 位的位权为$$N^{-j}$$。</li></ul><p><strong>8进10</strong></p><p>$$
+\begin{align}
+&amp;423.5176 = \\
+&amp;4×8^2 + 2×8^1 + 3×8^0 \quad after \quad point+ 5×8^{-1} + 1×8^{-2} + 7×8^{-3} + 6×8^{-4} = 275.65576171875（十进制）
+\end{align}
+$$</p><p><strong>16进10</strong></p><p>$$
+\begin{align}
+&amp;9FA8C = \\
+&amp;9×16^4 + 15×1^63 + 10×16^2 + 8×16^1 + 12×16^0 = 653964（十进制）
+\end{align}
+$$</p><p><strong>2进10</strong></p><p>$$
+\begin{align}
+&amp;1010.1101 = \\
+&amp;1×2^3 + 0×2^2 + 1×2^1 + 0×2^0 \quad after\quad point \quad+ 1×2^{-1} + 1×2^{-2} + 0×2^{-3} + 1×2^{-4} = 10.8125（十进制）
+\end{align}
+$$</p><h2>2. 10进制 转 2\8\16进制：</h2><h3>十进制整数转换为 N 进制整数采用“<u>除 N 取余，逆序排列</u>”法</h3><h3>1. 10进8，所以除8求余,逆序排列,十进制36926得八进制<u>110076</u></h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/10jin8.png" alt="10进8" title="10进8"></p><h3>2. 10进2，所以除2求余,得十进制42得二进制<u>101010</u></h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/10jin2.png" alt="10进2" title="10进2"></p><h3>3. 10进8的小数，给小数成8出整数，而这个<strong>整数就是进制后的小数</strong>，算出来的数<strong>正向</strong>排列，</h3><p>所以十进制0.930908203125得八进制<u>0.7345</u></p><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/10decimal8.png" alt="10-8小数" title="10-8小数"></p><h3>4. 10进的小数，同理，若小数点前后都有数字，那就把两种方法叠加。得十进制0.6875得二进制<u>0.1011</u></h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/10decimals2.png" alt="10decimal2" title="10decimal2"></p><p>所以<strong>十进制 <u>42.6875</u></strong> 转 <strong>二进制为 <u>101010.1011</u></strong></p><p><strong>十进制 <u>36926.930908203125</u></strong> 转 <strong>八进制 为<u>110076.7345</u></strong></p><h3>5. 特别的是，有时候一些小数是没有办法全部变为整数的，这个时候，我们一般会保留到某位小数，只要精度够，省略非常小的数也是可以的。</h3><ul><li>十进制 0.51 对应的二进制为 0.100000101000111101011100001010001111010111...，是一个循环小数；</li><li>十进制 0.72 对应的二进制为 0.1011100001010001111010111000010100011110...，是一个循环小数；</li></ul><h2>3.  8/16进制 和 2进制之间的转换</h2><h3>对于2/8/16之间的转换，主要是划分区段，然后一一对应的补出数字即可</h3><table><thead><tr><th align="center">二进制</th><th align="center">八进制</th><th align="center">十六进制</th></tr></thead><tbody><tr><td align="center">000(8) / 0000(16)</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="center">001(8) / 0001(16)</td><td align="center">1</td><td align="center">1</td></tr><tr><td align="center">010(8) / 0010(16)</td><td align="center">2</td><td align="center">2</td></tr><tr><td align="center">011(8) / 0011(16)</td><td align="center">3</td><td align="center">3</td></tr><tr><td align="center">100(8) / 0100(16)</td><td align="center">4</td><td align="center">4</td></tr><tr><td align="center">101(8) / 0101(16)</td><td align="center">5</td><td align="center">5</td></tr><tr><td align="center">110(8) / 0110(16)</td><td align="center">6</td><td align="center">6</td></tr><tr><td align="center">111(8) / 0111(16)</td><td align="center">7</td><td align="center">7</td></tr><tr><td align="center">1000</td><td align="center">10(逢8进1)</td><td align="center">8</td></tr><tr><td align="center">1001</td><td align="center">11</td><td align="center">9</td></tr><tr><td align="center">1010</td><td align="center">12</td><td align="center">A</td></tr><tr><td align="center">1011</td><td align="center">13</td><td align="center">B</td></tr><tr><td align="center">1100</td><td align="center">14</td><td align="center">C</td></tr><tr><td align="center">1101</td><td align="center">15</td><td align="center">D</td></tr><tr><td align="center">1110</td><td align="center">16</td><td align="center">E</td></tr><tr><td align="center">1111</td><td align="center">17</td><td align="center">F</td></tr></tbody></table><p>不难发现，对于一个四位二进制1111</p><p>各位的1代表16的1，</p><p>十位的1代表16的2，</p><p>百位的1代表16的4，</p><p>千位的1代表16的8， 于是只要做加法就可以了！</p><h4>对照上表，我们便可以开始转化了</h4><h3>8进2</h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/8jin2.png" alt="8进2" title="8进2"></p><p>2473 -&gt; 010111100011</p><h3>2进8</h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/2jin8.png" alt="2进8" title="2进8"></p><p>001110111100 -&gt; 1674</p><h3>16进2</h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/16jin2.png" alt="16进2" title="16进2"></p><p>A5D6 -&gt; 1010010111010110</p><h3>2进16</h3><p><img src="https://image.oplin.cn/photo/oplin.cn/conversion_system/2jin16.png" alt="2进16" title="2进16"></p><p>0010110101011100 -&gt; 2D5C</p><blockquote>总结一下，2/8/16到10的相互转换<br>2 / 8 / 6 之间的相互转化<br>你学废了吗</blockquote>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/136/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>Git 初学笔记</title>
+<link>https://www.oplin.cn/index.php/archives/133/</link>
+<guid>https://www.oplin.cn/index.php/archives/133/</guid>
+<pubDate>Tue, 06 Sep 2022 16:29:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[git reset 回滚use git reflog to look version numbergit reset --soft 版本号# cancel this time commit , ...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h2>git reset 回滚</h2><pre><code class="lang-bash">use git reflog to look version number
+git reset --soft 版本号
+# cancel this time commit , but this time edit in workspace and add in staging area(cache) still exit.
+git reset --mixed 版本号
+# cancel this time commit and the one add in staging area(cache) , only keep the one you edited in workspace 
+git reset --hard 版本号
+# directly go to last commit one</code></pre><h2>git branch</h2><pre><code class="lang-bash">git branch -v
+# list all branchs
+git branch branch_name
+# create a branch called name
+git branch -D branch_name
+# delete one branch
+git checkout branch_name
+# switch to the branch
+git merge branch_name
+# merge branch_name and your curennt anch(usually master)
+git merge --abort
+# give up this merge</code></pre><p><strong>Specially</strong> if you edited it in the branch and switch to master without commit in the branch, the content what you edited in branch will also apply in your master branch. <strong>So you must commit your edition in your branch before you switch to the master </strong>!!</p><h2>git diff</h2><pre><code class="lang-bash">git diff HEAD
+# 查看工作区与 HEAD 指向（default the last commit at present）的对比
+git diff filename
+# 查看工作区和暂存区单个文件的对比
+git diff
+# 查看工作区和暂存区所有文件的对比</code></pre><h2>git basic</h2><pre><code class="lang-bash">git add # . or filename
+# submit all file or one file to staging area(cache)
+git commit -m &quot;remark&quot;
+# commit the file in staging area(cache) with remark , remark also could be saeen by 下面的命令
+git reflog
+# list all change in file with git
+git restore filename
+# if you have already edited the file in workspace, but decide to ga back to the no-edited one use it ， Go back to before the modification.将不在暂存区的文件撤销更改,因为是用暂存区的文件覆盖工作区，所以不能睡add完了再restore，那样没有作用
+git restore --staged filename
+# 将缓存区的此文件更换为上一次commit的此文件 ， 配合git restore使用，实现恢复误删文件
+(不可以在分支中check master的区，需要更新分支中的文件可以merge主区)
+git checkout # . or filename
+# 恢复暂存区的指定文件到工作区
+git checkout HEAD
+git checkout HEAD -- filename
+# 回滚到最近的一次提交
+git checkout HEAD^
+# 回滚到最近一次提交的上一个版本 (^就是再退一次)
+git rm filename
+# 删除工作区，缓存区的文件，同时rm本地此文件
+如果误删
+1.可以先使用git restore --staged &lt;filename&gt; 用master上次commit的filename的状态来恢复 staged（暂存区）中的filename文件；
+然后再使用git restore &lt;filename&gt;通过staged中filename上次的状态来恢复工作区中的filename；
+2.git reset 回滚
+3.git pull玄学错误</code></pre><h2>git remote</h2><pre><code class="lang-bash">git clone https/ssh
+# to clone all files in github projects
+git pull https:/ssh branch_name
+# pull files to complement local file
+git push https:/ssh branch_name
+# push local commit files to remote database
+git remote -v 
+# 查看当前所有远程地址别名
+git remote add 别名 远程地址 
+# 起别名</code></pre><h2>git brance name standard</h2><ul><li>开发人员每天都需要拉取/提交最新的代码到 <strong>「develop 分支」</strong>；</li><li>开发人员开发完毕，开始 <strong>「集成测试」</strong>，测试无误后提交到 <strong>「test 分支」</strong>并发布到测试环境，交由测试人员测试；</li><li>测试环境通过后，发布到 <strong>「release 分支」</strong> 上，进行预发环境测试；</li><li>预发环境通过后，发布到 <strong>「master 分支」</strong>上并打上标签（tag）；</li><li>如果线上分支出了 bug ，这时候相关开发者应该基于预发布分支（<strong>「没有预发环境，就使用 master 分支」</strong>），新建一个 <strong>「bug 分支」</strong>用来临时解决 bug ，处理完后申请合并到 预发布 分支。这样做的好处就是：不会影响正在开发中的功能。</li></ul>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/133/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>对于正则表达式中 ‘断言’的理解</title>
+<link>https://www.oplin.cn/index.php/archives/130/</link>
+<guid>https://www.oplin.cn/index.php/archives/130/</guid>
+<pubDate>Mon, 08 Aug 2022 00:12:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[断言基本概念：断言分为两种零宽先行断言正向先行断言     用exp2(?=exp1) 来校验出右边是 exp1 的 exp2负向先行断言     用exp2(?!exp1) 来校验出右边不是 ...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h1>断言</h1><h2>基本概念：</h2><p>断言分为两种</p><ol><li><p>零宽先行断言</p><ol><li>正向先行断言     用<strong>exp2(?=exp1)</strong> 来校验出右边<em>是</em> <strong>exp1</strong> 的 <strong>exp2</strong></li><li>负向先行断言     用<strong>exp2(?!exp1)</strong> 来校验出右边<em>不是</em> <strong>exp1</strong> 的 <strong>exp2</strong></li></ol></li><li><p>零宽负向断言</p><ol><li>正向后行断言     用 <strong>(?&lt;=exp1)exp2</strong> 来校验出左边<em>是</em> <strong>exp1</strong> 的 <strong>exp2</strong></li><li>负向后行断言    用 <strong>(?&lt;!exp1)exp2</strong> 来校验出左边<em>不是</em> <strong>exp1</strong> 的 <strong>exp2</strong></li></ol></li></ol><h2>详解：</h2><h3>何为 <strong>零宽</strong> ?</h3><p>在先行断言和后行断言中，它们只匹配某些位置，在匹配过程中，不占用字符，所以被称为<strong>"零宽"</strong>。所谓位置，是指字符串中(每行)第一个字符的左边、最后一个字符的右边以及相邻字符的中间（假设文字方向是头左尾右）。</p><p><strong>图中，红色标出指针所有隐性位置，蓝色表示这里并不存在隐性位置</strong></p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/invisible_path.png" alt="所有隐性位置" title="所有隐性位置"></p><p>可以发现只有一行字符串的最尾不存在隐性位置。</p><h3>断言的匹配过程：</h3><p>先根据断言将指针移动到符合条件的隐性位置，然后开始匹配字符串。</p><p><strong>红色笔迹，为指针指向的隐性位置</strong></p><p>首先根据断言判断指针的位置。若为<strong>(?=exp)</strong>  ，则<strong>正向断言</strong>会使指针指向右边为<strong>exp</strong>的隐性位置。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/assertion_pointer.png" alt="正向断言指针指向" title="正向断言指针指向"></p><p>之后才会根据指针所在位置进行对应的匹配。</p><p>若为<code>.(?=exp)</code> 则会匹配指针位置的左侧的第一个字符。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/p_left.png" alt="正向断言指针匹配" title="正向断言指针匹配"></p><p>只有i被匹配到了。</p><p>若为<code>(?=exp).</code> 则会匹配指针位置的右侧的第一个字符。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/p_right.png" alt="正向断言指针匹配" title="正向断言指针匹配"></p><p>同理，则<strong>反向断言</strong><code>(?&lt;=exp)</code> 会使指针指向左边为<strong>exp</strong>的隐性位置。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/bw_assertion_pointer.png" alt="反向断言指针指向" title="反向断言指针指向"></p><p>若为<code>.(?&lt;=exp)</code> 则会匹配指针位置的左侧的第一个字符。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/bwp_left.png" alt="正向断言指针匹配" title="正向断言指针匹配"></p><p>若为<code>(?&lt;=exp).</code> 则会匹配指针位置的右侧的第一个字符。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/re_assertion/bwp_right.png" alt="正向断言指针匹配" title="正向断言指针匹配"></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/130/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>[笔记存档]在MacOS上使用Typora利用markdown语法记笔记</title>
+<link>https://www.oplin.cn/index.php/archives/126/</link>
+<guid>https://www.oplin.cn/index.php/archives/126/</guid>
+<pubDate>Sun, 31 Jul 2022 01:03:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[在这篇文章中，由于兼容性问题，所有高亮的sth均被更换成了粗体，并且仍有部分语法不兼容的问题Use command + figure to select different  sizes tit...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>在这篇文章中，由于兼容性问题，所有高亮的<strong>sth</strong>均被更换成了粗体，并且仍有部分语法不兼容的问题</p><h2>Use command + figure to select different  sizes titles</h2><h3>But specially, you can't do it when you are in the source code mode!</h3><h1>no1</h1><h2>no2</h2><h3>no3</h3><h4>no4</h4><h6>no5</h6><p>Normal</p><p>command+b <strong>Bold</strong></p><p>command+i <em>Incline</em></p><p>command + u <u>Underline</u></p><p>command + shift +h <strong>Highlight</strong> </p><p>control + shift + `  strikethrough <del>This it!</del></p><h2>To sum up, we can utilize different shortcut keys to achieve diverse effects! Such as <em><u><strong>final</strong></u></em></h2><hr><p>use ^str^  to achieve superscript like cm^3^</p><p>use \~str\~ to achieve subscript like H~2~O, Attention! Only in the <strong>English input mode</strong> we could input ~ out,in Chinese input mode we only could code ～，obviously ~ ～ no same!</p><hr><h2>Utilize <strong>figure + space + strings</strong> to achieve ordered list</h2><p>Or <strong>command + option + o</strong></p><ol><li>one</li><li>second</li><li><p>third</p><ol><li>Use ( <strong>command + ]</strong> ) or tab to outdent, otherwise use <strong>command + [</strong>  to indent</li></ol></li></ol><h2>Attention</h2><p>If we are typing in the list, and we want to quit the list, we'd better do it by use indent ( command + [ ) to quit list step by step. Actually, It's the most cosy way and makes you typing smoothly! </p><p>Moreover, use <strong>command + option +u</strong> or <strong>-/+/* + space + strings</strong> to achieve unordered list</p><ul><li>1</li><li><p>2</p><ul><li>3</li></ul></li></ul><p>The way to quit list is the same as ordered list.</p><h3>Use <strong>command + option + x</strong> to achieve task list</h3><ul><li>[x] Wake up</li><li>[ ] Eat breakfast</li><li>[x] Take a shower</li></ul><p>Use the same way to quit such list</p><hr><h2>Coding</h2><p>Use <strong>Control + \`</strong> to achieve inline coding like <code>print(&quot;Hello World!&quot;)</code></p><p>Also use <strong>Command + option +C</strong> or \`\`\` code \`\`\`to make code block</p><pre><code class="lang-python">import re
+one = input()
+print(one)</code></pre><h2>Use <strong>command + option + -</strong> to get cutting line</h2><hr><h2>use <strong>Control + m</strong> to type inline LateX</h2><p>$\sin2x = 2sinxcosx$</p><h2>use <strong>command + option + B</strong> to type LateX block</h2><p>$$
+E_k = \frac 1 2 m v^2 
+$$</p><hr><p>—列</p><p>|行</p><h2>use <strong>command + option + T</strong> to make table</h2><p>there are 5 lists and 3 lines</p><table><thead><tr><th>Yesterday</th><th>none</th><th>None</th><th>None</th><th>None</th></tr></thead><tbody><tr><td>Today</td><td>Yes</td><td>Yep</td><td>Right</td><td>Ok</td></tr><tr><td>Tomorrow</td><td>Dream</td><td>Achievement</td><td>Ambitious</td><td>Daydream</td></tr></tbody></table><hr><h2>Use <strong>command + option + q</strong> or <strong>&gt; + space + str</strong> to quote</h2><blockquote><p>我家门前有两棵树，一棵是枣树，另一颗也是枣树 </p><p>​                                                                            -鲁迅<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup></p></blockquote><p>Type 2 enter to quit the quote</p><h2>type <strong>[^mark]</strong> to use footnote</h2><h3>Then type <strong>[^mark]: or command + option + r</strong> to finish the footnote</h3><p>Look up</p><hr><h2>use <strong>command + k</strong> or <strong>[]()</strong> to achieve hyperlink</h2><p><a href="https://www.oplin.cn">OPlin's blog</a></p><p>also you can goto the title or mark which you point by <strong>[sth](full name of title including character)</strong></p><p><a href="#no1">go ahead</a>  </p><p>Ps: in Typora you should hold down the key command and check the link then it will goto.</p><h2>type <strong>command + control + i</strong> or <strong>![]()</strong> to illustrate</h2><p><img src="https://image.oplin.cn/photo/oplin.cn/archives/studymd/studymd.jpeg" alt="my own img" title="my own img"></p><div class="footnotes"><hr><ol><li id="fn-1"> Famous writer of China <a href="#fnref-1" class="footnote-backref">&#8617;</a></li></ol></div>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/126/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>在家极速制作蛋挞</title>
+<link>https://www.oplin.cn/index.php/archives/111/</link>
+<guid>https://www.oplin.cn/index.php/archives/111/</guid>
+<pubDate>Tue, 21 Jun 2022 17:54:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[起因是因为在B站看了这个视频 于是就买了展艺的蛋挞皮，还有俏浓的蛋挞液。各种券叠一下，平均一个蛋挞八毛钱，要什么飞机？速速上车By the way我建议蛋挞液买JD自营1.2升罐装的，这样子以后...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>起因是因为在B站看了这个<a href="https://www.bilibili.com/video/BV11r4y1s7mz?share_source=copy_web">视频</a><br></p><iframe src="//player.bilibili.com/player.html?aid=769450681&bvid=BV11r4y1s7mz&cid=729662105&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p>于是就买了展艺的蛋挞皮，还有俏浓的蛋挞液。<br></p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/8.jpg" alt="JD" title="JD"></p><p>各种券叠一下，平均一个蛋挞八毛钱，要什么飞机？速速上车<br><strong>By the way</strong>我建议蛋挞液买<strong>JD自营1.2升罐装</strong>的，这样子以后做方便，不要学博主买了500ml两袋的，还得拿瓶农夫山泉装，麻烦的很。<br></p><p>买JD的冷藏做得很好，发的也快，还比淘宝便宜（有活动和JD PLUS的话），强烈推荐。<br></p><hr><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/7.jpg" alt="教程" title="教程"></p><p>首先给蛋挞液解冻，大概要20~30分钟，<strong>蛋挞皮不用解冻</strong>，直接拿出来玩上面浇蛋液，浇到七八分就OK了，图中最右边是恰好的。<br></p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/2.jpg" alt="浇" title="浇"></p><p>左边感觉一个多了一个少了<br></p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/3.jpg" alt="烤箱" title="烤箱"></p><p>然后开始预热，每个烤箱受热温度不太一样，我是把烤盘放在烤箱正中间烤的。因为很久没用了所以上管220，下管210烤了32分钟，才有焦色出来，我建议220度25分钟先烤，如果不出焦色再加时间<br></p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/4.jpg" alt="出炉" title="出炉"></p><p>然后闪亮出炉，感觉最右边比较好，下次试试往上面铺点东西。</p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/5.jpg" alt="成品" title="成品"></p><p><img src="https://image.oplin.cn/photo/oplin.cn/kaodanta/6.jpg" alt="成品" title="成品"></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/111/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+<item>
+<title>Come Back</title>
+<link>https://www.oplin.cn/index.php/archives/105/</link>
+<guid>https://www.oplin.cn/index.php/archives/105/</guid>
+<pubDate>Sat, 11 Jun 2022 23:50:00 +0800</pubDate>
+<dc:creator>oplin</dc:creator>
+<description><![CDATA[在沉寂了多月之后,吾闪靓归来了这两年经历了太多太多de东西,只能说这可能是每个人成长都需要经历的一个阶段,尽管这个阶段也有难易好坏之分.Anyway这些都已经成为过去了,当人在面对面前一些令人茫...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h2>在沉寂了多月之后,<del>吾闪靓归来了</del></h2><p>这两年经历了太多太多de东西,只能说这可能是每个人成长都需要经历的一个阶段,尽管这个阶段也有难易好坏之分.<br></p><p><strong>Anyway</strong>这些都已经成为过去了,当人在面对面前一些令人茫然无措的事物的时候,我认为最好的心态和做法,应该是把目光放向远方.我不否认这样的做法也许只是逃避的一种手段,但同样不可否认的是它也有好的一面:让人稍微轻松一点的活在当下.<br></p><p><strong>目前</strong>,本站已经迁移到了一个新的服务器上,更新了最新的php/Typecho和handsome模板.回想起本站刚刚建立起来,设置好模板的那个时候,<strong>现在</strong>,似乎是一个全新的开始.我想,在未来本站会充当一个记事本\笔记本\分享站?有一个很好的朋友和我说过,<strong>每个人都有自己活跃的地方</strong>,与我而言,小时候是QQ,贴吧.大一点是各种论坛和B站,而现在我想引入一个长期以来存在的,自己的站点,充当朋友圈的作用<del>当然不是因为我社恐lol</del>,或许我和<del>傻比</del>网友能聊得来~<br></p><p>就先写到这里,想到什么再补充  ::aru:cryingface::</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://www.oplin.cn/index.php/archives/105/#comments</comments>
+<wfw:commentRss>https://www.oplin.cn/index.php/feed/</wfw:commentRss>
+</item>
+</channel>
+</rss>

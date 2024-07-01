@@ -1,0 +1,1 @@
+../data/wordReco_wordFreq/zh

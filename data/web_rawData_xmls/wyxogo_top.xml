@@ -1,0 +1,177 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>WYXOGO</title>
+        <link>https://wyxogo.top/</link>
+        <description>KEEP WALKING</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>wyxogo@gmail.com (Yasin)</managingEditor>
+            <webMaster>wyxogo@gmail.com (Yasin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Oct 2023 21:01:33 &#43;0800</lastBuildDate>
+            <atom:link href="https://wyxogo.top/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Diffusion Models</title>
+    <link>https://wyxogo.top/diffusion-models/</link>
+    <pubDate>Tue, 24 Oct 2023 21:01:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/diffusion-models/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/202310252323547.png" referrerpolicy="no-referrer">
+            </div><p>So far, there are many models to generate images, such as GAN, VAE, etc. But each has its own drawbacks. For example, GAN is difficult to train and less deversity in genration, and VAE is difficult to generate high-quality images.</p>]]></description>
+</item><item>
+    <title>Animatomy: an Animator-centric, Anatomically Inspired System for 3D Facial Modeling, Animation and Transfer</title>
+    <link>https://wyxogo.top/animatomy/</link>
+    <pubDate>Tue, 10 Jan 2023 15:45:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/animatomy/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/20230110172120.png" referrerpolicy="no-referrer">
+            </div>Animatomy: an Animator-centric, Anatomically Inspired System for 3D Facial Modeling, Animation and Transfer 年份： 2022 年 11 月 GB/T 7714: Choi B, Eom H, Mouscadet B, et al. Animatomy: an Animator-centric, Anatomically Inspired System for 3D Facial Modeling, Animation and Transfer[C]//SIGGRAPH Asia 2022 Conference Papers. 2022: 1-9. 1 介绍提出了一种基于面部肌肉曲线的解刨学面部捕捉系统，该技术应用于《阿凡达：水之道》
+Fig. 1 Animatomy 相关工作
+相比于 Blendshapes 和 Facial Rigging，该方法
+使用 178 个参数拟合面部动作 使用肌肉模拟来拟合一个新的的动态面部扫描语料库，可以直接使用笔刷修改 肌肉曲线是 skeletal rigging 的一种变形 基于 Data-driven 和 Morphable Models 的方法]]></description>
+</item><item>
+    <title>机器学习算法总结</title>
+    <link>https://wyxogo.top/mlmethods/</link>
+    <pubDate>Thu, 02 Jun 2022 09:45:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/mlmethods/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/cyborg-76.webp" referrerpolicy="no-referrer">
+            </div>1 线性回归与逻辑回归线性回归和逻辑回归是 2 种经典的算法：一文看懂线性回归（3个优缺点+8种方法评测） - easyAI 人工智能知识库
+二者的一些区别：
+线性回归只能用于回归问题，逻辑回归虽然名字叫回归，但是更多用于分类问题 线性回归要求因变量是连续性数值变量，而逻辑回归要求因变量是离散的变量 线性回归要求自变量和因变量呈线性关系，而逻辑回归不要求自变量和因变量呈线性关系 线性回归可以直观的表达自变量和因变量之间的关系，逻辑回归则无法表达变量之间的关系 8 种线性回归方法速度测评：Data science with Python: 8 ways to do linear regression and measure their speed (freecodecamp.org)
+8 种线性回归方法速度评测结果 2 Adaboost算法Adaboost是一种集合技术，其核心思想是针对同一个训练集训练不同的分类器(弱分类器)，然后把这些弱分类器集合起来，构成一个更强的最终分类器（强分类器）。这是通过从训练数据构建模型，然后创建第二个模型来尝试从第一个模型中纠正错误来完成的。添加模型直到完美预测训练集或添加最大数量的模型。
+AdaBoost是第一个为二进制分类开发的真正成功的增强算法。这是理解助力的最佳起点。现代助推方法建立在AdaBoost上，最着名的是随机梯度增强机。
+Adaboost算法图示 AdaBoost算法优点：
+很好的利用了弱分类器进行级联；
+可以将不同的分类算法作为弱分类器；
+AdaBoost具有很高的精度；
+相对于bagging算法和Random Forest算法，AdaBoost充分考虑的每个分类器的权重；
+Adaboost算法缺点：
+AdaBoost迭代次数也就是弱分类器数目不太好设定，可以使用交叉验证来进行确定；
+数据不平衡导致分类精度下降；
+训练比较耗时，每次重新选择当前分类器最好切分点；
+3 朴素贝叶斯 Naive Bayes classifier(NBC)该模型由两种类型的概率组成，可以直接根据训练数据计算：
+每个班级的概率 给出每个x值的每个类的条件概率。 一旦计算，概率模型可用于使用贝叶斯定理对新数据进行预测。当数据是实值时，通常假设高斯分布（钟形曲线），以便轻松估计这些概率。
+朴素贝叶斯定理 朴素贝叶斯被称为朴素，因为它假设每个输入变量是独立的。这是一个强有力的假设，对于实际数据是不现实的，然而，该技术对于大范围的复杂问题非常有效。
+实验测试：四种经典机器学习算法测试——Bayes, SVM, 决策树, K-Means - Yuexin&rsquo;s Blog (wyxogo.top)
+3.1 关于贝叶斯公式贝叶斯模型 全概率公式
+$$P(B)= P(A_1)P(B|A_1)+P(A_2)P(B|A_2)+...+P(A_n)P(B|A_n)$$ 贝叶斯公式
+$$P(A_i|B)=\frac{P(A_i)P(B|A_i)}{\sum_{j=1}^{n}P(A_j)P(B|A_j)}=\frac{P(A_i)P(B|A_i)}{P(A_1)P(B|A_1)+P(A_2)P(B|A_2)+...+P(A_n)P(B|A_n)}=\frac{P(A_i)P(B|A_i)}{P(B)}$$ 4 决策树 Decision tree(DT)决策树是一种解决分类问题的算法，采用树形结构，使用层层推理来实现最终的分类]]></description>
+</item><item>
+    <title>关于MLP的一些观点和一些未来可能的方向 【Can Attention Enable MLPs To Catch Up With CNNs】</title>
+    <link>https://wyxogo.top/mlpcucnns/</link>
+    <pubDate>Fri, 04 Jun 2021 17:36:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/mlpcucnns/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/image-20210605175321587.png" referrerpolicy="no-referrer">
+            </div>标题 Can Attention Enable MLPs To Catch Up With CNNs 年份： 2021 年 5 月 GB/T 7714: Guo M H, Liu Z N, Mu T J, et al. Can Attention Enable MLPs To Catch Up With CNNs?[J]. arXiv preprint arXiv:2105.15078, 2021. 1 引入 这是真的吗? 2021年5月的第一周，来自四个不同机构的研究人员：谷歌、清华大学、牛津大学和Facebook分享了他们最新的研究成果，每个人都提出了新的学习架构，主要由线性层组成，声称它们可以比拟，甚至优于基于卷积的模型。这立即引发了学术界和工业界关于mlp是否足够的讨论和辩论，许多人认为学习架构正在回归mlp。 从这个角度来看，本文简要介绍了学习架构的历史，包括多层感知器(MLPs)、卷积神经网络(CNNs)和变压器。然后，本文将研究这四种新提出的体系结构有哪些共同之处。最后，本文提出了新的学习架构的挑战和方向，希望对未来的研究有所启发。
+2 1. 学习视觉任务的架构多层感知器由输入层和输出层组成，其间可能有多个隐藏层。层通常与线性变换和激活函数完全相连。
+在深度卷积神经网络(DCNNs)取代之前，MLPs是神经网络的基础，极大地提高了计算机处理分类和回归问题的能力。
+然而，mlp由于其参数数量大，计算成本高，容易过拟合。
+mlp在获取输入中的局部结构方面也很差，因为层之间的线性转换总是将前一层的输出作为一个整体。
+然而，本文注意到，mlp的能力在提出时并没有得到充分的开发，这一方面是由于计算机性能有限，另一方面是由于无法获得大量用于训练的数据。
+为了在保持计算效率的同时学习输入中的局部结构，提出了卷积神经网络(CNNs)。
+1998年，LeCun等人提出了LeNet，利用五层卷积神经网络大大提高了手写数字识别的准确性。
+后来，AlexNet导致cnn在研究社区的广泛接受:它比以前的cnn像LeNet，并在ImageNet大型视觉识别挑战在20121以显著的优势击败所有其他竞争对手。
+从那时起，开发了更多具有更深层次架构的模型，其中许多模型在许多领域提供了比人类更准确的结果，从而在科学研究、工程和商业应用中产生了深刻的范式变化。撇开计算能力和训练数据量方面的进步不提，cnn的关键成功在于它们引入的归纳偏差:它们假定信息具有空间局域性，因此可以利用具有共享权值的滑动卷积来减少网络参数的数量。
+然而，这种方法的副作用是，cnn的接受域是有限的，使得cnn学习长期依赖的能力更低。为了扩大接受域，需要使用更大的卷积核，或者必须使用其他特殊策略，如扩展卷积。
+注意 由几个小内核组成一个大内核并不是扩大cnn接收域的合适方法。 最近，人们提出了用于序列数据的Transformer神经网络结构，在自然语言处理方面取得了巨大成功，后又提出了视觉Transformer。注意机制是Transformer的核心，它能够很容易地以注意地图的形式学习输入数据中任意两个位置之间的长期依赖关系。然而，这种额外的自由度和减少的感应偏差意味着有效地训练基于transformer的架构需要大量的数据。为了获得最好的结果，这些模型应该首先在一个非常大的数据集上进行预训练，比如GPT-3和ViT。
+3 2. Linear Layer Based Architectures 3.1 2.1. Four Recent Architectures为了避免上述学习体系结构的缺点，并以更低的计算成本获得更好的结果，最近，四种体系结构几乎同时被提出[16,7,12,17]。它们的共同目标是充分利用线性层。本文在下面简要地总结了这些架构，见图1，这四种方法都采用了转换来模拟所有尺度上的交互。残差连接和标准化以类似的方式使用，以确保稳定的训练。]]></description>
+</item><item>
+    <title>Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks</title>
+    <link>https://wyxogo.top/eamlp/</link>
+    <pubDate>Thu, 03 Jun 2021 22:59:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/eamlp/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/image-20210604232641714.png" referrerpolicy="no-referrer">
+            </div>标题 Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks 年份： 2021 年 5 月 GB/T 7714: Guo M H, Liu Z N, Mu T J, et al. Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks[J]. arXiv preprint arXiv:2105.02358, 2021. 原作者：国孟昊 清华大学 工学博士在读
+&quot;本文是对最近我们更新到 arxiv 的 paper ：Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks （External attention） 的解读论文，也分享一下在做这篇论文时候的实验过程中一些问题和想法。&quot;
+原文：External attention 和 EAMLP 论文：https://arxiv.]]></description>
+</item><item>
+    <title>Swin Transformer论文解读与源码分析</title>
+    <link>https://wyxogo.top/swintransfomer/</link>
+    <pubDate>Sat, 29 May 2021 12:33:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/swintransfomer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/image-20210530154842698.png" referrerpolicy="no-referrer">
+            </div>标题 Swin Transformer: Hierarchical Vision Transformer using Shifted Windows 年份： 2021 年 3 月 GB/T 7714: [1] Liu Z , Lin Y , Cao Y , et al. Swin Transformer: Hierarchical Vision Transformer using Shifted Windows[J]. 2021. Swin Transformer ( Shifted window) , 它可以作为计算机视觉的通用骨干。它基本上是一个层次转换器，其表示是通过移位的窗口计算的。移位窗口方案通过将自注意计算限制在不重叠的局部窗口上，同时允许跨窗口连接，从而带来更高的效率
+论文：https://arxiv.org/pdf/2103.14030.pdf
+代码：https://github.com/microsoft/Swin-Transformer
+1 引入Transformer尽管在CV任务有着不俗的表现，但是这是牺牲了速度与算力，这也是现在传统CNN没有被transformer取代的原因——CNN实在是太成熟了，目前业界不会冒风险并再挖坑填坑接纳transformer，而要想transformer替代CNN，必须要在各大CV任务上遥遥领先与传统CNN并且速度不亚于传统CNN，这样才会让业界重新花费代价去部署接纳transformer，这也是目前CV任务的研究热点。
+Transformer从NLP迁移到CV上没有大放异彩主要有两点原因：
+两个领域涉及的scale不同，NLP的scale是标准固定的，而CV的scale变化范围非常大。
+CV比起NLP需要更大的分辨率，而且CV中使用Transformer的计算复杂度是图像尺度的平方，这会导致计算量过于庞大。
+为了解决这两个问题，Swin Transformer相比之前的ViT做了两个改进：
+引入CNN中常用的层次化构建方式构建层次化Transformer 引入locality思想，对无重合的window区域内进行self-attention计算 2 框架结构Figure 3. (a) The architecture of a Swin Transformer (Swin-T); (b) two successive Swin Transformer Blocks (notation presented with Eq.]]></description>
+</item><item>
+    <title>Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation</title>
+    <link>https://wyxogo.top/swinunet/</link>
+    <pubDate>Sat, 22 May 2021 18:33:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/swinunet/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/image-20210522204649991.png" referrerpolicy="no-referrer">
+            </div>标题 Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation 年份： 2021 年 5 月 GB/T 7714: Cao H, Wang Y, Chen J, et al. Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation[J]. arXiv preprint arXiv:2105.05537, 2021. 首个基于纯Transformer的U-Net形的医学图像分割网络，其中利用Swin Transformer构建encoder、bottleneck和decoder，表现SOTA！性能优于TransUnet、Att-UNet等，代码即将开源！ 作者单位：慕尼黑工业大学, 复旦大学, 华为(田奇等人)
+论文：https://arxiv.org/abs/2105.05537
+代码：https://github.com/HuCaoFighting/Swin-Unet
+1 引入在过去的几年中，卷积神经网络(CNN)在医学图像分析中取得了里程碑式的进展。尤其是，基于U形结构和skip-connections的深度神经网络已广泛应用于各种医学图像任务中。但是，尽管CNN取得了出色的性能，但是由于卷积操作的局限性，它无法很好地学习全局和远程语义信息交互。
+在本文中，作者提出了Swin-Unet，它是用于医学图像分割的类似Unet的纯Transformer模型。标记化的图像块通过跳跃连接被送到基于Transformer的U形Encoder-Decoder架构中，以进行局部和全局语义特征学习。
+具体来说，使用带有偏移窗口的分层Swin Transformer作为编码器来提取上下文特征。并设计了一个symmetric Swin Transformer-based decoder with patch expanding layer来执行上采样操作，以恢复特征图的空间分辨率。在对输入和输出进行4倍的下采样和上采样的情况下，对多器官和心脏分割任务进行的实验表明，基于纯Transformer的U-shaped Encoder-Decoder优于那些全卷积或者Transformer和卷积的组合。
+2 Swin-Unet架构Fig. 1. The architecture of Swin-Unet, which is composed of encoder, bottleneck, decoder and skip connections.]]></description>
+</item><item>
+    <title>RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition</title>
+    <link>https://wyxogo.top/repmlp/</link>
+    <pubDate>Fri, 21 May 2021 08:33:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/repmlp/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/20210522130911.png" referrerpolicy="no-referrer">
+            </div>标题 RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition 年份： 2021 年 5 月 GB/T 7714: Ding X, Zhang X, Han J, et al. RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition[J]. arXiv preprint arXiv:2105.01883, 2021. 本文是清华大学&amp;旷视科技在结构重参数领域继ACNet、RepVGG、DBB之后又一突破：RepMLP，它将重参数卷积与全连接层进行了巧妙地衔接，同时利用了全连接层的全局建模、位置感知特性与卷积的局部结构提取能力。在ImageNet分类、人脸识别以及语义分割等任务(无论是否具有平移不变性)上均能涨点。此外，相比标准卷积，RepMLP的一个优势：在大幅增加参数的同时不会造成推理速度的显著降低。比如，从RepMLP-Res50-g8/16到RepMLP-Res50-g4/8，参数量提升47%，但FLOPs仅提升3.6%，推理速度仅下降2.2%。
+论文：RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition
+源代码：DingXiaoH/RepMLP
+1 引入本文提出了一个由多个全连接层构成的用于图像分类的模块RepMLP。全连接层能够高效地建模长距离依赖和位置模式，但不能很好地捕捉局部信息（擅长这件事情的是卷积）。我们在RepMLP中引入了卷积操作来捕捉局部信息，并在推理阶段将卷积核权重融入到全连接层中。
+在CIFAR数据集上，简简单单的MLP模型即可取得与CNN非常接近的性能。通过将RepMLP插入到现有CNN中，我们在ImageNet数据集上提升ResNets模型精度达1.8%，在人脸识别任务上提升2.9%，在Cityscapes提升2.3%mIoU精度且具有更低的FLOPs。
+该发现说明：全连接层的全局表达、位置感知能力与卷积的局部结构提取能力的组合能够以更快的速度在平移不变任务(比如语义分割)、图像对齐+位置模式相关任务(比如人脸识别)上的性能。
+本文主要贡献包含以下几点：
+提出利用全连接层的全局建模、位置感知能力，并为其插上局部先验的翅膀，使其适用于图像识别任务； 提出一种简单的、平台不可知的、可微分算法用于将并行卷积、BN合并到全连接层中，使其具有局部先验且不造成任何推理耗时增加； 提出一种高效模块RepMLP，并在多个视觉任务上证实了其有效性。 2 方法在CNN中我们给卷积操作赋予了一个局部先验（也叫归纳偏置），卷积操作每次只处理相邻的元素。光有局部信息是不行的，需要给网络引入一定的全局信息。传统的CNN是通过卷积层的堆叠，来扩大感受野，以此获得全局信息。但这种做法效率低下，也带来很多优化的问题（以前训练很深的网络是很难的，后续通过正确的参数初始化和残差连接才逐步解决这一问题）。
+此外CNN缺乏位置感知能力，因为一个卷积层在不同空间位置下是共享参数的。他没有考虑到各个空间位置特征的相对关系（Capsule Network也提到了）
+最近的一些关于Vision Transformer的工作表明了在大量数据下，抛弃CNN的局部先验是可行的。本文尝试将全连接层替换部分卷积层中，以提供全局表征能力和位置感知能力。并将引入卷积层，赋予全连接层其不具备的捕捉局部信息能力。最后通过重参数化的方法，将卷积层和全连接层重参数化为一个全连接层，提升推理速度。
+训练阶段的RepMLP（见下图）由三部分构成：Global Perceptron、Partition Perceptron、Local Perceptron。接下来，我们将针对所提RepMLP进行详细介绍，同时表明如何如何将训练阶段的RepMLP转换为推理阶段的全连接层。
+Figure 1: Sketch of a RepMLP.]]></description>
+</item><item>
+    <title>【多层感知机混合器】MLP-Mixer: An all-MLP Architecture for Visio</title>
+    <link>https://wyxogo.top/mlpmixer/</link>
+    <pubDate>Sat, 15 May 2021 14:52:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/mlpmixer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/20210515205048.png" referrerpolicy="no-referrer">
+            </div>标题 MLP-Mixer: An all-MLP Architecture for Visio 年份： 2021 年 5 月 GB/T 7714: Tolstikhin I, Houlsby N, Kolesnikov A, et al. MLP-Mixer: An all-MLP architecture for vision[J]. arXiv preprint arXiv:2105.01601, 2021. 在这篇文章中，主要证明了卷积和注意力对于良好的性能都是足够的，但它们都不是必要的。提出了MLP-Mixer，一个专门基于多层感知器(MLPs)的体系结构。 MLP-Mixer包含两种类型的层:一种是MLPs独立应用于图像patches(即&quot;mixing&quot; per-location features)，另一种是MLPs应用于跨patches(即&quot;mixing&quot; spatial information)。
+MLP-Mixer在大型数据集或现代正则化方案上进行训练时，可以在图像分类基准上获得有竞争力的分数，其训练前和推理成本可与最先进的模型相媲美。这是一种在概念和技术上都很简单的替代方案，不需要卷积或自注意力机制。
+Mixer的架构完全基于多层感知器(MLPs)，这些感知器在空间位置或特性通道上重复应用。
+Mixer只依赖于basic matrix multiplication routines, changes to data layout (reshapes and transpositions)和scalar non-linearities
+1 方法介绍Macro-structure of Mixer 如上图描述了Mixer结构。它接受图像patches经线性投影后的序列(也称为tokens)作为输入，维度为“patches×channels”的表。Mixer使用两种类型的MLP层: channels混合MLP和tokens混合MLP。
+Channels混合mlp允许不同通道之间的通信，它们独立地对每个tokens进行操作，并将表中的各个行作为输入。Tokens混合mlp允许不同空间位置(tokens)之间的通信，它们在每个通道上独立操作，将表中的列作为输入。这两种类型的层是交叉的，以支持两个输入维度的交互。
+某种程度上说，通道混合类似于1*1的卷积、tokens混合类似于深度可分离卷积。然而，典型的cnn不是特殊情况下的Mixer。此外，卷积比mlp中简单的矩阵乘法更复杂，因为它需要额外地减少矩阵乘法和/或专门的实现。可分离卷积(separable convolutions)中不同通道使用不同卷积核。然而，Mixer每个通道相当于共享相同核。
+在大型数据集(约100M张图像)上进行预训练，可以取得与CNN和Transformers的相近的性能，在适中数据集上(约1-10M张图像)结合现有规则化技术，也可以取得相近性能。
+1.1 Mixer网络结构现有深度视觉网络模型，不同层之间混合2种特征：
+1). 给定空间位置处的特征； 2). 不同空间位置的特征。
+CNN通过N*N的卷积实现2），1*1的卷积实现1）；Transformer的self-attention可以同时实现1）和2）。Mixer通过通道混合实现1）、通过tokens混合实现2）。]]></description>
+</item><item>
+    <title>目标检测新范式：End-to-End Object Detection with Transformers</title>
+    <link>https://wyxogo.top/detr/</link>
+    <pubDate>Tue, 11 May 2021 13:07:33 &#43;0800</pubDate><author>
+        <name>Yasin</name>
+    </author><guid>https://wyxogo.top/detr/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://files.wyxogo.top/image-20210514134434125.png" referrerpolicy="no-referrer">
+            </div>标题 Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection 年份： 2020 年 5 月 GB/T 7714: [1] Carion N , Massa F , Synnaeve G , et al. End-to-End Object Detection with Transformers[J]. 2020. DETR是FIR提出的基于Transformers的端到端目标检测，没有NMS后处理步骤、没有anchor，结果在coco数据集上效果与Faster RCNN相当，且可以很容易地将DETR迁移到其他任务例如全景分割。 原文链接：【论文笔记】从Transformer到DETR (zhihu.com)
+1 Transformer原理 1.1 Transformer的整体架构Transformer是2017年NIPS上的文章，题目为Attention is All You Need。它使用attention组成了encoder-decoder的框架，并将其用于机器翻译。它的大致结构如下：
+每个句子先经过六个Encoder进行编码，然后经过六个Decoder进行解码，得到最后的输出
+1.2 Transformer EncoderEnconder 如上图所示，Encoder的输入是词向量（大概是word2vec之类的编码）和Positional Encoding（二者相加之后送入第一个Encoder），然后经过Self Attention和Layer Norm，最后是一个Feed Forward Network。另外每个Encoder中还有两个Skip Connection。这种Encoder结构重复六次之后就得到了句子的编码。我会在接下来几个subsection中介绍Encoder中的各个function。
+1.2.1 Positional EncodingPositional Encoding旨在为每个特征的位置与通道进行编码，其公式如下所示： $$ PE_{(pos,2i)} = sin(pos/100^{2i/d_{model}}) $$
+$$ PE_{(pos,2i+1)} = cos(pos/1000^{2i/d_{model}}) $$]]></description>
+</item></channel>
+</rss>

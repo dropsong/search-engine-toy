@@ -1,0 +1,1 @@
+../data/wordReco_index_table/en

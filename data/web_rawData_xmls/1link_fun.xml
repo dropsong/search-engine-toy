@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1Link.Fun 科技周刊</title>
+    <link>https://1link.fun/</link>
+    <description>Recent content on 1Link.Fun 科技周刊</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://1link.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1link.fun 科技周刊 | 第 95 期</title>
+      <link>https://1link.fun/blog/issue/issue95/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue95/</guid>
+      <description>&lt;p&gt;推荐在 &lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童专栏&lt;/a&gt; 阅读本期周刊，有配图，阅读体验更好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;根据 &lt;a href=&#34;https://1link.fun/blog/plans-after-issue100/&#34;&gt;100 期之后的计划&lt;/a&gt;，周刊会首先发布在&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童专栏&lt;/a&gt;，喜欢本周刊的读者朋友欢迎订阅，以获得更好的阅读体验，同时激励我持续进行创作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;人类摄影师的作品赢了-ai-图像比赛httpspetapixelcom20240612photographer-disqualified-from-ai-image-contest-after-winning-with-real-photo&#34;&gt;&lt;a href=&#34;https://petapixel.com/2024/06/12/photographer-disqualified-from-ai-image-contest-after-winning-with-real-photo/&#34;&gt;人类摄影师的作品赢了 AI 图像比赛&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一位摄影师的作品参加了一个 AI 图像比赛，结果赢了一个 3 等奖，还获得了观众投票奖。&lt;/p&gt;
+&lt;p&gt;不过最后被取消了参赛资格。&lt;/p&gt;
+&lt;h3 id=&#34;跳过-youtube-视频中的广告时间httpsblogajayappsponserblocker-or-blocking-youtube-sponsorship-segments&#34;&gt;&lt;a href=&#34;https://blog.ajay.app/sponserblocker-or-blocking-youtube-sponsorship-segments/&#34;&gt;跳过 Youtube 视频中的广告时间&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个浏览器插件的想法很有意思，它可以让你选择上传你正在看的 Youtube 视频中 UP 主插入的赞助商广告时间，提交之后，如果另一个用户也用了这个插件， 也在看同一个视频， 这个插件就会自动帮它跳过广告时间。&lt;/p&gt;
+&lt;p&gt;非常有意思的想法。&lt;/p&gt;
+&lt;h3 id=&#34;为什么睡眠不足会导致记忆减退httpswwwnaturecomarticlesd41586-024-01732-y&#34;&gt;&lt;a href=&#34;https://www.nature.com/articles/d41586-024-01732-y&#34;&gt;为什么睡眠不足会导致记忆减退&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个 Nature 的论文通过研究发现，睡眠不足会影响与记忆形成相关的大脑信号，而且补觉也无法弥补。“If you lost it, you lost it”&lt;/p&gt;
+&lt;p&gt;研究人员的实验方法是监控 7 个小老鼠的海马体的神经元活动，首先训练这 7 个老鼠走迷宫，然后挑选其中的几只，不让它们睡好觉，从而与另外几只正常睡眠的老鼠进行比较。&lt;/p&gt;
+&lt;p&gt;另外，这项研究还表明睡眠中断可以用来防止记忆进入长期存储，这可能对最近经历过创伤的人有用，例如那些患有创伤后应激障碍的人。&lt;/p&gt;
+&lt;h3 id=&#34;俄罗斯方块---流沙版httpssandtriscom&#34;&gt;&lt;a href=&#34;https://sandtris.com/&#34;&gt;俄罗斯方块 - 流沙版&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个叫做 Sandtris 的类俄罗斯方块的游戏很有意思，游戏刚开始是正常的俄罗斯方块形状，各种颜色的方块落下去之后就像沙子一样流了下去，消除目标就是让同一种颜色的沙子占满一整行，就能一起消除。非常的好玩，推荐试一试。&lt;/p&gt;
+&lt;h3 id=&#34;字帖生成器httpspaperz2hcn&#34;&gt;&lt;a href=&#34;https://paper.z2h.cn/&#34;&gt;字帖生成器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个简洁的网站，可以生成中文、英文的字帖，支持汉字，词语，段落；字母，单词，段落字帖生成，有各种选项调节字帖的显示效果，最后可打印出来用于写字练习。&lt;/p&gt;
+&lt;h3 id=&#34;负排放电池httpswwwmdpicom1996-10731771749&#34;&gt;&lt;a href=&#34;https://www.mdpi.com/1996-1073/17/7/1749&#34;&gt;负排放电池&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个研究小组从微生物光合作用中收集电子发电，然后为 IOT 低功耗设备供电。&lt;/p&gt;
+&lt;p&gt;这个方案不仅达到了零排放，甚至还达到了负排放，因为在光合作用的过程中微生物还会吸收空气中的二氧化碳，而整个作用的副产品也只是水而已。&lt;/p&gt;
+&lt;h3 id=&#34;midjourney-sref-精选参数httpsmidjourneysrefcom&#34;&gt;&lt;a href=&#34;https://midjourneysref.com/&#34;&gt;MidJourney sref 精选参数&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;在 Midjourney 的 prompt 输入 –sref xxx ，可以固定生成某种特定风格的图片。这对很多人来说非常方便，不用写一堆效果词，只要记住几位数字就可以。&lt;/p&gt;
+&lt;p&gt;但“–sref xxx”的参数有大概 40 亿个左右，其中重复或者质量不佳的不在少数。因此有人做了一个网站把一些不错的 sref code 收集起来并进行分类，方便新人或者设计师检索。&lt;/p&gt;
+&lt;p&gt;另外为了让设计师得到创意，所有的图片prompt也都是免费开放的。&lt;/p&gt;
+&lt;h3 id=&#34;图片无损放大增强httpsjpghicom&#34;&gt;&lt;a href=&#34;https://jpghi.com/&#34;&gt;图片无损放大+增强&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以让你上传任意一张图片，对其进行无损放大和增强，上传的照片越模糊，最终的效果越好。&lt;/p&gt;
+&lt;p&gt;我用一张特斯拉的照片试了试，效果还不错&lt;/p&gt;
+&lt;h3 id=&#34;随机获得一个字符画版宝可梦怪兽httpspkmnli&#34;&gt;&lt;a href=&#34;https://pkmn.li/&#34;&gt;随机获得一个字符画版宝可梦怪兽&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;访问这个网站，就可以随机得到一个字符画版的宝可梦怪兽。&lt;/p&gt;
+&lt;p&gt;字符画版，意味着你可以直接在终端显示出来，用 &lt;code&gt;curl pkmn.li&lt;/code&gt; 命令也能看到.&lt;/p&gt;
+&lt;h3 id=&#34;开搜-ai-搜索httpskaisouaicom&#34;&gt;&lt;a href=&#34;https://kaisouai.com/&#34;&gt;开搜 AI 搜索&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个 AI 搜索引擎，无广告，直达结果。省去你在传统搜索引擎中输入关键字，过滤广告，人工浏览链接的繁琐过程， 还可以对结果进行追问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童主页&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 94 期</title>
+      <link>https://1link.fun/blog/issue/issue94/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue94/</guid>
+      <description>&lt;p&gt;推荐在 &lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童专栏&lt;/a&gt; 阅读本期周刊，有配图，阅读体验更好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;根据 &lt;a href=&#34;https://1link.fun/blog/plans-after-issue100/&#34;&gt;100 期之后的计划&lt;/a&gt;，周刊会首先发布在&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童专栏&lt;/a&gt;，喜欢本周刊的读者朋友欢迎订阅，以获得更好的阅读体验，同时激励我持续进行创作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;树莓派天气助手httpsgithubcomblixtsol-mate-einktabreadme-ov-file&#34;&gt;&lt;a href=&#34;https://github.com/blixt/sol-mate-eink?tab=readme-ov-file&#34;&gt;树莓派天气助手&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个开源项目利用一个树莓派，一个电子纸显示屏制作了一个天气助手：&lt;/p&gt;
+&lt;p&gt;根据你给定的位置获取天气信息&lt;/p&gt;
+&lt;p&gt;根据位置信息和天气信息调用 DALLE 生成一张图片&lt;/p&gt;
+&lt;p&gt;定期将图片更新到电子纸显示屏上&lt;/p&gt;
+&lt;p&gt;你可以在这个仓库里找到所有的代码，喜欢动手的朋友可以试试&lt;/p&gt;
+&lt;h3 id=&#34;什么是-pid-0httpsblogdavetfpostlinux-pid0&#34;&gt;&lt;a href=&#34;https://blog.dave.tf/post/linux-pid0/&#34;&gt;什么是 PID 0&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这是一篇纯技术文章，作者翻阅内核代码，只为回答一个问题：&lt;/p&gt;
+&lt;p&gt;UID 从 0 开始，PID 却从 1 开始，为什么？&lt;/p&gt;
+&lt;p&gt;从这个问题入手，他发现网上基本上没有一篇回答是完全正确的，包括已经存在了 16 年的维基百科词条。&lt;/p&gt;
+&lt;p&gt;最终，在翻阅了内核代码之后，作者尝试对 【PID=0 的进程到底是干啥的】这一问题进行终极解析.&lt;/p&gt;
+&lt;h3 id=&#34;数字游戏httpswwwworchlecommathic&#34;&gt;&lt;a href=&#34;https://www.worchle.com/mathic/&#34;&gt;数字游戏&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个数字游戏很好玩，可以用来锻炼自己的反应和心算能力。&lt;/p&gt;
+&lt;p&gt;玩法也很简单，M.N. 是 Magic Number 的缩写，你要做的就是通过点击两个方格（头尾）来选中横、竖或者斜方向的几个方格来选择你的算式，只要算式的结果等于这个M.N.， 也就是魔法数字，就算正确，然后魔法数字会继续刷新。&lt;/p&gt;
+&lt;h3 id=&#34;给网页的图片添加胶片效果httpswwwnetzgestadefilmed&#34;&gt;&lt;a href=&#34;https://www.netzgesta.de/filmed/&#34;&gt;给网页的图片添加胶片效果&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个 JS 库可以让你很轻松的给网页上的图片添加胶片效果，引入这个 JS 之后只需要添加一个 class 即可&lt;/p&gt;
+&lt;h3 id=&#34;爬取多页网站到一个-zip-包httpsgithubcompotahtmlmpa-archive&#34;&gt;&lt;a href=&#34;https://github.com/potahtml/mpa-archive&#34;&gt;爬取多页网站到一个 zip 包&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个开源项目可以把给定的一个多页网站爬取到一个 zip 包里，它会读取 sitemap 并且会加载页面上的动态资源 （基于 headless puppeteer）&lt;/p&gt;
+&lt;p&gt;此外，它还可以把保存下来的 zip 包重新发布为一个新网站对外访问。&lt;/p&gt;
+&lt;h3 id=&#34;23-个单词挑战https23wordscom&#34;&gt;&lt;a href=&#34;https://23words.com/&#34;&gt;23 个单词挑战&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个有意思的猜单词游戏，在给定的时间里从打乱的字母中猜出对应的单词，看看你能否猜对 23 个单词。&lt;/p&gt;
+&lt;h3 id=&#34;openrecallhttpsgithubcomopenrecallopenrecall&#34;&gt;&lt;a href=&#34;https://github.com/openrecall/openrecall&#34;&gt;OpenRecall&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;上一期介绍了微软即将推出的 ReCall 功能，看似很强大，但是隐私和安全性被质疑。&lt;/p&gt;
+&lt;p&gt;这个开源仓库旨在实现一个开源版的 ReCall 功能，大概的实现方式也是定期截图并且用 OCR 识别文字。&lt;/p&gt;
+&lt;p&gt;提供一个 WebUI 让你可以随时回溯到任意时间点，还可以根据关键字进行搜索。&lt;/p&gt;
+&lt;h3 id=&#34;软银为接线员开发-ai-情绪消除功能httpsslashdotorgstory2406120438231softbanks-new-ai-makes-angry-customers-sound-calm-on-phone&#34;&gt;&lt;a href=&#34;https://slashdot.org/story/24/06/12/0438231/softbanks-new-ai-makes-angry-customers-sound-calm-on-phone&#34;&gt;软银为接线员开发 AI 情绪消除功能&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;接线员时不时会面对那些暴躁的用户，他们会大喊大叫甚至爆粗口来表达自己的不满，而这会给接线员带来心理上的压力和创伤。&lt;/p&gt;
+&lt;p&gt;软银针对这种情况，开发了一个 AI 系统，把这些用户的暴躁语句转换成更加柔和的声音和语调 （只是改变声音和语调，不会修改用户说的话），从而减轻接线员的压力。&lt;/p&gt;
+&lt;h3 id=&#34;xz-后门事件中的社会工程攻击httpssecurelistcomxz-backdoor-story-part-2-social-engineering112476&#34;&gt;&lt;a href=&#34;https://securelist.com/xz-backdoor-story-part-2-social-engineering/112476/&#34;&gt;XZ 后门事件中的社会工程攻击&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;虽然 XZ Utils 后门事件现在基本没人讨论了，但是还是有必要再分享一下卡巴斯基这篇博客，专门分析了在这个后门事件中的社会工程手法。&lt;/p&gt;
+&lt;p&gt;几个精心设计的账号，经过长达 3 年的布局，通过向 xz-utils 维护者施压，迫使他给 JiaTan 完全的代码管理权限，最终差点使带有后门的 xz-utils 进入 Linux 发行版。&lt;/p&gt;
+&lt;h3 id=&#34;用-wifi-信号识别人体姿势httpswwwkasperskycomblogdense-pose-recognition-from-wi-fi-signal51216&#34;&gt;&lt;a href=&#34;https://www.kaspersky.com/blog/dense-pose-recognition-from-wi-fi-signal/51216/&#34;&gt;用 WiFi 信号识别人体姿势&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;卡内基梅隆大学的研究人员使用家用路由器和机器学习模型，能够用 WiFi 信号对人体的姿势进行识别和空间重建。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童主页&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 100 期之后的计划</title>
+      <link>https://1link.fun/blog/plans-after-issue100/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/plans-after-issue100/</guid>
+      <description>&lt;p&gt;各位读者朋友大家好,&lt;/p&gt;
+&lt;p&gt;从第 93 期开始, 周刊开始同步更新在&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童专栏&lt;/a&gt; 且会设置为免费浏览.&lt;/p&gt;
+&lt;p&gt;100 期之后的计划初步设想如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站 / RSS: 持续更新, 内容会适当精简, 无图 (其实很久以来, 周刊就变成无图了, 主要折腾图床是一个麻烦事儿).&lt;/li&gt;
+&lt;li&gt;竹白: 停止更新
+&lt;ul&gt;
+&lt;li&gt;不久前已经关闭了竹白的微信订阅&lt;/li&gt;
+&lt;li&gt;小报童支持微信推送&lt;/li&gt;
+&lt;li&gt;小报童支持邮箱推送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;小报童: 主力更新平台
+&lt;ul&gt;
+&lt;li&gt;内容相较现在会更加丰富, 主打图文并茂&lt;/li&gt;
+&lt;li&gt;除定期发周刊之外, 目前还在策划其他的主题(待定)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于小报童专栏的定价, 每年 52 元, 对应 52 周, 每周一期周刊. 每期周刊 10 个链接, 算下来, 一毛钱一个链接, emmm&amp;hellip; 很合理.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;前 100 位订阅者&lt;/strong&gt;, 可以领一个 &lt;a href=&#34;https://xiaobot.net/coupon/0e4df1d7-cbc8-4892-8a00-e5edfce708d0&#34;&gt;5 折的优惠券&lt;/a&gt;, 多谢支持.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;正如此前分享的 &lt;a href=&#34;https://kitze.io/posts/github-stars-wont-pay-your-rent&#34;&gt;GitHub 的 star 不会付你的房租&lt;/a&gt; 文章里提到的, Github 的 star 不会帮你付房租, 同理, 竹白的订阅数, RSS 和网站的访问量也不会帮我付房租.&lt;/p&gt;
+&lt;p&gt;持续的内容输出需要创作者付出时间和精力, 毕竟:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://1link.fun/images/1.png&#34; alt=&#34;你也不想这个周刊倒闭吧&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 93 期</title>
+      <link>https://1link.fun/blog/issue/issue93/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue93/</guid>
+      <description>&lt;p&gt;从本期开始到第 100 期，周刊会同步发布在&lt;a href=&#34;https://xiaobot.net/post/0e73b668-5eec-4149-b75a-058dff07dda8&#34;&gt;小报童专栏&lt;/a&gt;，且设置为免费预览。&lt;/p&gt;
+&lt;h3 id=&#34;按主色调浏览网站httpsthemefinderioa15353&#34;&gt;&lt;a href=&#34;https://themefinder.io/#a15353&#34;&gt;按主色调浏览网站&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以让你任意选择一个颜色，列出使用这个颜色为主色调的网站列表，如果你有自己喜欢的色调，不妨在这里看看其他相同色调的网站是如何设计的。&lt;/p&gt;
+&lt;h3 id=&#34;诺基亚-3310-手机字体httpswebdrafthufontsnokja-original&#34;&gt;&lt;a href=&#34;https://webdraft.hu/fonts/nokja-original/&#34;&gt;诺基亚 3310 手机字体&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个开源的复刻诺基亚 3310 手机上的字体, MIT 协议, 不支持中文.&lt;/p&gt;
+&lt;h3 id=&#34;84-24https84-24org&#34;&gt;&lt;a href=&#34;https://84-24.org/&#34;&gt;84-24&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这不是你认识的那个 8424 品种的西瓜,而是代表作者在 2024 年买了一台 1984 年发布的苹果 Macintosh 电脑的折腾过程.&lt;/p&gt;
+&lt;p&gt;整个网页做的非常精美, 随着页面向下滚动, 非常丝滑和炫酷的动画随之上演, 不看后悔.&lt;/p&gt;
+&lt;h3 id=&#34;关于睡眠的巨大谎言httpswwwbusinessinsidercomsleep-loss-deprivation-america-reasons-health-inequality-economic-stress-money-2024-5&#34;&gt;&lt;a href=&#34;https://www.businessinsider.com/sleep-loss-deprivation-america-reasons-health-inequality-economic-stress-money-2024-5&#34;&gt;关于睡眠的巨大谎言&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这篇文章认为, 通常人类每天需要 7 - 9 小时的睡眠时间, 睡眠不足会慢慢的影响人的身体健康.网上有很多方法可以改善睡眠, 比如把手机放在另一个房间,  适当调低空调温度, 对于情侣来说, 分开卧室睡觉也会改善睡眠.&lt;/p&gt;
+&lt;p&gt;但是, 文章认为这些都是表面原因, 通过研究团队的数据, 他们发现, 导致睡眠问题的根本原因是人的压力, 尤其是经济压力, 穷人睡眠时间普遍比富人少.&lt;/p&gt;
+&lt;h3 id=&#34;美国国家安全局对于智能手机安全的建议httpss3documentcloudorgdocuments21018353nsa-mobile-device-best-practicespdf&#34;&gt;&lt;a href=&#34;https://s3.documentcloud.org/documents/21018353/nsa-mobile-device-best-practices.pdf&#34;&gt;美国国家安全局对于智能手机安全的建议&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这份 PDF 据说是美国国家安全局针对智能手机如何提高安全性的指南, 其中有几点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不使用时, 禁用蓝牙, Wifi 和位置服务&lt;/li&gt;
+&lt;li&gt;尽量不要连接公共设备(如公共充电口等)&lt;/li&gt;
+&lt;li&gt;每周定期重启一次手机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;谁是推特上假新闻传播的主力军httpsarstechnicacomscience202405key-misinformation-superspreaders-on-twitter-older-women&#34;&gt;&lt;a href=&#34;https://arstechnica.com/science/2024/05/key-misinformation-superspreaders-on-twitter-older-women/&#34;&gt;谁是推特上假新闻传播的主力军?&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这篇文章分析指出, 推特上假新闻传播的主力军(&amp;gt;60%)是年长的女性, 她们的账号数量虽然只占了 0.3%, 但是却传播了 80% 的假新闻.&lt;/p&gt;
+&lt;p&gt;这些账号每天大约发布 16 条新闻链接, 其中 18% 为假新闻.&lt;/p&gt;
+&lt;h3 id=&#34;youtube-洗衣机铃声侵权事件httpsarstechnicacomtech-policy202405washing-machine-chime-scandal-shows-how-absurd-youtube-copyright-abuse-can-get&#34;&gt;&lt;a href=&#34;https://arstechnica.com/tech-policy/2024/05/washing-machine-chime-scandal-shows-how-absurd-youtube-copyright-abuse-can-get/&#34;&gt;Youtube 洗衣机铃声侵权事件&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一位 Youtube 博主上传了一段视频, 只因为视频里他的三星洗衣机播放了一段音乐来提醒他洗衣完成了, 结果 Youtube 检测到这段音乐已经被另外一位博主声明为版权内容了, Youtube 就判定这个视频侵犯了版权, 导致收益被暂停.&lt;/p&gt;
+&lt;p&gt;但是实际上这段音乐是 19 世纪的一位音乐家创作的, 之所以出现这种事情, 这位博主将其归罪于 Youtube 的内容检测系统, 导致一些有心之人可以非常简单的声明自己拥有版权, 从而恶意维权.&lt;/p&gt;
+&lt;h3 id=&#34;windows-11-的-recall-功能httpsgithubcomxaitaxtotalrecall&#34;&gt;&lt;a href=&#34;https://github.com/xaitax/TotalRecall&#34;&gt;Windows 11 的 ReCall 功能&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Windows 11 即将带来一个叫 ReCall 的功能, 具体来说就是每隔 5 秒钟截取一下当前的屏幕, 用 OCR 识别屏幕上的文字并保存在本地, 当你想回想之前看过的一个网页, 或者文档, 或者之前输入的密码时, 你可以用自然语言问 Windows 上的 AI 助手, 它就会帮你找到.&lt;/p&gt;
+&lt;p&gt;微软声称这个功能是安全的, 保存内容只存在本地, 黑客必须获得你机器的物理访问权限, 拿到你的开机密码才能看到保存的内容.&lt;/p&gt;
+&lt;p&gt;但, 真的是这样吗?&lt;/p&gt;
+&lt;p&gt;链接中的开源项目就是一个 Python 的命令行程序, 它可以直接从 Windows 11 ReCall 的数据库里读取内容, 作者分析之后发现这个 ReCall 功能的安全性堪忧, 比如这个数据库就是一个没有加密的 sqlite 数据库文件.&lt;/p&gt;
+&lt;h3 id=&#34;用-sql-的-where-语句查询本地文件httpsgithubcomlaktakzfind&#34;&gt;&lt;a href=&#34;https://github.com/laktak/zfind&#34;&gt;用 SQL 的 where 语句查询本地文件&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;zfind 是一个命令行软件, 它的目标是代替 find 这个命令, 特点就是让你通过指定一个 SQL 语句中 where 查询条件来进行过滤.&lt;/p&gt;
+&lt;p&gt;比如: zfind -w &amp;ldquo;size&amp;gt;100Mb&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;它还可以查询到压缩包里面的内容, 如 tar 和 zip&lt;/p&gt;
+&lt;h3 id=&#34;识别手写-latex-符号httpsdetexifykirelabsorgclassifyhtml&#34;&gt;&lt;a href=&#34;https://detexify.kirelabs.org/classify.html&#34;&gt;识别手写 LaTeX 符号&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以识别你画出来的形状, 根据相似度列出相似的 LaTeX 符号.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://xiaobot.net/p/1link?refer=cd147f62-e3cc-4dd4-8cde-fb2ed1f1be40&#34;&gt;小报童主页&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>&lt;西游记&gt;书评 - 第 59 章</title>
+      <link>https://1link.fun/blog/book-review/journey-to-the-west/59/</link>
+      <pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/book-review/journey-to-the-west/59/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;不定时会更新一些书评，欢迎评论区留言讨论&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近重看西游记原著, 看到第 59 章: 唐三藏路阻火焰山　孙行者一调芭蕉扇&lt;/p&gt;
+&lt;h3 id=&#34;白噪声技术&#34;&gt;白噪声技术&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;三藏勒马道：“如今正是秋天，却怎返有热气？”八戒道：“原来不知，西方路上有个斯哈哩国，乃日落之处，俗呼为天尽头。若到申酉时，国王差人上城，擂鼓吹角，混杂海沸之严。日乃太阳真火，落于西海之间，如火淬水，接声滚沸；&lt;strong&gt;若无鼓角之声混耳，即振杀城中小儿。&lt;/strong&gt; 此地热气蒸人，想必到日落之处也。”大圣听说，忍不住笑道：“呆子莫乱谈！若论斯哈哩国，正好早哩。似师父朝三暮二的，这等担阁，就从小至老，老了又小，老小三生，也还不到。”八戒道：“哥啊，据你说，不是日落之处，为何这等酷热？”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;唐僧问: 现在不是秋天么, 咋还有这么大的热气呢?&lt;/p&gt;
+&lt;p&gt;八戒说: 师傅你这就不知道了吧, 去往西天的路上有一个斯哈哩国, 是太阳落下去的地方, 也叫做天的尽头&amp;hellip; 太阳是天上的真火, 落到西海中时, 西海中的水就像被烧开了一样, 沸腾的声音连绵不绝, 这时候, 国王就会派人到城墙上, 吹号角, 击战鼓. 要是没有这击鼓吹号角的声音一起传到耳朵里啊, 城里的小孩都要被这滚水沸腾的声音给震死了. 这里的热气这么大, 想来我们是已经到了日落之城了.&lt;/p&gt;
+&lt;p&gt;这不就是&lt;strong&gt;白噪声技术&lt;/strong&gt;么, 国王派人&lt;strong&gt;擂鼓吹角&lt;/strong&gt;, 提供了一个持续的、均匀的背景声音, 为了和太阳落在西海中产生的沸腾声音&lt;strong&gt;混耳&lt;/strong&gt;, 抵消掉了一部分沸腾之声, 不然城里的小孩要被巨大的沸腾声音给震死了.&lt;/p&gt;
+&lt;p&gt;有点意思.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 92 期</title>
+      <link>https://1link.fun/blog/issue/issue92/</link>
+      <pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue92/</guid>
+      <description>&lt;h3 id=&#34;友好语气转换器httpsgoblintoolsformalizer&#34;&gt;&lt;a href=&#34;https://goblin.tools/Formalizer&#34;&gt;友好语气转换器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个工具很好玩，尤其对于上班族来说最有用， 当你面对令你无语又不能发脾气的同事/老板/甲方等，可以用这个工具将你想说的话转换成友好语气，比如输入：你听不懂人话吗？它可以帮你转换成：请问您是否能够理解我的意思？&lt;/p&gt;
+&lt;h3 id=&#34;偷按钮的人httpsanatolyzenkovcomstolen-buttons&#34;&gt;&lt;a href=&#34;https://anatolyzenkov.com/stolen-buttons&#34;&gt;偷按钮的人&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;每访问一个网站，都会从这个网站”偷“走一个按钮，这个网页就是它“偷”来的所有按钮集合。&lt;/p&gt;
+&lt;h3 id=&#34;创意图片组合可视化神器httpswwwlanrentuyuncom&#34;&gt;&lt;a href=&#34;https://www.lanrentuyun.com/&#34;&gt;创意图片组合可视化神器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以让你轻松生成图片墙，有各种预设的形状。&lt;/p&gt;
+&lt;h3 id=&#34;炫酷的编曲网站httpsaidnjpmikutap&#34;&gt;&lt;a href=&#34;https://aidn.jp/mikutap/&#34;&gt;炫酷的编曲网站&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个非常好玩又炫酷的“编曲”网站，进入网站之后按下 Start，然后随意按下键盘的按键即可，每个按键代表一个声音，同时还会随机出现炫酷的形状和动画效果。&lt;/p&gt;
+&lt;p&gt;还很适合小朋友敲键盘玩。&lt;/p&gt;
+&lt;h3 id=&#34;彩虹狗游戏httpswwwwesanecomgame2127&#34;&gt;&lt;a href=&#34;https://www.wesane.com/game/2127/&#34;&gt;彩虹狗游戏&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个很可爱的游戏，玩法很简单，就是停车场停了很多车，你需要先开出最外面的，再开出最里面的。只不过这个游戏里用可爱的小狗替代了小汽车，还会有彩虹特效。&lt;/p&gt;
+&lt;h3 id=&#34;git-操作手册httpswizardzinescomgit-cheat-sheetpdf&#34;&gt;&lt;a href=&#34;https://wizardzines.com/git-cheat-sheet.pdf&#34;&gt;Git 操作手册&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Julia Evans 是一位著名的科技博主，在 Linux 和 Git 方面有深入的研究， 这是她制作的 Git 操作手册，非常适合打印出来贴在工位上。&lt;/p&gt;
+&lt;h3 id=&#34;在线记事本httpsnotepadtabcomenrlyhy_p8cwjzmvwy-tne_h-aywf-t3v2hoftan-2l_dx0aah8rtq&#34;&gt;&lt;a href=&#34;https://notepadtab.com/#eNrLyHy_p8cwJzMvWy-tNE_h-ayWF-t3v2hofTan-2l_dx0AAh8RTQ&#34;&gt;在线记事本&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个有趣的在线记事本网站，你所有的输入都会保存在 URL 中，任何拥有这个 URL 的人都可以看到。&lt;/p&gt;
+&lt;p&gt;代码&lt;a href=&#34;https://github.com/revolter/notepadtab.com&#34;&gt;开源&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dna-数据存储技术httpskilobasercompostdna-data-storage&#34;&gt;&lt;a href=&#34;https://kilobaser.com/post/dna-data-storage&#34;&gt;DNA 数据存储技术&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个 DNA 就是我们身体细胞里的那个 DNA，我们都知道 DNA 只用了 4 个字母就能表示几万个蛋白质编码数据，而且 DNA 的尺寸非常小，我们为何不把数据存在 DNA 上呢？&lt;/p&gt;
+&lt;p&gt;据估算，1 克干燥的 DNA 可以存储 455 EB 的数据 （1 EB = 1024 PB ）&lt;/p&gt;
+&lt;h3 id=&#34;神奇的-js-时钟httpsaem1kcomqlock&#34;&gt;&lt;a href=&#34;https://aem1k.com/qlock/&#34;&gt;神奇的 JS 时钟&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一段简单的 JS 代码，竟然可以将整段 JS 代码字符本身变成时钟，每秒以 HH:MM:SS 的格式显示当前的时间。&lt;/p&gt;
+&lt;h3 id=&#34;可以查看任意时间任意地点太阳阴影的地图httpsshademapapp&#34;&gt;&lt;a href=&#34;https://shademap.app/&#34;&gt;可以查看任意时间任意地点太阳阴影的地图&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以让你查看世界各地，任意时间点的太阳阴影。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 91 期</title>
+      <link>https://1link.fun/blog/issue/issue91/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue91/</guid>
+      <description>&lt;h3 id=&#34;ioccc-最不可读的-c-代码比赛httpswwwiocccorgindexhtml&#34;&gt;&lt;a href=&#34;https://www.ioccc.org/index.html&#34;&gt;IOCCC 最不可读的 C 代码比赛&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个专门举办最不可读的 C 代码比赛的网站，每年举办一次，你可以在这里看到历年比赛的获奖作品。&lt;/p&gt;
+&lt;p&gt;这些提交，不仅仅是让代码不可读，而是将代码以一种有趣的，艺术的形状来编写，同时还要保证代码是可编译和运行的。&lt;/p&gt;
+&lt;h3 id=&#34;chatgpt-的声音是如何选择的httpsopenaicomindexhow-the-voices-for-chatgpt-were-chosen&#34;&gt;&lt;a href=&#34;https://openai.com/index/how-the-voices-for-chatgpt-were-chosen/&#34;&gt;ChatGPT 的声音是如何选择的&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;最近才发现 ChatGPT 的回复是可以读出来的，网页版内置了 5 个声音让你选择，朗读的效果非常逼真，这篇文章是 OpenAI 介绍它们是如何选择和制作出来这 5 个声音的。&lt;/p&gt;
+&lt;p&gt;这 5 个声音都是从专业的配音演员的声音中取样制作的，并不是对某位名人(因为斯嘉丽约翰逊认为Sky 的语音是模仿她的，OpenAI 更新了博文表示 Sky 和约翰逊没啥关系)的声音模仿。&lt;/p&gt;
+&lt;h3 id=&#34;用代码还原手写字httpswwwamygoodchildcomblogcursive-handwriting-in-javascript&#34;&gt;&lt;a href=&#34;https://www.amygoodchild.com/blog/cursive-handwriting-in-javascript&#34;&gt;用代码还原手写字&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;用 JavaScript 代码生成手写草书的字体，为每个字母生成大约 10 个关键点，再绘制出路径，复现手写效果，然后从单个字母，到字母和字母之间的连接，再到一个一个的单词，最终还原出手写草书的效果。&lt;/p&gt;
+&lt;p&gt;用代码实现之后还有一个好处，就是随意修改路径，颜色，线条粗细等，最终生成各种艺术形状。&lt;/p&gt;
+&lt;h3 id=&#34;windows-磁盘使用情况可视化httpswindirstatnet&#34;&gt;&lt;a href=&#34;https://windirstat.net/&#34;&gt;Windows 磁盘使用情况可视化&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个开源免费的 Windows 磁盘使用情况可视化以及清理工具，它会读取所有目录和文件，然后把目录按照文件大小排序。&lt;/p&gt;
+&lt;h3 id=&#34;在线速写板画板httpswwwsuxiebancomindexhtml&#34;&gt;&lt;a href=&#34;https://www.suxieban.com/index.html#&#34;&gt;在线速写板、画板&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;我无意间发现的一个有用的网站，如题所说，就是一个速写板，你可以在上面用各种形状，笔刷，颜色创作你的画作，可以把结果保存成 png 图片，不需要注册。&lt;/p&gt;
+&lt;h3 id=&#34;keyviz-实时键鼠输入可视化软件httpsgithubcommularahulkeyviz&#34;&gt;&lt;a href=&#34;https://github.com/mulaRahul/keyviz&#34;&gt;KeyViz 实时键鼠输入可视化软件&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个全平台的键鼠可视化软件，可以实时把你的按键和鼠标点击动作在屏幕上显示出来，用来做软件演示录屏的时候非常有用。&lt;/p&gt;
+&lt;h3 id=&#34;免费生成乐高设计图的网站httpswwwbrickcenternet&#34;&gt;&lt;a href=&#34;https://www.brickcenter.net/&#34;&gt;免费生成乐高设计图的网站&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个可以把你的想法生成对应的乐高设计图的网站，除此之外，你还可以上传一张人像照片，通过 AI 转成乐高风格。&lt;/p&gt;
+&lt;h3 id=&#34;用-ai-在声音频谱图上作画httpsificlgithubioimages-that-sound&#34;&gt;&lt;a href=&#34;https://ificl.github.io/images-that-sound/&#34;&gt;用 AI 在声音频谱图上作画&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这篇论文提出了一种方法，可以用 AI 生成一个看似是普通图片，但实际上是一段声音的频谱图。或者理解为在声音的频谱图上作画，比如一段狗叫的声音频谱图上显示的就是狗狗的图像。&lt;/p&gt;
+&lt;p&gt;许多音乐家在他们的音乐频谱图中插入了图像，这篇论文的不同之处在于，AI 生成的频谱图看起来和听起来都很自然。&lt;/p&gt;
+&lt;h3 id=&#34;美国顶级科学博览会上的丑闻httpswwwkarlstackcompexclusive-scandal-at-americas-top&#34;&gt;&lt;a href=&#34;https://www.karlstack.com/p/exclusive-scandal-at-americas-top&#34;&gt;美国顶级科学博览会上的丑闻&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一位南加州大学的学生在“再生元国际科学与工程博览会 （ISEF）”获得了一等奖，其获奖研究是因为他开发了一个软件，名为Microby，可以扫描微生物数据库，利用机器学习的技术确定哪些微生物可以通过基因改变以生物降解塑料。在测试中，他发现了两种微生物，它们可以通过基因改造来降解塑料。&lt;/p&gt;
+&lt;p&gt;然而有人发现，他的研究成果中用了造假的图片，来伪造微生物降解塑料的现象。&lt;/p&gt;
+&lt;p&gt;文章提出，应该撤销颁奖并把 50000 美元奖金发给亚军选手。&lt;/p&gt;
+&lt;h3 id=&#34;树懒为什么这么慢httpsslothconservationorgsloths-move-slow&#34;&gt;&lt;a href=&#34;https://slothconservation.org/sloths-move-slow/&#34;&gt;树懒为什么这么慢？&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;想起树懒，你能想到的就是它干啥都慢，但是你有没有想过它为啥这么慢？这篇文章认为有以下几个原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的视力很差&lt;/li&gt;
+&lt;li&gt;吃的食物（主要是树叶）热量很低&lt;/li&gt;
+&lt;li&gt;吃的也少&lt;/li&gt;
+&lt;li&gt;肌肉含量很低&lt;/li&gt;
+&lt;li&gt;新陈代谢效率低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 90 期</title>
+      <link>https://1link.fun/blog/issue/issue90/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue90/</guid>
+      <description>&lt;h3 id=&#34;让文字动起来httpsanimate-your-wordgithubiodemo&#34;&gt;&lt;a href=&#34;https://animate-your-word.github.io/demo/&#34;&gt;让文字动起来&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个大模型可以根据提示，让单词动起来，对其中几个字母进行形象化、拟人化并添加响应的动画效果。链接中有很多例子，一看便知。&lt;/p&gt;
+&lt;h3 id=&#34;js-裸奔节httpsjs-naked-dayorg&#34;&gt;&lt;a href=&#34;https://js-naked-day.org/&#34;&gt;JS 裸奔节&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;之前介绍了 CSS 裸奔节，这次是 4 月 24 日的 JS 裸奔节，旨在提示人们，现代网页不用 JS 代码也能工作。&lt;/p&gt;
+&lt;h3 id=&#34;世界地图mini版httpsgithubcomtinyworldmaptiny-world-map&#34;&gt;&lt;a href=&#34;https://github.com/tinyworldmap/tiny-world-map&#34;&gt;世界地图mini版&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个开源项目提供一个 mini 版本的世界地图，压缩之后只有 300k 的大小，你可以把它放到你的网页上， 这相比用一个 iframe 嵌入谷歌、百度等地图的方式来说更轻量，而且还可以离线使用。&lt;/p&gt;
+&lt;h3 id=&#34;把-ytb-视频变成一步一步的教程httpsstepifytech&#34;&gt;&lt;a href=&#34;https://stepify.tech/&#34;&gt;把 Ytb 视频变成一步一步的教程&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站的思路很有意思，很多教程视频是冗长，结构化很差，你必须得看完才能知道讲的是什么内容，这个网站用 AI 对视频进行分析（我猜是通过分析字幕），把视频里的内容变成文字版的教程，同时提供时间点。&lt;/p&gt;
+&lt;p&gt;估计实现起来不会很难，一个调教好的提示词，加上字幕文件的内容，估计就差不多了。&lt;/p&gt;
+&lt;h3 id=&#34;不需要数学知识你可以这么理解-llm-的工作原理httpsblogmiguelgrinbergcomposthow-llms-work-explained-without-math&#34;&gt;&lt;a href=&#34;https://blog.miguelgrinberg.com/post/how-llms-work-explained-without-math&#34;&gt;不需要数学知识，你可以这么理解 LLM 的工作原理&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这篇文章通俗易懂的解释了 LLM 的工作原理，主要是 token 和预测下一个 token 的工作模式。与之前推荐的&lt;a href=&#34;https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/&#34;&gt;这篇文章&lt;/a&gt; 相比更加通俗一些。&lt;/p&gt;
+&lt;h3 id=&#34;复杂的软件卖的更好httpseugeneyancomwritingsimplicity&#34;&gt;&lt;a href=&#34;https://eugeneyan.com/writing/simplicity/&#34;&gt;复杂的软件卖的更好&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这篇文章讨论软件复杂度的问题，我们经常被教育说，写软件、系统越简单越好，维护成本低等等。但是现实往往是那些复杂的庞大系统卖的更好，究其原因，大概是因为复杂意味着功能多，付出的努力多，意味着你的工作能力强。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简单是一种伟大的美德，但它需要努力工作才能实现它，需要教育才能欣赏它&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;全同态加密的高级技术概述httpswwwjeremykuncom20240504fhe-overview&#34;&gt;&lt;a href=&#34;https://www.jeremykun.com/2024/05/04/fhe-overview/&#34;&gt;全同态加密的高级技术概述&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;谷歌工程师对于全同态加密技术的技术概述。
+全同态加密，简单来说就是允许你在不解密数据的情况下对数据进行运算，同时，基于加密数据的运算结果解密后，和直接在原数据上进行运算的结果一致，解决了数据交给第三方处理时候的信任问题。&lt;/p&gt;
+&lt;h3 id=&#34;20-年来美国核弹武器的发射密码都是-8-个-0httpsarstechnicacomtech-policy201312launch-code-for-us-nukes-was-00000000-for-20-years&#34;&gt;&lt;a href=&#34;https://arstechnica.com/tech-policy/2013/12/launch-code-for-us-nukes-was-00000000-for-20-years/&#34;&gt;20 年来，美国核弹武器的发射密码都是 8 个 0&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;2004 年，时任美国国防信息中心主席在一篇专栏文章中透露了这个消息，按理说每个核弹头都应该有一个 PAL，也就是发射代码才能工作，但是古巴导弹危机发生之后，司令部的将军在导弹系统部署之后，几乎立即把发射代码都重置成了 8  个 0， 以确保无论总统是否有时间授权，导弹都可以使用。&lt;/p&gt;
+&lt;h3 id=&#34;谷歌网站上-xss-漏洞的发现过程httpsmatan-hcomcommon-google-xss&#34;&gt;&lt;a href=&#34;https://matan-h.com/common-google-xss&#34;&gt;谷歌网站上 XSS 漏洞的发现过程&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;作者在用谷歌搜索的时候发现其中一个谷歌的网站竟然没有做 XSS 防护，导致可以通过修改 URL 的参数来执行任意 JS 代码。&lt;/p&gt;
+&lt;p&gt;他把这个漏洞报告给谷歌，得到了 3133 刀的奖励。&lt;/p&gt;
+&lt;h3 id=&#34;捉住那只小猫httpsgithubcomganlvtechphaser-catch-the-cat&#34;&gt;&lt;a href=&#34;https://github.com/ganlvtech/phaser-catch-the-cat&#34;&gt;捉住那只小猫&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个有趣同时也很难的游戏，通过围堵的方式阻止小猫跑到边缘处（应该是有技巧的，到那时我是一次都没成功过）&lt;/p&gt;
+&lt;p&gt;链接是这个游戏的开源 github 仓库地址，&lt;a href=&#34;https://game.ittools.cc/&#34;&gt;这个摸鱼网站&lt;/a&gt;还有一些其他的小游戏，如果你上班无聊可以逛一逛。&lt;/p&gt;
+&lt;p&gt;另外提一句，最近有很多朋友在&lt;a href=&#34;https://1link.fun/blog/guestbook/&#34;&gt;留言板&lt;/a&gt;上留言推荐自己的作品，大家也可以时不时上去瞅一瞅。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 89 期</title>
+      <link>https://1link.fun/blog/issue/issue89/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue89/</guid>
+      <description>&lt;h3 id=&#34;蝴蝶山httpsenwikipediaorgwikijulia_butterfly_hill&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Julia_Butterfly_Hill&#34;&gt;蝴蝶山&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这才是做环保的，链接是维基百科的页面，讲的是一位环保人士为了保护一颗红杉树，在树上生活了 738 天，期间没有从树上下来过，生活物资都是通过绳索从地面上拉上去的。&lt;/p&gt;
+&lt;p&gt;最终她保住了这棵树。&lt;/p&gt;
+&lt;h3 id=&#34;可视化解析-des--3des-加解密算法httpshereketcomtinydes-algorithm&#34;&gt;&lt;a href=&#34;https://hereket.com/tiny/des-algorithm/&#34;&gt;可视化解析 DES , 3DES 加解密算法&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;DES、3DES 是一种对称的加密算法，所谓对称就是指加密解密用的是同一个秘钥。这个网站对这个算法的工作过程进行了逐字节的拆解，感兴趣的可以看看。&lt;/p&gt;
+&lt;h3 id=&#34;12000-fps-游戏引擎优化过程httpswwwyoutubecomwatchv40jzyaoyjey&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=40JzyaOYJeY&#34;&gt;12000 FPS 游戏引擎优化过程&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个 Ytb 视频，讲的是一个游戏引擎如何一步一步地通过分析数据结构，跳过用户看不到的细节等方式优化内存使用，提升 FPS 的，推荐看看。&lt;/p&gt;
+&lt;h3 id=&#34;xz-后门工作原理分析httpssecurelistcomxz-backdoor-story-part-1112354&#34;&gt;&lt;a href=&#34;https://securelist.com/xz-backdoor-story-part-1/112354/&#34;&gt;XZ 后门工作原理分析&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;可能这个热度已经过去了，但是看完了整个时间线之后，还是觉得太可怕了，长达几年的时间，精心设计的算法加上社会工程手段，差点植入了一个大后门。&lt;/p&gt;
+&lt;p&gt;这个文章是卡巴斯基针对后门工作原理分析的第一步，推荐去看看。&lt;/p&gt;
+&lt;h3 id=&#34;一个有趣的益智游戏httpsshikakuofthedayhard240412&#34;&gt;&lt;a href=&#34;https://shikakuofthe.day/hard/240412&#34;&gt;一个有趣的益智游戏&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这是一个非常好玩的益智游戏，规则很简单，你需要用鼠标框选出长方形或者正方形，使得范围内只有一个数字，而且刚好是你所选形状包括的小正方形的数量。&lt;/p&gt;
+&lt;h3 id=&#34;关于-xz-后门的所有事情httpsboehsorgnodeeverything-i-know-about-the-xz-backdoor&#34;&gt;&lt;a href=&#34;https://boehs.org/node/everything-i-know-about-the-xz-backdoor&#34;&gt;关于 XZ 后门的所有事情&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;还是关于 XZ 后门的文章，这个博客清晰的列出了所有关于这个后门事件的时间线，可以着重看一下关于策划让 Jia Tan 获取直接提交代码权限的几封邮件往来，简直就是 PUA 大师。&lt;/p&gt;
+&lt;h3 id=&#34;让-chatgpt-预测未来的技巧httpsarxivorghtml240407396v2&#34;&gt;&lt;a href=&#34;https://arxiv.org/html/2404.07396v2&#34;&gt;让 ChatGPT 预测未来的技巧&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;ChatGPT 默认不会为你预测任何未来的事情，论文揭示了一个小技巧：&lt;/p&gt;
+&lt;p&gt;让 ChatGPT 讲一个故事，在一个未来的场景中，让故事中的人物对过去进行评价。&lt;/p&gt;
+&lt;p&gt;很拗口，没关系，举一个例子：&lt;/p&gt;
+&lt;p&gt;比如 GPT 的知识截止到 2021 年 9 月，你想让它预测 2021 年 10 月到 2022 年 8 月的经济走势和通胀，提示词就这么写：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写一个场景，美联储主席杰罗姆·鲍威尔（Jerome Powell）在2022年10月发表关于通货膨胀、失业和货币政策的演讲。鲍威尔主席向听众介绍了从 2021 年 9 月到 2022 年 8 月结束的每个月的通货膨胀率和失业率。让董事长每个月一个接一个地说。最后，他展望了通胀和失业以及可能的利率政策变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;极简番茄钟httpstkuaitucc&#34;&gt;&lt;a href=&#34;https://t.kuaitu.cc/&#34;&gt;极简番茄钟&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个极简的网页番茄钟，经常用番茄工作法的朋友可以收藏一下。&lt;/p&gt;
+&lt;h3 id=&#34;免费-ai-生成的图片库音乐库httpsstockcakecom&#34;&gt;&lt;a href=&#34;https://stockcake.com/&#34;&gt;免费 AI 生成的图片库/音乐库&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;链接中是图片库，音乐库在&lt;a href=&#34;https://stocktune.com/&#34;&gt;这里&lt;/a&gt;, 应该是一个人或者一个公司的作品。&lt;/p&gt;
+&lt;p&gt;版权都是 public domain 的，质量还不错。&lt;/p&gt;
+&lt;h3 id=&#34;铃芽之旅三条腿的椅子---现实版httpsshin0805githubiochair-type-tripedal-robot&#34;&gt;&lt;a href=&#34;https://shin0805.github.io/chair-type-tripedal-robot/&#34;&gt;铃芽之旅三条腿的椅子 - 现实版&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;三条腿的椅子怎么保持平衡和走路？铃芽之旅中三条腿的椅子还真有人做出来了，链接就是实现方法，其中的步态分析和学习是通过 re-inforcement 学习出来的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱/微信订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1link.fun 科技周刊 | 第 88 期</title>
+      <link>https://1link.fun/blog/issue/issue88/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://1link.fun/blog/issue/issue88/</guid>
+      <description>&lt;h3 id=&#34;每一个程序员都应该知道的延迟数字httpscolin-scottgithubiopersonal_websiteresearchinteractive_latencyhtml&#34;&gt;&lt;a href=&#34;https://colin-scott.github.io/personal_website/research/interactive_latency.html&#34;&gt;每一个程序员都应该知道的延迟数字&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站收集了从 1980 到 2020 年之间，各种程序操作的延迟数字，比如从内存里顺序加载100万个字节，从磁盘里顺序读100万个字节。&lt;/p&gt;
+&lt;p&gt;40 年间，计算机技术的发展真是迅猛。&lt;/p&gt;
+&lt;h3 id=&#34;css-裸奔节httpscss-naked-daygithubio&#34;&gt;&lt;a href=&#34;https://css-naked-day.github.io/&#34;&gt;CSS 裸奔节&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;为了推广 WEB 标准，倡导正确使用 HTML 标签，从 2006 年开始，每年的 4 月 9 日被定为  CSS 裸奔节&amp;hellip;&lt;/p&gt;
+&lt;p&gt;参与这个节日很简单，就是去掉 HTML 上所有的 CSS 标签，包括行内样式，让 HTML 回归本来的样子.&lt;/p&gt;
+&lt;h3 id=&#34;在线-sqlite-游乐场httpsgithubcomnalgeonsqlime&#34;&gt;&lt;a href=&#34;https://github.com/nalgeon/sqlime&#34;&gt;在线 SQLite 游乐场&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个在线的 SQLite 游乐场，可以加载本地或者远程数据库文件，SQL 语言的 JSFiddle。&lt;/p&gt;
+&lt;h3 id=&#34;互联网日食httpsblogcloudflarecomtotal-eclipse-internet-traffic-impacts-mexico-us-canada&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/total-eclipse-internet-traffic-impacts-mexico-us-canada&#34;&gt;互联网日食&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;4 月 9 日，美国经历了一次日全食，CloudFlare 分析了日全食发生前后的互联网流量，发现日全食发生的时候，墨西哥、美国、加拿大地区的网络流量都有不同程度的下降，因为太多人都在看日全食，没空玩手机、电脑。&lt;/p&gt;
+&lt;p&gt;另一个有趣的消息是，日全食之后，谷歌 “Eyes hurt”（眼睛疼）搜索量&lt;a href=&#34;https://9to5google.com/2024/04/08/google-search-solar-eclipse-my-eyes-hurt/&#34;&gt;激增&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tsac-来自-ffmpeg-作者的音频压缩工具httpsbellardorgtsac&#34;&gt;&lt;a href=&#34;https://bellard.org/tsac/&#34;&gt;TSAC 来自 ffmpeg 作者的音频压缩工具&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;特点是保持音频质量的同时达到极低的比特率，能够把一个3.5分钟的立体声音频压缩到 192 kb 文件大小。&lt;/p&gt;
+&lt;h3 id=&#34;把废弃的卫星信号接收装置变成太阳能发电站httpswwwreuterscomsustainabilityclimate-energyswiss-satellite-antennas-make-comeback-solar-powerhouses-2023-10-19&#34;&gt;&lt;a href=&#34;https://www.reuters.com/sustainability/climate-energy/swiss-satellite-antennas-make-comeback-solar-powerhouses-2023-10-19/&#34;&gt;把废弃的卫星信号接收装置变成太阳能发电站&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;瑞士有公司利用废弃的卫星信号装置（不知道是不是理解的正确，其实就是mini型的 FAST，或者大号的卫星锅），在表面铺满太阳能电池板进行发电。&lt;/p&gt;
+&lt;p&gt;这些装置直径达 32 米，装在海拔1000米的位置，即使在冬天也能接收到最佳的阳光。&lt;/p&gt;
+&lt;h3 id=&#34;比达尔文领先-100-年提出进化论的法国贵族httpswwwtheguardiancomscience2024apr07the-french-aristocrat-who-understood-evolution-100-years-before-darwin-and-even-worried-about-climate-change&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/science/2024/apr/07/the-french-aristocrat-who-understood-evolution-100-years-before-darwin-and-even-worried-about-climate-change&#34;&gt;比达尔文领先 100 年提出进化论的法国贵族&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;1859年，达尔文出版物种起源，提出进化论，随后他阅读了一本 100 多年前的书，发现里面的观点和自己的一样。&lt;/p&gt;
+&lt;h3 id=&#34;曾经帮迪士尼挣了很多钱的技术-后来被他们抛弃了httpswwwyoutubecomwatchvuquivsnzqdk&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UQuIVsNzqDk&#34;&gt;曾经帮迪士尼挣了很多钱的技术 后来被他们抛弃了&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个是一个 ytb 视频，很有意思，讲的是电影制作中的绿幕技术，绿幕简单，而且可以实现很多特效，但是缺点也明显，就是你不能穿和背景一样的衣服。
+迪士尼有一个技术，就是黄幕，也就是用低压钠蒸汽光制成特定的 598nm 的黄色光谱，然后再用一个特质的分束器，过滤掉这个黄色光谱，就能得到绿幕完不成的视觉效果。&lt;/p&gt;
+&lt;h3 id=&#34;suno-歌曲下载工具httpssunoaidownloadcom&#34;&gt;&lt;a href=&#34;https://sunoaidownload.com/&#34;&gt;Suno 歌曲下载工具&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;这个网站可以让你从分享链接中下载 Suno AI 生成的歌曲文件。&lt;/p&gt;
+&lt;h3 id=&#34;facesjs-生成矢量图卡通头像httpszengmcomfacesjs&#34;&gt;&lt;a href=&#34;https://zengm.com/facesjs/&#34;&gt;faces.js: 生成矢量图卡通头像&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;一个开源 JS 库，可以生成很多卡通头像，有非常多的选项可以调节，比如眼睛角度，眼镜，嘴巴等等。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://happyfire.zhubai.love/&#34;&gt;邮箱/微信订阅&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/index.xml&#34;&gt;RSS 订阅&lt;/a&gt; | &lt;a href=&#34;https://www.xiaohongshu.com/user/profile/5db7ad40000000000100bfd5?xhsshare=CopyLink&amp;amp;appuid=5db7ad40000000000100bfd5&amp;amp;apptime=1678024783&#34;&gt;小红书&lt;/a&gt; | &lt;a href=&#34;https://mastodon.world/@1link&#34;&gt;Mastodon&lt;/a&gt; | &lt;a href=&#34;https://1link.fun/sponsor&#34;&gt;赞助 &amp;amp; 支持&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

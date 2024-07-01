@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>科学空间|Scientific Spaces</title>
+<link>https://kexue.fm/</link>
+<atom:link href="https://spaces.ac.cn/feed" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description>渴望成为一个小飞侠</description>
+<lastBuildDate>Thu, 20 Jun 2024 15:15:00 +0800</lastBuildDate>
+<pubDate>Thu, 20 Jun 2024 15:15:00 +0800</pubDate>
+<item>
+<title>重温SSM（三）：HiPPO的高效计算（S4）</title>
+<link>https://spaces.ac.cn/archives/10162</link>
+<guid>https://spaces.ac.cn/archives/10162</guid>
+<pubDate>Thu, 20 Jun 2024 15:15:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[前面我们用两篇文章《重温SSM（一）：线性系统和HiPPO矩阵》和《重温SSM（二）：HiPPO的一些遗留问题》介绍了HiPPO的思想和推导——通过正交函数基对持续更新的函数进行实时逼近，其拟合...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>前面我们用两篇文章<a href="https://kexue.fm/archives/10114" target="_blank">《重温SSM（一）：线性系统和HiPPO矩阵》</a>和<a href="https://kexue.fm/archives/10137" target="_blank">《重温SSM（二）：HiPPO的一些遗留问题》</a>介绍了HiPPO的思想和推导——通过正交函数基对持续更新的函数进行实时逼近，其拟合系数的动力学正好可以表示为一个线性ODE系统，并且对于特定的基底以及逼近方式，我们可以将线性系统的关键矩阵精确地算出来。此外，我们还讨论了HiPPO的离散化和相关性质等问题，这些内容奠定了后续的SSM工作的理论基础。</p><p>接下来，我们将介绍HiPPO的后续应用篇<a href="https://arxiv.org/abs/2111.00396" target="_blank">《Efficiently Modeling Long Sequences with Structured State Spaces》</a>（简称S4），它利用HiPPO的推导结果作为序列建模的基本工具，并从新的视角探讨了高效的计算和训练方式，最后在不少长序列建模任务上验证了它的有效性，可谓SSM乃至RNN复兴的代表作之一。</p><h2>基本框架</h2><p>S4使用的序列建模框架，是如下的线性ODE系统：<br />
+\begin{equation}\begin{aligned}<br />
+x'(t) =&\, A x(t) + B u(t) \\<br />
+y(t) =&\, C x(t) + D u(t)<br />
+\end{aligned}\end{equation}</p><p class="more"><a href="https://spaces.ac.cn/archives/10162" title="重温SSM（三）：HiPPO的高效计算（S4）">[...]</a></p>
+]]></content:encoded>
+<slash:comments>1</slash:comments>
+<comments>https://spaces.ac.cn/archives/10162#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10162</wfw:commentRss>
+</item>
+<item>
+<title>通向概率分布之路：盘点Softmax及其替代品</title>
+<link>https://spaces.ac.cn/archives/10145</link>
+<guid>https://spaces.ac.cn/archives/10145</guid>
+<pubDate>Fri, 14 Jun 2024 16:01:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[不论是在基础的分类任务中，还是如今无处不在的注意力机制中，概率分布的构建都是一个关键步骤。具体来说，就是将一个$n$维的任意向量，转换为一个$n$元的离散型概率分布。众所周知，这个问题的标准答案...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>不论是在基础的分类任务中，还是如今无处不在的注意力机制中，概率分布的构建都是一个关键步骤。具体来说，就是将一个$n$维的任意向量，转换为一个$n$元的离散型概率分布。众所周知，这个问题的标准答案是Softmax，它是指数归一化的形式，相对来说比较简单直观，同时也伴有很多优良性质，从而成为大部分场景下的“标配”。</p><p>尽管如此，Softmax在某些场景下也有一些不如人意之处，比如不够稀疏、无法绝对等于零等，因此很多替代品也应运而生。在这篇文章中，我们将简单总结一下Softmax的相关性质，并盘点和对比一下它的部分替代方案。</p><h2>Softmax回顾</h2><p>首先引入一些通用记号：$\boldsymbol{x} = (x_1,x_2,\cdots,x_n)\in\mathbb{R}^n$是需要转为概率分布的$n$维向量，它的分量可正可负，也没有限定的上下界。$\Delta^{n-1}$定义为全体$n$元离散概率分布的集合，即<br />
+\begin{equation}\Delta^{n-1} = \left\{\boldsymbol{p}=(p_1,p_2,\cdots,p_n)\left|\, p_1,p_2,\cdots,p_n\geq 0,\sum_{i=1}^n p_i = 1\right.\right\}\end{equation}<br />
+之所以标注$n-1$而不是$n$，是因为约束$\sum\limits_{i=1}^n p_i = 1$定义了$n$维空间中的一个$n-1$维子平面，再加上$p_i\geq 0$的约束，$(p_1,p_2,\cdots,p_n)$的集合就只是该平面的一个子集，即实际维度只有$n-1$。</p><p class="more"><a href="https://spaces.ac.cn/archives/10145" title="通向概率分布之路：盘点Softmax及其替代品">[...]</a></p>
+]]></content:encoded>
+<slash:comments>2</slash:comments>
+<comments>https://spaces.ac.cn/archives/10145#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10145</wfw:commentRss>
+</item>
+<item>
+<title>重温SSM（二）：HiPPO的一些遗留问题</title>
+<link>https://spaces.ac.cn/archives/10137</link>
+<guid>https://spaces.ac.cn/archives/10137</guid>
+<pubDate>Wed, 05 Jun 2024 15:21:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[书接上文，在上一篇文章《重温SSM（一）：线性系统和HiPPO矩阵》中，我们详细讨论了HiPPO逼近框架其HiPPO矩阵的推导，其原理是通过正交函数基来动态地逼近一个实时更新的函数，其投影系数的...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>书接上文，在上一篇文章<a href="https://kexue.fm/archives/10114" target="_blank">《重温SSM（一）：线性系统和HiPPO矩阵》</a>中，我们详细讨论了HiPPO逼近框架其HiPPO矩阵的推导，其原理是通过正交函数基来动态地逼近一个实时更新的函数，其投影系数的动力学正好是一个线性系统，而如果以正交多项式为基，那么线性系统的核心矩阵我们可以解析地求解出来，该矩阵就称为HiPPO矩阵。</p><p>当然，上一篇文章侧重于HiPPO矩阵的推导，并没有对它的性质做进一步分析，此外诸如“如何离散化以应用于实际数据”、“除了多项式基外其他基是否也可以解析求解”等问题也没有详细讨论到。接下来我们将补充探讨相关问题。</p><h2>离散格式</h2><p>假设读者已经阅读并理解上一篇文章的内容，那么这里我们就不再进行过多的铺垫。在上一篇文章中，我们推导出了两类线性ODE系统，分别是：<br />
+\begin{align}<br />
+&\text{HiPPO-LegT:}\quad x'(t) = Ax(t) + Bu(t) \label{eq:legt-ode}\\[5pt]<br />
+&\text{HiPPO-LegS:}\quad x'(t) = \frac{A}{t}x(t) + \frac{B}{t}u(t) \label{eq:legs-ode}\end{align}<br />
+其中$A,B$是与时间$t$无关的常数矩阵，HiPPO矩阵主要指矩阵$A$。在这一节中，我们讨论这两个ODE的离散化。</p><p class="more"><a href="https://spaces.ac.cn/archives/10137" title="重温SSM（二）：HiPPO的一些遗留问题">[...]</a></p>
+]]></content:encoded>
+<slash:comments>2</slash:comments>
+<comments>https://spaces.ac.cn/archives/10137#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10137</wfw:commentRss>
+</item>
+<item>
+<title>Transformer升级之路：18、RoPE的底数选择原则</title>
+<link>https://spaces.ac.cn/archives/10122</link>
+<guid>https://spaces.ac.cn/archives/10122</guid>
+<pubDate>Wed, 29 May 2024 18:29:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[我们知道，在RoPE中频率的计算公式为$\theta_i = b^{-2i/d}$，底数$b$默认值为10000。目前Long Context的主流做法之一是，先在$b=10000$上用短文本预...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>我们知道，在<a href="https://kexue.fm/archives/8265" target="_blank">RoPE</a>中频率的计算公式为$\theta_i = b^{-2i/d}$，底数$b$默认值为10000。目前Long Context的主流做法之一是，先在$b=10000$上用短文本预训练，然后调大$b$并在长文本微调，其出发点是<a href="https://kexue.fm/archives/9675" target="_blank">《Transformer升级之路：10、RoPE是一种β进制编码》</a>里介绍的NTK-RoPE，它本身有较好长度外推性，换用更大的$b$再微调相比不加改动的微调，起始损失更小，收敛也更快。该过程给人的感觉是：调大$b$完全是因为“先短后长”的训练策略，如果一直都用长文本训练似乎就没必要调大$b$了？</p><p>上周的论文<a href="https://arxiv.org/abs/2405.14591" target="_blank">《Base of RoPE Bounds Context Length》</a>试图回答这个问题，它基于一个期望性质研究了$b$的下界，由此指出更大的训练长度本身就应该选择更大的底数，与训练策略无关。整个分析思路颇有启发性，接下来我们一起来品鉴一番。</p><p class="more"><a href="https://spaces.ac.cn/archives/10122" title="Transformer升级之路：18、RoPE的底数选择原则">[...]</a></p>
+]]></content:encoded>
+<slash:comments>7</slash:comments>
+<comments>https://spaces.ac.cn/archives/10122#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10122</wfw:commentRss>
+</item>
+<item>
+<title>重温SSM（一）：线性系统和HiPPO矩阵</title>
+<link>https://spaces.ac.cn/archives/10114</link>
+<guid>https://spaces.ac.cn/archives/10114</guid>
+<pubDate>Fri, 24 May 2024 15:20:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[前几天，笔者看了几篇介绍SSM（State Space Model）的文章，才发现原来自己从未认真了解过SSM，于是打算认真去学习一下SSM的相关内容，顺便开了这个新坑，记录一下学习所得。SSM...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>前几天，笔者看了几篇介绍SSM（State Space Model）的文章，才发现原来自己从未认真了解过SSM，于是打算认真去学习一下SSM的相关内容，顺便开了这个新坑，记录一下学习所得。</p><p>SSM的概念由来已久，但这里我们特指深度学习中的SSM，一般认为其开篇之作是2021年的<a href="https://arxiv.org/abs/2111.00396" target="_blank">S4</a>，不算太老，而SSM最新最火的变体大概是去年的<a href="https://arxiv.org/abs/2312.00752" target="_blank">Mamba</a>。当然，当我们谈到SSM时，也可能泛指一切线性RNN模型，这样<a href="https://arxiv.org/abs/2305.13048" target="_blank">RWKV</a>、<a href="https://arxiv.org/abs/2307.08621" target="_blank">RetNet</a>还有此前我们在<a href="https://kexue.fm/archives/9554" target="_blank">《Google新作试图“复活”RNN：RNN能否再次辉煌？》</a>介绍过的LRU都可以归入此类。不少SSM变体致力于成为Transformer的竞争者，尽管笔者并不认为有完全替代的可能性，但SSM本身优雅的数学性质也值得学习一番。</p><p>尽管我们说SSM起源于S4，但在S4之前，SSM有一篇非常强大的奠基之作<a href="https://arxiv.org/abs/2008.07669" target="_blank">《HiPPO: Recurrent Memory with Optimal Polynomial Projections》</a>（简称HiPPO），所以本文从HiPPO开始说起。</p><p class="more"><a href="https://spaces.ac.cn/archives/10114" title="重温SSM（一）：线性系统和HiPPO矩阵">[...]</a></p>
+]]></content:encoded>
+<slash:comments>28</slash:comments>
+<comments>https://spaces.ac.cn/archives/10114#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10114</wfw:commentRss>
+</item>
+<item>
+<title>缓存与效果的极限拉扯：从MHA、MQA、GQA到MLA</title>
+<link>https://spaces.ac.cn/archives/10091</link>
+<guid>https://spaces.ac.cn/archives/10091</guid>
+<pubDate>Mon, 13 May 2024 11:15:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[前几天，幻方发布的DeepSeek-V2引起了大家的热烈讨论。首先，最让人哗然的是1块钱100万token的价格，普遍比现有的各种竞品API便宜了两个数量级，以至于有人调侃“这个价格哪怕它输出乱...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>前几天，幻方发布的<a href="https://arxiv.org/abs/2405.04434" target="_blank">DeepSeek-V2</a>引起了大家的热烈讨论。首先，最让人哗然的是1块钱100万token的价格，普遍比现有的各种竞品API便宜了两个数量级，以至于有人调侃“这个价格哪怕它输出乱码，我也会认为这个乱码是一种艺术”；其次，从模型的技术报告看，如此便宜的价格背后的关键技术之一是它新提出的MLA（<strong><font color=red>M</font></strong>ulti-head <strong><font color=red>L</font></strong>atent <strong><font color=red>A</font></strong>ttention），这是对GQA的改进，据说能比GQA更省更好，也引起了读者的广泛关注。</p><p>接下来，本文将跟大家一起梳理一下从MHA、MQA、GQA到MLA的演变历程，并着重介绍一下MLA的设计思路。</p><h2>MHA</h2><p>MHA（<strong><font color=red>M</font></strong>ulti-<strong><font color=red>H</font></strong>ead <strong><font color=red>A</font></strong>ttention），也就是多头注意力，是开山之作<a href="https://kexue.fm/archives/4765" target="_blank">《Attention is all you need》</a>所提出的一种Attention形式，可以说它是当前主流LLM的基础工作。在数学上，多头注意力MHA等价于多个独立的单头注意力的拼接，假设输入的（行）向量序列为$\boldsymbol{x}_1,\boldsymbol{x}_2,\cdots,\boldsymbol{x}_l$，其中$\boldsymbol{x}_i\in\mathbb{R}^d$，那么MHA可以形式地记为</p><p class="more"><a href="https://spaces.ac.cn/archives/10091" title="缓存与效果的极限拉扯：从MHA、MQA、GQA到MLA">[...]</a></p>
+]]></content:encoded>
+<slash:comments>46</slash:comments>
+<comments>https://spaces.ac.cn/archives/10091#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10091</wfw:commentRss>
+</item>
+<item>
+<title>Cool Papers更新：简单搭建了一个站内检索系统</title>
+<link>https://spaces.ac.cn/archives/10088</link>
+<guid>https://spaces.ac.cn/archives/10088</guid>
+<pubDate>Tue, 07 May 2024 10:12:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[自从《更便捷的Cool Papers打开方式：Chrome重定向扩展》之后，Cool Papers有两次比较大的变化，一次是引入了venue分支，逐步收录了一些会议历年的论文集，如ICLR、IC...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>自从<a href="https://kexue.fm/archives/9978" target="_blank">《更便捷的Cool Papers打开方式：Chrome重定向扩展》</a>之后，<a href="http://papers.cool" target="_blank">Cool Papers</a>有两次比较大的变化，一次是引入了venue分支，逐步收录了一些会议历年的论文集，如ICLR、ICML等，这部分是动态人工扩充的，欢迎有心仪的会议的读者提更多需求；另一次就是本文的主题，前天新增加的站内检索功能。</p><p>本文将简单介绍一下新增功能，并对搭建站内检索系统的过程做个基本总结。</p><h2>简介</h2><p>在Cool Papers的首页，我们看到搜索入口：<br />
+<a href="https://kexue.fm/usr/uploads/2024/05/1948170921.png" title="点击查看原图" target="_blank"><img src="https://kexue.fm/usr/uploads/2024/05/1948170921.png" width=500 alt="Cool Papers（2024.05.07）.png" /></a></p><p class="more"><a href="https://spaces.ac.cn/archives/10088" title="Cool Papers更新：简单搭建了一个站内检索系统">[...]</a></p>
+]]></content:encoded>
+<slash:comments>21</slash:comments>
+<comments>https://spaces.ac.cn/archives/10088#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10088</wfw:commentRss>
+</item>
+<item>
+<title>以蒸馏的名义：“从去噪自编码器到生成模型”重现江湖</title>
+<link>https://spaces.ac.cn/archives/10085</link>
+<guid>https://spaces.ac.cn/archives/10085</guid>
+<pubDate>Wed, 01 May 2024 15:23:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[今天我们分享一下论文《Score identity Distillation: Exponentially Fast Distillation of Pretrained Diffusion M...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>今天我们分享一下论文<a href="https://arxiv.org/abs/2404.04057" target="_blank">《Score identity Distillation: Exponentially Fast Distillation of Pretrained Diffusion Models for One-Step Generation》</a>，顾名思义，这是一篇探讨如何更快更好地蒸馏扩散模型的新论文。</p><p>即便没有做过蒸馏，大家应该也能猜到蒸馏的常规步骤：随机采样大量输入，然后用扩散模型生成相应结果作为输出，用这些输入输出作为训练数据对，来监督训练一个新模型。然而，众所周知作为教师的原始扩散模型通常需要多步（比如1000步）迭代才能生成高质量输出，所以且不论中间训练细节如何，该方案的一个显著缺点是生成训练数据太费时费力。此外，蒸馏之后的学生模型通常或多或少都有效果损失。</p><p>有没有方法能一次性解决这两个缺点呢？这就是上述论文试图要解决的问题。</p><p class="more"><a href="https://spaces.ac.cn/archives/10085" title="以蒸馏的名义：“从去噪自编码器到生成模型”重现江湖">[...]</a></p>
+]]></content:encoded>
+<slash:comments>21</slash:comments>
+<comments>https://spaces.ac.cn/archives/10085#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10085</wfw:commentRss>
+</item>
+<item>
+<title>生成扩散模型漫谈（二十四）：少走捷径，更快到达</title>
+<link>https://spaces.ac.cn/archives/10077</link>
+<guid>https://spaces.ac.cn/archives/10077</guid>
+<pubDate>Tue, 23 Apr 2024 21:39:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[如何减少采样步数同时保证生成质量，是扩散模型应用层面的一个关键问题。其中，《生成扩散模型漫谈（四）：DDIM = 高观点DDPM》介绍的DDIM可谓是加速采样的第一次尝试。后来，《生成扩散模型漫...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>如何减少采样步数同时保证生成质量，是扩散模型应用层面的一个关键问题。其中，<a href="https://kexue.fm/archives/9181" target="_blank">《生成扩散模型漫谈（四）：DDIM = 高观点DDPM》</a>介绍的DDIM可谓是加速采样的第一次尝试。后来，<a href="https://kexue.fm/archives/9209" target="_blank">《生成扩散模型漫谈（五）：一般框架之SDE篇》</a>、<a href="https://kexue.fm/archives/9228" target="_blank">《生成扩散模型漫谈（五）：一般框架之ODE篇》</a>等所介绍的工作将扩散模型与SDE、ODE联系了起来，于是相应的数值积分技术也被直接用于扩散模型的采样加速，其中又以相对简单的ODE加速技术最为丰富，我们在<a href="https://kexue.fm/archives/9881" target="_blank">《生成扩散模型漫谈（二十一）：中值定理加速ODE采样》</a>也介绍过一例。</p><p>这篇文章我们介绍另一个特别简单有效的加速技巧——Skip Tuning，出自论文<a href="https://arxiv.org/abs/2402.15170" target="_blank">《The Surprising Effectiveness of Skip-Tuning in Diffusion Sampling》</a>，准确来说它是配合已有的加速技巧使用，来一步提高采样质量，这就意味着在保持相同采样质量的情况下，它可以进一步压缩采样步数，从而实现加速。</p><p class="more"><a href="https://spaces.ac.cn/archives/10077" title="生成扩散模型漫谈（二十四）：少走捷径，更快到达">[...]</a></p>
+]]></content:encoded>
+<slash:comments>9</slash:comments>
+<comments>https://spaces.ac.cn/archives/10077#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10077</wfw:commentRss>
+</item>
+<item>
+<title>生成扩散模型漫谈（二十三）：信噪比与大图生成（下）</title>
+<link>https://spaces.ac.cn/archives/10055</link>
+<guid>https://spaces.ac.cn/archives/10055</guid>
+<pubDate>Wed, 17 Apr 2024 16:59:00 +0800</pubDate>
+<dc:creator>苏剑林</dc:creator>
+<description><![CDATA[上一篇文章《生成扩散模型漫谈（二十二）：信噪比与大图生成（上）》中，我们介绍了通过对齐低分辨率的信噪比来改进noise schedule，从而改善直接在像素空间训练的高分辨率图像生成（大图生成）...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>上一篇文章<a href="https://kexue.fm/archives/10047" target="_blank">《生成扩散模型漫谈（二十二）：信噪比与大图生成（上）》</a>中，我们介绍了通过对齐低分辨率的信噪比来改进noise schedule，从而改善直接在像素空间训练的高分辨率图像生成（大图生成）的扩散模型效果。而这篇文章的主角同样是信噪比和大图生成，但做到了更加让人惊叹的事情——直接将训练好低分辨率图像的扩散模型用于高分辨率图像生成，不用额外的训练，并且效果和推理成本都媲美直接训练的大图模型！</p><p>这个工作出自最近的论文<a href="https://arxiv.org/abs/2404.01709" target="_blank">《Upsample Guidance: Scale Up Diffusion Models without Training》</a>，它巧妙地将低分辨率模型上采样作为引导信号，并结合了CNN对纹理细节的平移不变性，成功实现了免训练高分辨率图像生成。</p><h2>思想探讨</h2><p>我们知道，扩散模型的训练目标是去噪（Denoise，也是DDPM的第一个D）。按我们的直觉，去噪这个任务应该是分辨率无关的，换句话说，理想情况下低分辨率图像训练的去噪模型应该也能用于高分辨率图像去噪，从而低分辨率的扩散模型应该也能直接用于高分辨率图像生成。</p><p class="more"><a href="https://spaces.ac.cn/archives/10055" title="生成扩散模型漫谈（二十三）：信噪比与大图生成（下）">[...]</a></p>
+]]></content:encoded>
+<slash:comments>12</slash:comments>
+<comments>https://spaces.ac.cn/archives/10055#comments</comments>
+<wfw:commentRss>https://spaces.ac.cn/feed/archives/10055</wfw:commentRss>
+</item>
+</channel>
+</rss>

