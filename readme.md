@@ -1,4 +1,4 @@
-[English](https://github.com/dropsong/tiny-search-engine/blob/main/readme_English.md)
+[English](https://github.com/dropsong/search-engine-toy/blob/master/readme_English.md)
 
 # 使用方法
 
